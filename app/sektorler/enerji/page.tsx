@@ -248,7 +248,7 @@ export default function EnerjiPage() {
                 <p className="text-gray-700 mb-4">
                   Rüzgar türbini kuleleri ve enerji altyapısı için yüksek dayanımlı çelik ürünleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -260,7 +260,7 @@ export default function EnerjiPage() {
                 <p className="text-gray-700 mb-4">
                   Yüksek sıcaklık uygulamaları için özel alaşımlı çelik çözümleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/zam" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -272,7 +272,7 @@ export default function EnerjiPage() {
                 <p className="text-gray-700 mb-4">
                   Açık hava uygulamaları için korozyona dayanıklı çelik ve kaplama çözümleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/galvanizli-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -284,7 +284,7 @@ export default function EnerjiPage() {
                 <p className="text-gray-700 mb-4">
                   Geniş yapısal uygulamalar için sıcak haddelenmiş sac ürünleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -296,7 +296,7 @@ export default function EnerjiPage() {
                 <p className="text-gray-700 mb-4">
                   Enerji iletim hatları ve yapısal uygulamalar için boru ve profil çelik ürünleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boru-ve-profil" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -339,7 +339,7 @@ export default function EnerjiPage() {
               <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 İletişime Geç
               </a>
-              <a href="#teklif" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
                 Teklif Al
               </a>
             </div>

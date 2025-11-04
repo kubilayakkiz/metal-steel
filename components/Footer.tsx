@@ -222,17 +222,17 @@ export default function Footer() {
             <h3 className="font-bold mb-4 text-white">Kariyer</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/kariyer/neden-metal-x" className="hover:text-white transition-colors">
                   Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/kariyer/insan-kaynaklari" className="hover:text-white transition-colors">
                   İnsan Kaynakları
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/kariyer/basvuru" className="hover:text-white transition-colors">
                   Başvuru
                 </a>
               </li>

@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButton from "@/components/FloatingButton";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export const metadata: Metadata = {
   title: "Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Footer />
         <FloatingButton />
         <WhatsAppButton />
+        <ScrollToTopButton />
       </body>
     </html>
   );

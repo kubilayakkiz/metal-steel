@@ -2,6 +2,7 @@
 
 import Slider from '@/components/Slider';
 import NewsletterForm from '@/components/NewsletterForm';
+import BlogPostsSection from '@/components/BlogPostsSection';
 
 export default function Home() {
   // Slider görselleri - Görsellerinizi public klasörüne ekleyip yollarını buraya yazın
@@ -14,12 +15,12 @@ export default function Home() {
       buttons: [
         {
           text: 'Teklif Al',
-          href: '/iletisim',
+          href: '/teklif-al',
           variant: 'primary' as const,
         },
         {
           text: 'Ürünlerimiz',
-          href: '/urunler',
+          href: '#urunler-ve-hizmetler',
           variant: 'secondary' as const,
         },
       ],
@@ -32,7 +33,7 @@ export default function Home() {
       buttons: [
         {
           text: 'Hakkımızda',
-          href: '/hakkimizda',
+          href: '/kurumsal/hakkimizda',
           variant: 'primary' as const,
         },
         {
@@ -49,13 +50,13 @@ export default function Home() {
       subtitle: 'Çevre dostu üretim anlayışıyla gelecek nesillere temiz bir dünya bırakıyoruz',
       buttons: [
         {
-          text: 'Sürdürülebilirlik',
-          href: '/surdurulebilirlik',
+          text: 'Ürünlerimiz',
+          href: '#urunler-ve-hizmetler',
           variant: 'primary' as const,
         },
         {
           text: 'Teklif Al',
-          href: '/iletisim',
+          href: '/teklif-al',
           variant: 'secondary' as const,
         },
       ],
@@ -107,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Ürünler ve Hizmetler Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section id="urunler-ve-hizmetler" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] text-center mb-6">
             Ürünler ve Hizmetler
@@ -205,9 +206,6 @@ export default function Home() {
                     <a href="/hizmetler/musteri-teknik-hizmetleri" className="block border-t border-white/30 pt-3 hover:bg-white/10 transition-colors duration-200 rounded">
                       <p className="text-base font-semibold text-center">Müşteri Teknik Hizmetleri</p>
                     </a>
-                    <a href="/hizmetler/metal-steel-laboratuvarlari" className="block border-t border-white/30 pt-3 hover:bg-white/10 transition-colors duration-200 rounded">
-                      <p className="text-base font-semibold text-center">Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. Laboratuvarları</p>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -236,9 +234,9 @@ export default function Home() {
               <p className="text-white text-2xl md:text-3xl font-semibold mb-8 leading-relaxed">
                 Geleceğe değer katan iş yapış şekillerimiz, çalışma kültürümüz ve üretici kimliğimize yakından bakın
               </p>
-              <button className="bg-[#261dcf] hover:bg-[#1a16a8] text-white font-bold py-3 px-8 rounded transition-colors">
+              <a href="/kurumsal/hakkimizda" className="bg-[#261dcf] hover:bg-[#1a16a8] text-white font-bold py-3 px-8 rounded transition-colors inline-block">
                 DETAYLI BİLGİ
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -254,66 +252,7 @@ export default function Home() {
             Güncel haberler, etkinlikler ve sektörden haberleri buradan takip edin.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {[
-              { 
-                title: 'Sürdürülebilir Üretimde Yeni Adımlar',
-                excerpt: 'Sürdürülebilirlik odaklı üretim süreçlerimizde gerçekleştirdiğimiz yenilikler ve çevre dostu yaklaşımlarımız hakkında detaylı bilgiler.',
-                date: '15 Ocak 2025',
-                category: 'Haberler',
-                image: 'https://placehold.co/600x400/261dcf/ffffff?text=Blog+1',
-                slug: '/blog/surdurulebilir-uretim-yeni-adimlar'
-              },
-              { 
-                title: '2025 Yılında Sektörün Geleceği',
-                excerpt: 'Çelik sektöründeki son gelişmeler ve 2025 yılında bizi bekleyen trendler hakkında öngörüler.',
-                date: '10 Ocak 2025',
-                category: 'Sektör',
-                image: 'https://placehold.co/600x400/261dcf/ffffff?text=Blog+2',
-                slug: '/blog/2025-yilinda-sektorun-gelecegi'
-              },
-              { 
-                title: 'EKÖK UYUMLULUĞU EN İYİ TESİSLER ÖDÜLÜ',
-                excerpt: 'Aldığımız prestijli ödül ve bu başarıya giden yolda attığımız adımlar hakkında detaylı bilgiler.',
-                date: '5 Ocak 2025',
-                category: 'Ödüller',
-                image: 'https://placehold.co/600x400/261dcf/ffffff?text=Blog+3',
-                slug: '/blog/ekok-uyumlulugu-en-iyi-tesisler-odulu'
-              },
-            ].map((blog, index) => (
-              <a 
-                key={index} 
-                href={blog.slug}
-                className="relative group overflow-hidden rounded-lg cursor-pointer bg-white shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
-              >
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <img 
-                    src={blog.image} 
-                    alt={blog.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4 bg-[#261dcf] text-white px-3 py-1 rounded text-sm font-semibold">
-                    {blog.category}
-                  </div>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <p className="text-sm text-gray-500 mb-2">{blog.date}</p>
-                  <h3 className="font-bold text-gray-900 mb-3 text-xl group-hover:text-[#261dcf] transition-colors">
-                    {blog.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
-                    {blog.excerpt}
-                  </p>
-                  <div className="flex items-center text-[#261dcf] font-semibold text-sm group-hover:gap-2 transition-all">
-                    Devamını Oku
-                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+          <BlogPostsSection />
           
           <div className="text-center">
             <a 

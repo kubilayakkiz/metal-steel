@@ -249,7 +249,7 @@ export default function OtomotivPage() {
                 <p className="text-gray-700 mb-4">
                   Otomotiv gövde ve şasi üretimi için yüksek kaliteli sıcak haddelenmiş saclar.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -261,7 +261,7 @@ export default function OtomotivPage() {
                 <p className="text-gray-700 mb-4">
                   Hassas kalınlık toleransları ve mükemmel yüzey kalitesi ile otomotiv uygulamaları.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/soguk-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -273,7 +273,7 @@ export default function OtomotivPage() {
                 <p className="text-gray-700 mb-4">
                   Korozyona dayanıklı galvanizli sac, otomotiv ömrünü uzatır ve bakım maliyetlerini düşürür.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/galvanizli-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -285,7 +285,7 @@ export default function OtomotivPage() {
                 <p className="text-gray-700 mb-4">
                   Güvenlik bileşenleri ve kritik parçalar için yüksek dayanımlı çelik çözümleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -297,7 +297,7 @@ export default function OtomotivPage() {
                 <p className="text-gray-700 mb-4">
                   Motor ve şanzıman bileşenleri için özel alaşımlı çelik ürünleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/zam" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -340,7 +340,7 @@ export default function OtomotivPage() {
               <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 İletişime Geç
               </a>
-              <a href="#teklif" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
                 Teklif Al
               </a>
             </div>

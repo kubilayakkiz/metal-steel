@@ -247,7 +247,7 @@ export default function InsaatPage() {
                 <p className="text-gray-700 mb-4">
                   I, H ve U profilleri ile bina ve altyapı projeleri için yapısal çelik.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boru-ve-profil" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -259,7 +259,7 @@ export default function InsaatPage() {
                 <p className="text-gray-700 mb-4">
                   Galvanizli ve boyalı çatı kaplama sacları ile uzun ömürlü çözümler.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/galvanizli-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -271,7 +271,7 @@ export default function InsaatPage() {
                 <p className="text-gray-700 mb-4">
                   Modern cephe uygulamaları için boyalı ve özel kaplamalı saclar.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boyali-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -283,7 +283,7 @@ export default function InsaatPage() {
                 <p className="text-gray-700 mb-4">
                   Yapı tesisatları için çelik boru ve bağlantı elemanları.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boru-ve-profil" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -295,7 +295,7 @@ export default function InsaatPage() {
                 <p className="text-gray-700 mb-4">
                   Betonarme yapılarda kullanılan çelik donatı ve özel çelik bileşenler.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/insaat-demiri" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -338,7 +338,7 @@ export default function InsaatPage() {
               <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 İletişime Geç
               </a>
-              <a href="#teklif" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
                 Teklif Al
               </a>
             </div>

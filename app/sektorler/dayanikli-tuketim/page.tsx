@@ -248,7 +248,7 @@ export default function DayanikliTuketimPage() {
                 <p className="text-gray-700 mb-4">
                   Estetik ve koruyucu özellikleri ile beyaz eşya ve elektronik ürünlerde kullanılan boyalı saclar.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boyali-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -260,7 +260,7 @@ export default function DayanikliTuketimPage() {
                 <p className="text-gray-700 mb-4">
                   Korozyona dayanıklı galvanizli sac, dayanıklı tüketim ürünlerinde uzun ömür sağlar.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/galvanizli-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -272,7 +272,7 @@ export default function DayanikliTuketimPage() {
                 <p className="text-gray-700 mb-4">
                   Hassas toleranslar ve mükemmel yüzey kalitesi ile hassas üretim gerektiren uygulamalar.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/soguk-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -284,7 +284,7 @@ export default function DayanikliTuketimPage() {
                 <p className="text-gray-700 mb-4">
                   Hijyen ve dayanıklılık gerektiren uygulamalar için paslanmaz çelik çözümleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -296,7 +296,7 @@ export default function DayanikliTuketimPage() {
                 <p className="text-gray-700 mb-4">
                   Estetik ve koruyucu özellikleri ile özel kaplama seçenekleri.
                 </p>
-                <a href="#" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boyali-sac" className="text-[#261dcf] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
@@ -339,7 +339,7 @@ export default function DayanikliTuketimPage() {
               <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 İletişime Geç
               </a>
-              <a href="#teklif" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
                 Teklif Al
               </a>
             </div>

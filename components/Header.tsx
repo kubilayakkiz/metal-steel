@@ -78,13 +78,13 @@ export default function Header() {
                 </button>
                 {openDropdown === 'kariyer' && (
                   <div className="absolute top-full left-0 mt-0 pt-2 bg-[#261dcf] border border-[#6dd5fb]/30 rounded shadow-lg py-2 min-w-[200px] z-50">
-                    <a href="#" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                        Neden Metal Steel
+                    <a href="/kariyer/neden-metal-x" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                        Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.
                     </a>
-                    <a href="#" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                    <a href="/kariyer/insan-kaynaklari" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                       İnsan Kaynakları
                     </a>
-                    <a href="#" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                    <a href="/kariyer/basvuru" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                       Başvuru
                     </a>
                   </div>
@@ -363,24 +363,6 @@ export default function Header() {
                   <div>
                     <button 
                       className="flex items-center justify-between w-full hover:text-gray-300 transition-colors text-sm"
-                      onClick={() => handleDropdownToggle('kurumsal-mobile')}
-                    >
-                      Kurumsal
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    {openDropdown === 'kurumsal-mobile' && (
-                      <div className="pl-4 mt-2 space-y-2">
-                        <a href="#" className="block text-gray-300 hover:text-white text-sm">Hakkımızda</a>
-                        <a href="#" className="block text-gray-300 hover:text-white text-sm">Politikalarımız</a>
-                        <a href="#" className="block text-gray-300 hover:text-white text-sm">Kurumsal Kimlik</a>
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <button 
-                      className="flex items-center justify-between w-full hover:text-gray-300 transition-colors text-sm"
                       onClick={() => handleDropdownToggle('kariyer-mobile')}
                     >
                       Kariyer
@@ -390,9 +372,9 @@ export default function Header() {
                     </button>
                     {openDropdown === 'kariyer-mobile' && (
                       <div className="pl-4 mt-2 space-y-2">
-                        <a href="#" className="block text-gray-300 hover:text-white text-sm">Neden Tatçelik</a>
-                        <a href="#" className="block text-gray-300 hover:text-white text-sm">İnsan Kaynakları</a>
-                        <a href="#" className="block text-gray-300 hover:text-white text-sm">Başvuru</a>
+                        <a href="/kariyer/neden-metal-x" className="block text-gray-300 hover:text-white text-sm">Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.</a>
+                        <a href="/kariyer/insan-kaynaklari" className="block text-gray-300 hover:text-white text-sm">İnsan Kaynakları</a>
+                        <a href="/kariyer/basvuru" className="block text-gray-300 hover:text-white text-sm">Başvuru</a>
                       </div>
                     )}
                   </div>
@@ -467,24 +449,24 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-                <div>
-                  <button 
-                    className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
-                    onClick={() => handleDropdownToggle('kurumsal-mobile')}
-                  >
-                    Kurumsal
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {openDropdown === 'kurumsal-mobile' && (
-                    <div className="pl-4 mt-2 space-y-2">
-                      <a href="/kurumsal/hakkimizda" className="block text-gray-300 hover:text-white">Hakkımızda</a>
-                      <a href="/kurumsal/politikalarimiz" className="block text-gray-300 hover:text-white">Politikalarımız</a>
-                      <a href="/kurumsal/kurumsal-kimlik" className="block text-gray-300 hover:text-white">Kurumsal Kimlik</a>
-                    </div>
-                  )}
-                </div>
+                  <div>
+                    <button 
+                      className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
+                      onClick={() => handleDropdownToggle('kurumsal-mobile')}
+                    >
+                      Kurumsal
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {openDropdown === 'kurumsal-mobile' && (
+                      <div className="pl-4 mt-2 space-y-2">
+                        <a href="/kurumsal/hakkimizda" className="block text-gray-300 hover:text-white text-sm">Hakkımızda</a>
+                        <a href="/kurumsal/politikalarimiz" className="block text-gray-300 hover:text-white text-sm">Politikalarımız</a>
+                        <a href="/kurumsal/kurumsal-kimlik" className="block text-gray-300 hover:text-white text-sm">Kurumsal Kimlik</a>
+                      </div>
+                    )}
+                  </div>
                 <a href="/iletisim" className="block hover:text-gray-300 transition-colors">
                   İletişim
                 </a>

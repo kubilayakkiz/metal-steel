@@ -6,11 +6,14 @@ export default function FloatingButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    phone: '',
     company: '',
-    product: '',
+    phone: '',
+    email: '',
+    productType: '',
+    quantity: '',
+    deliveryAddress: '',
     message: '',
+    file: null as File | null,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -20,6 +23,15 @@ export default function FloatingButton() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setFormData({
+        ...formData,
+        file: e.target.files[0],
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,11 +46,14 @@ export default function FloatingButton() {
       setSubmitStatus('success');
       setFormData({
         name: '',
-        email: '',
-        phone: '',
         company: '',
-        product: '',
+        phone: '',
+        email: '',
+        productType: '',
+        quantity: '',
+        deliveryAddress: '',
         message: '',
+        file: null,
       });
       setTimeout(() => {
         setIsOpen(false);
@@ -53,27 +68,25 @@ export default function FloatingButton() {
 
   return (
     <>
-      {/* Floating Button - Sağa bitişik dikey, şık tasarım */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed right-0 top-1/2 -translate-y-1/2 z-50 bg-gradient-to-b from-[#261dcf] to-[#1a16a8] hover:from-[#1a16a8] hover:to-[#261dcf] text-white font-bold shadow-[0_4px_20px_rgba(38,29,207,0.4)] hover:shadow-[0_6px_30px_rgba(38,29,207,0.6)] transition-all duration-300 transform hover:translate-x-[-4px] group px-4 py-12 rounded-l-2xl border-l-2 border-white/20 backdrop-blur-sm"
-        aria-label="Teklif Al"
-      >
-        <div className="flex flex-col items-center justify-center gap-3 h-full">
-          {/* Icon - Form/Quote icon */}
-          <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Floating Button - Küçük ikon butonu, sağa bitişik */}
+      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 group">
+        {/* Icon Button */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-gradient-to-b from-[#261dcf]/30 to-[#1a16a8]/30 hover:from-[#261dcf] hover:to-[#1a16a8] text-white/70 hover:text-white shadow-[0_4px_20px_rgba(38,29,207,0.2)] hover:shadow-[0_6px_30px_rgba(38,29,207,0.6)] transition-all duration-300 transform hover:translate-x-[-4px] group rounded-l-2xl border-l-2 border-white/10 hover:border-white/30 backdrop-blur-sm px-4 py-6 flex flex-col items-center gap-3"
+          aria-label="Teklif Al"
+        >
+          <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-          
-          {/* Vertical Text - Tek satır halinde */}
-          <div 
-            className="flex items-center justify-center whitespace-nowrap"
-            style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}
+          <span 
+            className="text-sm font-semibold"
+            style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
           >
-            <span className="text-sm md:text-base font-bold tracking-[0.15em] leading-none">TEKLİF AL</span>
-          </div>
-        </div>
-      </button>
+            TEKLİF AL
+          </span>
+        </button>
+      </div>
 
       {/* Overlay */}
       {isOpen && (
@@ -101,153 +114,232 @@ export default function FloatingButton() {
           </div>
           
           {/* Content */}
-          <div className="relative p-6 md:p-8">
+          <div className="relative h-full flex flex-col">
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#261dcf]">
+          <div className="flex items-center justify-between p-6 md:p-8 pb-4 border-b border-gray-200 flex-shrink-0">
+            <h2 className="text-xl md:text-2xl font-bold text-[#261dcf]">
               Teklif Al
             </h2>
             <button
               onClick={() => setIsOpen(false)}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
               aria-label="Kapat"
             >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
+          {/* Form Container - Scrollable */}
+          <div className="flex-1 overflow-y-auto p-6 md:p-8 pt-4">
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="teklif-name" className="block text-sm font-semibold text-gray-700 mb-2">
-                Ad Soyad <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                id="teklif-name"
-                name="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                placeholder="Adınız Soyadınız"
-              />
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {submitStatus === 'success' && (
+              <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-green-800 font-semibold text-sm">
+                  ✓ Teklif talebiniz başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                </p>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-800 font-semibold text-sm">
+                  ✗ Bir hata oluştu. Lütfen tekrar deneyin veya bizimle iletişime geçin.
+                </p>
+              </div>
+            )}
+
+            {/* Kişisel Bilgiler */}
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <h3 className="text-base font-bold text-[#261dcf] mb-2">Kişisel Bilgiler</h3>
+              <div className="grid grid-cols-1 gap-2">
+                <div>
+                  <label htmlFor="teklif-name" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Ad Soyad <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="teklif-name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                    placeholder="Adınız ve Soyadınız"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="teklif-company" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Firma/Şirket Adı
+                  </label>
+                  <input
+                    type="text"
+                    id="teklif-company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                    placeholder="Firma veya Şirket Adı"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <div>
+                    <label htmlFor="teklif-phone" className="block text-xs font-semibold text-gray-700 mb-1">
+                      Telefon <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="teklif-phone"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                      placeholder="0 (5XX) XXX XX XX"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="teklif-email" className="block text-xs font-semibold text-gray-700 mb-1">
+                      E-posta <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="teklif-email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                      placeholder="ornek@email.com"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <label htmlFor="teklif-email" className="block text-sm font-semibold text-gray-700 mb-2">
-                E-posta <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                id="teklif-email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                placeholder="ornek@email.com"
-              />
+            {/* Ürün/Hizmet Bilgileri */}
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <h3 className="text-base font-bold text-[#261dcf] mb-2">Ürün/Hizmet Bilgileri</h3>
+              <div className="space-y-2">
+                <div>
+                  <label htmlFor="teklif-productType" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Ürün/Hizmet Türü <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    id="teklif-productType"
+                    name="productType"
+                    required
+                    value={formData.productType}
+                    onChange={handleChange}
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
+                  >
+                    <option value="">Seçiniz</option>
+                    <optgroup label="Ürünler">
+                      <option value="zam">ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)</option>
+                      <option value="sicak-haddelenmis-sac">Sıcak Haddelenmiş Sac</option>
+                      <option value="galvanizli-sac">Galvanizli Sac</option>
+                      <option value="boyali-sac">Boyalı Sac</option>
+                      <option value="soguk-haddelenmis-sac">Soğuk Haddelenmiş Sac</option>
+                      <option value="asitlenmis-sac">Asitlenmiş Sac</option>
+                      <option value="silisli-sac">Silisli Sac</option>
+                      <option value="boru-ve-profil">Boru ve Profil</option>
+                      <option value="insaat-demiri">İnşaat Demiri</option>
+                    </optgroup>
+                    <optgroup label="Hizmetler">
+                      <option value="celik-servis-hizmetleri">Çelik Servis Hizmetleri</option>
+                      <option value="musteri-teknik-hizmetleri">Müşteri Teknik Hizmetleri</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="teklif-quantity" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Miktar/Tutar
+                  </label>
+                  <input
+                    type="text"
+                    id="teklif-quantity"
+                    name="quantity"
+                    value={formData.quantity}
+                    onChange={handleChange}
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                    placeholder="Örn: 100 ton, 500 m², vb."
+                  />
+                </div>
+                <div>
+                  <label htmlFor="teklif-deliveryAddress" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Teslimat Adresi
+                  </label>
+                  <textarea
+                    id="teklif-deliveryAddress"
+                    name="deliveryAddress"
+                    rows={2}
+                    value={formData.deliveryAddress}
+                    onChange={handleChange}
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
+                    placeholder="Teslimat yapılacak adres bilgileri"
+                  />
+                </div>
+              </div>
             </div>
 
-            <div>
-              <label htmlFor="teklif-phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                Telefon <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="tel"
-                id="teklif-phone"
-                name="phone"
-                required
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                placeholder="0 (5XX) XXX XX XX"
-              />
+            {/* Ek Bilgiler */}
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <h3 className="text-base font-bold text-[#261dcf] mb-2">Ek Bilgiler</h3>
+              <div className="space-y-2">
+                <div>
+                  <label htmlFor="teklif-message" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Mesaj/Notlar
+                  </label>
+                  <textarea
+                    id="teklif-message"
+                    name="message"
+                    rows={3}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
+                    placeholder="Eklemek istediğiniz özel notlar, teknik şartlar, kalite gereksinimleri vb."
+                  />
+                </div>
+                <div>
+                  <label htmlFor="teklif-file" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Dosya Ekle
+                  </label>
+                  <input
+                    type="file"
+                    id="teklif-file"
+                    name="file"
+                    accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png"
+                    onChange={handleFileChange}
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
+                  />
+                  {formData.file && (
+                    <p className="mt-1 text-xs text-gray-600">
+                      Seçilen: {formData.file.name}
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
 
-            <div>
-              <label htmlFor="teklif-company" className="block text-sm font-semibold text-gray-700 mb-2">
-                Şirket (Opsiyonel)
-              </label>
-              <input
-                type="text"
-                id="teklif-company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                placeholder="Şirket Adı"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="teklif-product" className="block text-sm font-semibold text-gray-700 mb-2">
-                Ürün/Service <span className="text-red-500">*</span>
-              </label>
-              <select
-                id="teklif-product"
-                name="product"
-                required
-                value={formData.product}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
-              >
-                <option value="">Ürün/Hizmet Seçiniz</option>
-                <option value="sicak-haddelenmis">Sıcak Haddelenmiş Asitlenmiş Sac</option>
-                <option value="soguk-haddelenmis">Soğuk Haddelenmiş Sac</option>
-                <option value="galvanizli">Galvanizli Sac</option>
-                <option value="boyali">Boyalı Sac</option>
-                <option value="celik-servis">Çelik Servis Hizmetleri</option>
-                <option value="teknik-hizmet">Müşteri Teknik Hizmetleri</option>
-                <option value="laboratuvar">Metal Steel Laboratuvarları</option>
-                <option value="diger">Diğer</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="teklif-message" className="block text-sm font-semibold text-gray-700 mb-2">
-                Mesajınız (Opsiyonel)
-              </label>
-              <textarea
-                id="teklif-message"
-                name="message"
-                rows={4}
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                placeholder="Ek bilgiler, notlar..."
-              />
-            </div>
-
-            <div>
+            <div className="flex flex-col gap-2 pt-2">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-8 py-4 bg-[#261dcf] text-white font-bold rounded-lg transition-all ${
-                  isSubmitting
-                    ? 'opacity-50 cursor-not-allowed'
-                    : 'hover:bg-[#1a16a8] hover:shadow-lg transform hover:scale-105'
-                }`}
+                className="w-full bg-[#261dcf] hover:bg-[#1a16a8] text-white font-bold py-2.5 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
-                {isSubmitting ? 'Gönderiliyor...' : 'TEKLİF TALEBİ GÖNDER'}
+                {isSubmitting ? 'Gönderiliyor...' : 'Teklif İste'}
               </button>
+              <a
+                href="/iletisim"
+                className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2.5 px-6 rounded-lg transition-colors text-center text-sm"
+              >
+                İletişime Geç
+              </a>
             </div>
-
-            {/* Status Messages */}
-            {submitStatus === 'success' && (
-              <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                ✓ Teklif talebiniz başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
-              </div>
-            )}
-            {submitStatus === 'error' && (
-              <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
-                Bir hata oluştu. Lütfen tekrar deneyin.
-              </div>
-            )}
           </form>
+          </div>
           </div>
         </div>
       </div>
