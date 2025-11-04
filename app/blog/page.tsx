@@ -46,7 +46,7 @@ export default async function BlogPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+            {blogPosts.map((post: any) => (
               <a 
                 key={post.id}
                 href={`/blog/${post.slug}`}

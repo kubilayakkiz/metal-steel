@@ -34,9 +34,3 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function POST_LOGOUT(request: NextRequest) {
-  const response = NextResponse.json({ success: true });
-  response.cookies.delete('admin_token');
-  return response;
-}
-

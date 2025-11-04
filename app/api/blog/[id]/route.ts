@@ -21,11 +21,12 @@ async function writeBlogData(data: any[]) {
 // GET - Tek bir blog yazısını getir
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const blogs = await readBlogData();
-    const blog = blogs.find((b: any) => b.id === parseInt(params.id));
+    const blog = blogs.find((b: any) => b.id === parseInt(id));
     
     if (!blog) {
       return NextResponse.json({ error: 'Blog yazısı bulunamadı' }, { status: 404 });
@@ -40,7 +41,7 @@ export async function GET(
 // PUT - Blog yazısını güncelle
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   // Authentication kontrolü
   const auth = requireAuth(request);
@@ -49,9 +50,10 @@ export async function PUT(
   }
 
   try {
+    const { id } = await params;
     const body = await request.json();
     const blogs = await readBlogData();
-    const index = blogs.findIndex((b: any) => b.id === parseInt(params.id));
+    const index = blogs.findIndex((b: any) => b.id === parseInt(id));
     
     if (index === -1) {
       return NextResponse.json({ error: 'Blog yazısı bulunamadı' }, { status: 404 });
@@ -76,7 +78,7 @@ export async function PUT(
     blogs[index] = {
       ...blogs[index],
       ...body,
-      id: parseInt(params.id),
+      id: parseInt(id),
       slug: body.slug || slug,
     };
 
@@ -90,7 +92,7 @@ export async function PUT(
 // DELETE - Blog yazısını sil
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   // Authentication kontrolü
   const auth = requireAuth(request);
@@ -99,8 +101,9 @@ export async function DELETE(
   }
 
   try {
+    const { id } = await params;
     const blogs = await readBlogData();
-    const filteredBlogs = blogs.filter((b: any) => b.id !== parseInt(params.id));
+    const filteredBlogs = blogs.filter((b: any) => b.id !== parseInt(id));
     
     if (filteredBlogs.length === blogs.length) {
       return NextResponse.json({ error: 'Blog yazısı bulunamadı' }, { status: 404 });
