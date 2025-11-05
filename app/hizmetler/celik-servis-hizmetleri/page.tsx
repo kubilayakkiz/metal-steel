@@ -9,8 +9,16 @@ export default function CelikServisHizmetleriPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden bg-gradient-to-br from-[#261dcf] to-[#1a1a5e] text-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
+        <div className="absolute inset-0">
+          <img 
+            src="/celikservis1.JPG" 
+            alt="Çelik Servis Hizmetleri"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
+        </div>
+        <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
             Çelik Servis Hizmetleri
           </h1>
@@ -24,11 +32,11 @@ export default function CelikServisHizmetleriPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative">
               <img 
-                src="https://placehold.co/1200x400/261dcf/ffffff?text=Çelik+Servis+Hizmetleri" 
+                src="/celikservis2.jpg" 
                 alt="Çelik Servis Hizmetleri"
-                className="w-full h-full object-cover"
+                className="w-full h-64 md:h-80 object-cover opacity-80"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
@@ -60,11 +68,11 @@ export default function CelikServisHizmetleriPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative">
               <img 
-                src="https://placehold.co/1200x300/261dcf/ffffff?text=Hizmet+Alanları" 
+                src="/celikservis1.JPG" 
                 alt="Hizmet Alanları"
-                className="w-full h-full object-cover"
+                className="w-full h-48 md:h-64 object-cover opacity-70"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
