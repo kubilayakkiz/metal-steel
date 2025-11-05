@@ -14,7 +14,7 @@ export default function CelikServisHizmetleriPage() {
           <img 
             src="/celikservis1.JPG" 
             alt="Çelik Servis Hizmetleri"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
         </div>
