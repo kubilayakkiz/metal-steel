@@ -12,7 +12,7 @@ export default function BoyaliSacPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="https://placehold.co/1200x400/261dcf/ffffff?text=Boyalı+Sac" 
+            src="/Boyali-Sac.jpg" 
             alt="Boyalı Sac"
             className="w-full h-full object-cover"
           />
@@ -34,9 +34,9 @@ export default function BoyaliSacPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
-                src="https://placehold.co/1200x400/261dcf/ffffff?text=Boyalı+Sac" 
+                src="/Boyali-Sac.jpg" 
                 alt="Boyalı Sac"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute inset-0 bg-[#261dcf]/30"></div>
             </div>
