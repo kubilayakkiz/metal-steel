@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { useTranslations } from '@/lib/i18n/hooks';
+import { getPathWithLocale } from '@/lib/i18n/translations';
 
 export default function BasvuruPage() {
-  const { t } = useTranslations();
+  const { t, locale } = useTranslations();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -68,18 +69,18 @@ export default function BasvuruPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="https://placehold.co/1200x400/261dcf/ffffff?text=Basvuru" 
-            alt="Başvuru"
+            src="https://placehold.co/1200x400/261dcf/ffffff?text=Application" 
+            alt={t.career.basvuru.title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
-            Başvuru Formu
+            {t.career.basvuru.title}
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl">
-            Kariyerinize yeni bir yön verin, bizimle çalışın
+            {t.career.basvuru.subtitle}
           </p>
         </div>
       </section>
@@ -90,22 +91,21 @@ export default function BasvuruPage() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-[#261dcf] mb-4">
-                İş Başvuru Formu
+                {t.career.basvuru.formTitle}
               </h2>
               <p className="text-gray-700 mb-6">
-                Aşağıdaki formu doldurarak başvurunuzu yapabilirsiniz. Başvurularınız yetenek havuzumuza eklenir ve 
-                uygun pozisyonlar için değerlendirilir. Pozisyon belirtmek zorunlu değildir, genel başvuru da yapabilirsiniz.
+                {t.career.basvuru.formDesc}
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Kişisel Bilgiler */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Kişisel Bilgiler</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.personalInfo}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Ad Soyad <span className="text-red-500">*</span>
+                      {t.career.basvuru.name} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -115,13 +115,13 @@ export default function BasvuruPage() {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                      placeholder="Adınız Soyadınız"
+                      placeholder={t.career.basvuru.name}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                      E-posta <span className="text-red-500">*</span>
+                      {t.career.basvuru.email} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -131,13 +131,13 @@ export default function BasvuruPage() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                      placeholder="ornek@email.com"
+                      placeholder="example@email.com"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Telefon <span className="text-red-500">*</span>
+                      {t.career.basvuru.phone} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
@@ -153,7 +153,7 @@ export default function BasvuruPage() {
 
                   <div>
                     <label htmlFor="position" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Başvurulan Pozisyon <span className="text-gray-500 text-xs">(Opsiyonel)</span>
+                      {t.career.basvuru.position} <span className="text-gray-500 text-xs">{t.career.basvuru.optional}</span>
                     </label>
                     <select
                       id="position"
@@ -162,14 +162,14 @@ export default function BasvuruPage() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
                     >
-                      <option value="">Genel Başvuru (Yetenek Havuzu)</option>
-                      <option value="uretim-muhendisi">Üretim Mühendisi</option>
-                      <option value="satis-temsilcisi">Satış Temsilcisi</option>
-                      <option value="kalite-kontrol">Kalite Kontrol Uzmanı</option>
-                      <option value="muhendis">Mühendis</option>
-                      <option value="teknisyen">Teknisyen</option>
-                      <option value="yonetici">Yönetici</option>
-                      <option value="diger">Diğer</option>
+                      <option value="">{t.career.basvuru.generalApplication}</option>
+                      <option value="uretim-muhendisi">{t.career.basvuru.productionEngineer}</option>
+                      <option value="satis-temsilcisi">{t.career.basvuru.salesRepresentative}</option>
+                      <option value="kalite-kontrol">{t.career.basvuru.qualityControl}</option>
+                      <option value="muhendis">{t.career.basvuru.engineer}</option>
+                      <option value="teknisyen">{t.career.basvuru.technician}</option>
+                      <option value="yonetici">{t.career.basvuru.manager}</option>
+                      <option value="diger">{t.career.basvuru.other}</option>
                     </select>
                   </div>
                 </div>
@@ -177,11 +177,11 @@ export default function BasvuruPage() {
 
               {/* Eğitim ve Deneyim */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Eğitim ve Deneyim</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.educationExperience}</h3>
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="education" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Eğitim Bilgileri <span className="text-red-500">*</span>
+                      {t.career.basvuru.educationInfo} <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="education"
@@ -191,13 +191,13 @@ export default function BasvuruPage() {
                       value={formData.education}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                      placeholder="Mezun olduğunuz okul, bölüm, mezuniyet yılı ve varsa lisansüstü eğitim bilgileriniz..."
+                      placeholder={t.career.basvuru.educationPlaceholder}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="experience" className="block text-sm font-semibold text-gray-700 mb-2">
-                      İş Deneyimi <span className="text-red-500">*</span>
+                      {t.career.basvuru.workExperience} <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="experience"
@@ -207,7 +207,7 @@ export default function BasvuruPage() {
                       value={formData.experience}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                      placeholder="Önceki iş deneyimleriniz, görevleriniz ve sorumluluklarınız..."
+                      placeholder={t.career.basvuru.workExperiencePlaceholder}
                     />
                   </div>
                 </div>
@@ -215,10 +215,10 @@ export default function BasvuruPage() {
 
               {/* Ön Yazı */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Ön Yazı</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.coverLetter}</h3>
                 <div>
                   <label htmlFor="coverLetter" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Neden Bizimle Çalışmak İstiyorsunuz? <span className="text-red-500">*</span>
+                    {t.career.basvuru.coverLetterQuestion} <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="coverLetter"
@@ -228,18 +228,18 @@ export default function BasvuruPage() {
                     value={formData.coverLetter}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                    placeholder="Kendinizi tanıtın ve neden bizimle çalışmak istediğinizi açıklayın..."
+                    placeholder={t.career.basvuru.coverLetterPlaceholder}
                   />
                 </div>
               </div>
 
               {/* CV Yükleme */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Özgeçmiş (CV)</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.resume}</h3>
                 <div>
                   <label htmlFor="resume" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Özgeçmiş Dosyası <span className="text-red-500">*</span>
-                    <span className="text-gray-500 text-xs ml-2">(PDF, DOC, DOCX - Max 5MB)</span>
+                    {t.career.basvuru.resumeFile} <span className="text-red-500">*</span>
+                    <span className="text-gray-500 text-xs ml-2">{t.career.basvuru.resumeFormat}</span>
                   </label>
                   <div className="relative">
                     <input
@@ -257,16 +257,16 @@ export default function BasvuruPage() {
                         onClick={() => document.getElementById('resume')?.click()}
                         className="px-4 py-2 bg-[#261dcf] text-white text-sm font-semibold rounded-lg hover:bg-[#1a16a8] transition-colors flex-shrink-0"
                       >
-                        Dosya Seç
+                        {t.career.basvuru.chooseFile || 'Choose File'}
                       </button>
                       <span className="text-sm text-gray-500 flex-1">
-                        {formData.resume ? formData.resume.name : 'Dosya seçilmedi'}
+                        {formData.resume ? formData.resume.name : (t.career.basvuru.noFileChosen || 'No file chosen')}
                       </span>
                     </div>
                   </div>
                   {formData.resume && (
                     <p className="mt-2 text-sm text-gray-600">
-                      Seçili dosya: {formData.resume.name}
+                      {t.career.basvuru.selectedFile} {formData.resume.name}
                     </p>
                   )}
                 </div>
@@ -283,19 +283,19 @@ export default function BasvuruPage() {
                       : 'hover:bg-[#1a16a8] hover:shadow-lg transform hover:scale-105'
                   }`}
                 >
-                  {isSubmitting ? 'Gönderiliyor...' : 'BAŞVURUYU GÖNDER'}
+                  {isSubmitting ? t.career.basvuru.submitting : t.career.basvuru.submit}
                 </button>
               </div>
 
               {/* Status Messages */}
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                  ✓ Başvurunuz başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                  ✓ {t.career.basvuru.success}
                 </div>
               )}
               {submitStatus === 'error' && (
                 <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
-                  Bir hata oluştu. Lütfen tekrar deneyin veya bizimle doğrudan iletişime geçin.
+                  {t.career.basvuru.error}
                 </div>
               )}
             </form>

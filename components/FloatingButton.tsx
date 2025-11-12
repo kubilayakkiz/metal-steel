@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from '@/lib/i18n/hooks';
+import { getPathWithLocale } from '@/lib/i18n/translations';
 
 export default function FloatingButton() {
+  const { t, locale } = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -74,7 +77,7 @@ export default function FloatingButton() {
         <button
           onClick={() => setIsOpen(true)}
           className="bg-gradient-to-b from-[#261dcf]/30 to-[#1a16a8]/30 hover:from-[#261dcf] hover:to-[#1a16a8] text-white/70 hover:text-white shadow-[0_4px_20px_rgba(38,29,207,0.2)] hover:shadow-[0_6px_30px_rgba(38,29,207,0.6)] transition-all duration-300 transform hover:translate-x-[-4px] group rounded-l-2xl border-l-2 border-white/10 hover:border-white/30 backdrop-blur-sm px-4 py-6 flex flex-col items-center gap-3"
-          aria-label="Teklif Al"
+          aria-label={t.common.floatingButton.getQuote}
         >
           <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -83,7 +86,7 @@ export default function FloatingButton() {
             className="text-sm font-semibold"
             style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
           >
-            TEKLİF AL
+            {t.common.floatingButton.getQuote.toUpperCase()}
           </span>
         </button>
       </div>
@@ -118,12 +121,12 @@ export default function FloatingButton() {
           {/* Header */}
           <div className="flex items-center justify-between p-6 md:p-8 pb-4 border-b border-gray-200 flex-shrink-0">
             <h2 className="text-xl md:text-2xl font-bold text-[#261dcf]">
-              Teklif Al
+              {t.common.floatingButton.getQuote}
             </h2>
             <button
               onClick={() => setIsOpen(false)}
               className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-              aria-label="Kapat"
+              aria-label={t.common.floatingButton.close}
             >
               <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -138,7 +141,7 @@ export default function FloatingButton() {
             {submitStatus === 'success' && (
               <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                 <p className="text-green-800 font-semibold text-sm">
-                  ✓ Teklif talebiniz başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                  {t.common.floatingButton.success}
                 </p>
               </div>
             )}
@@ -146,18 +149,18 @@ export default function FloatingButton() {
             {submitStatus === 'error' && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
                 <p className="text-red-800 font-semibold text-sm">
-                  ✗ Bir hata oluştu. Lütfen tekrar deneyin veya bizimle iletişime geçin.
+                  {t.common.floatingButton.error}
                 </p>
               </div>
             )}
 
             {/* Kişisel Bilgiler */}
             <div className="bg-gray-50 p-3 rounded-lg">
-              <h3 className="text-base font-bold text-[#261dcf] mb-2">Kişisel Bilgiler</h3>
+              <h3 className="text-base font-bold text-[#261dcf] mb-2">{t.common.floatingButton.personalInfo}</h3>
               <div className="grid grid-cols-1 gap-2">
                 <div>
                   <label htmlFor="teklif-name" className="block text-xs font-semibold text-gray-700 mb-1">
-                    Ad Soyad <span className="text-red-500">*</span>
+                    {t.common.floatingButton.name} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -167,12 +170,12 @@ export default function FloatingButton() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                    placeholder="Adınız ve Soyadınız"
+                    placeholder={t.common.floatingButton.namePlaceholder}
                   />
                 </div>
                 <div>
                   <label htmlFor="teklif-company" className="block text-xs font-semibold text-gray-700 mb-1">
-                    Firma/Şirket Adı
+                    {t.common.floatingButton.company}
                   </label>
                   <input
                     type="text"
@@ -181,13 +184,13 @@ export default function FloatingButton() {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                    placeholder="Firma veya Şirket Adı"
+                    placeholder={t.common.floatingButton.companyPlaceholder}
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <div>
                     <label htmlFor="teklif-phone" className="block text-xs font-semibold text-gray-700 mb-1">
-                      Telefon <span className="text-red-500">*</span>
+                      {t.common.floatingButton.phone} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
@@ -197,12 +200,12 @@ export default function FloatingButton() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                      placeholder="0 (5XX) XXX XX XX"
+                      placeholder={t.common.floatingButton.phonePlaceholder}
                     />
                   </div>
                   <div>
                     <label htmlFor="teklif-email" className="block text-xs font-semibold text-gray-700 mb-1">
-                      E-posta <span className="text-red-500">*</span>
+                      {t.common.floatingButton.email} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -212,7 +215,7 @@ export default function FloatingButton() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                      placeholder="ornek@email.com"
+                      placeholder={t.common.floatingButton.emailPlaceholder}
                     />
                   </div>
                 </div>
@@ -221,11 +224,11 @@ export default function FloatingButton() {
 
             {/* Ürün/Hizmet Bilgileri */}
             <div className="bg-gray-50 p-3 rounded-lg">
-              <h3 className="text-base font-bold text-[#261dcf] mb-2">Ürün/Hizmet Bilgileri</h3>
+              <h3 className="text-base font-bold text-[#261dcf] mb-2">{t.common.floatingButton.productServiceInfo}</h3>
               <div className="space-y-2">
                 <div>
                   <label htmlFor="teklif-productType" className="block text-xs font-semibold text-gray-700 mb-1">
-                    Ürün/Hizmet Türü <span className="text-red-500">*</span>
+                    {t.common.floatingButton.productType} <span className="text-red-500">*</span>
                   </label>
                   <select
                     id="teklif-productType"
@@ -235,27 +238,27 @@ export default function FloatingButton() {
                     onChange={handleChange}
                     className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
                   >
-                    <option value="">Seçiniz</option>
-                    <optgroup label="Ürünler">
-                      <option value="zam">ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)</option>
-                      <option value="sicak-haddelenmis-sac">Sıcak Haddelenmiş Sac</option>
-                      <option value="galvanizli-sac">Galvanizli Sac</option>
-                      <option value="boyali-sac">Boyalı Sac</option>
-                      <option value="soguk-haddelenmis-sac">Soğuk Haddelenmiş Sac</option>
-                      <option value="asitlenmis-sac">Asitlenmiş Sac</option>
-                      <option value="silisli-sac">Silisli Sac</option>
-                      <option value="boru-ve-profil">Boru ve Profil</option>
-                      <option value="insaat-demiri">İnşaat Demiri</option>
+                    <option value="">{t.common.floatingButton.select}</option>
+                    <optgroup label={t.common.floatingButton.products}>
+                      <option value="zam">{t.home.productsList.zam}</option>
+                      <option value="sicak-haddelenmis-sac">{t.home.productsList.sicakHaddelenmisSac}</option>
+                      <option value="galvanizli-sac">{t.home.productsList.galvanizliSac}</option>
+                      <option value="boyali-sac">{t.home.productsList.boyaliSac}</option>
+                      <option value="soguk-haddelenmis-sac">{t.home.productsList.sogukHaddelenmisSac}</option>
+                      <option value="asitlenmis-sac">{t.home.productsList.asitlenmisSac}</option>
+                      <option value="silisli-sac">{t.home.productsList.silisliSac}</option>
+                      <option value="boru-ve-profil">{t.home.productsList.boruProfil}</option>
+                      <option value="insaat-demiri">{t.home.productsList.insaatDemiri}</option>
                     </optgroup>
-                    <optgroup label="Hizmetler">
-                      <option value="celik-servis-hizmetleri">Çelik Servis Hizmetleri</option>
-                      <option value="musteri-teknik-hizmetleri">Müşteri Teknik Hizmetleri</option>
+                    <optgroup label={t.common.floatingButton.services}>
+                      <option value="celik-servis-hizmetleri">{t.home.servicesList.celikServis}</option>
+                      <option value="musteri-teknik-hizmetleri">{t.home.servicesList.musteriTeknik}</option>
                     </optgroup>
                   </select>
                 </div>
                 <div>
                   <label htmlFor="teklif-quantity" className="block text-xs font-semibold text-gray-700 mb-1">
-                    Miktar/Tutar
+                    {t.common.floatingButton.quantity}
                   </label>
                   <input
                     type="text"
@@ -264,12 +267,12 @@ export default function FloatingButton() {
                     value={formData.quantity}
                     onChange={handleChange}
                     className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                    placeholder="Örn: 100 ton, 500 m², vb."
+                    placeholder={t.common.floatingButton.quantityPlaceholder}
                   />
                 </div>
                 <div>
                   <label htmlFor="teklif-deliveryAddress" className="block text-xs font-semibold text-gray-700 mb-1">
-                    Teslimat Adresi
+                    {t.common.floatingButton.deliveryAddress}
                   </label>
                   <textarea
                     id="teklif-deliveryAddress"
@@ -278,7 +281,7 @@ export default function FloatingButton() {
                     value={formData.deliveryAddress}
                     onChange={handleChange}
                     className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                    placeholder="Teslimat yapılacak adres bilgileri"
+                    placeholder={t.common.floatingButton.deliveryAddressPlaceholder}
                   />
                 </div>
               </div>
@@ -286,11 +289,11 @@ export default function FloatingButton() {
 
             {/* Ek Bilgiler */}
             <div className="bg-gray-50 p-3 rounded-lg">
-              <h3 className="text-base font-bold text-[#261dcf] mb-2">Ek Bilgiler</h3>
+              <h3 className="text-base font-bold text-[#261dcf] mb-2">{t.common.floatingButton.additionalInfo}</h3>
               <div className="space-y-2">
                 <div>
                   <label htmlFor="teklif-message" className="block text-xs font-semibold text-gray-700 mb-1">
-                    Mesaj/Notlar
+                    {t.common.floatingButton.message}
                   </label>
                   <textarea
                     id="teklif-message"
@@ -299,24 +302,38 @@ export default function FloatingButton() {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                    placeholder="Eklemek istediğiniz özel notlar, teknik şartlar, kalite gereksinimleri vb."
+                    placeholder={t.common.floatingButton.messagePlaceholder}
                   />
                 </div>
                 <div>
                   <label htmlFor="teklif-file" className="block text-xs font-semibold text-gray-700 mb-1">
-                    Dosya Ekle
+                    {t.common.floatingButton.fileUpload}
                   </label>
-                  <input
-                    type="file"
-                    id="teklif-file"
-                    name="file"
-                    accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png"
-                    onChange={handleFileChange}
-                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
-                  />
+                  <div className="relative">
+                    <input
+                      type="file"
+                      id="teklif-file"
+                      name="file"
+                      accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png"
+                      onChange={handleFileChange}
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                    />
+                    <div className="flex items-center gap-2 border border-gray-300 rounded-lg bg-white p-2">
+                      <button
+                        type="button"
+                        onClick={() => document.getElementById('teklif-file')?.click()}
+                        className="px-3 py-1.5 bg-[#261dcf] text-white text-xs font-semibold rounded-lg hover:bg-[#1a16a8] transition-colors flex-shrink-0"
+                      >
+                        {t.getQuote?.chooseFile || t.common.floatingButton.fileUpload || 'Dosya Seç'}
+                      </button>
+                      <span className="text-xs text-gray-500 flex-1 truncate">
+                        {formData.file ? formData.file.name : (t.getQuote?.noFileChosen || 'Dosya seçilmedi')}
+                      </span>
+                    </div>
+                  </div>
                   {formData.file && (
                     <p className="mt-1 text-xs text-gray-600">
-                      Seçilen: {formData.file.name}
+                      {t.common.floatingButton.selected} {formData.file.name}
                     </p>
                   )}
                 </div>
@@ -329,13 +346,13 @@ export default function FloatingButton() {
                 disabled={isSubmitting}
                 className="w-full bg-[#261dcf] hover:bg-[#1a16a8] text-white font-bold py-2.5 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
-                {isSubmitting ? 'Gönderiliyor...' : 'Teklif İste'}
+                {isSubmitting ? t.common.floatingButton.submitting : t.common.floatingButton.submit}
               </button>
               <a
-                href="/iletisim"
+                href={getPathWithLocale('/iletisim', locale)}
                 className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2.5 px-6 rounded-lg transition-colors text-center text-sm"
               >
-                İletişime Geç
+                {t.common.floatingButton.contact}
               </a>
             </div>
           </form>

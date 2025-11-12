@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { useTranslations } from '@/lib/i18n/hooks';
+import { getPathWithLocale } from '@/lib/i18n/translations';
 
-export default function TeklifAlPage() {
-  const { t } = useTranslations();
+export default function TeklifAlPageEN() {
+  const { t, locale } = useTranslations();
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -41,7 +42,6 @@ export default function TeklifAlPage() {
     setSubmitStatus('idle');
 
     try {
-      // TODO: API endpoint'e form verilerini gönder
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       setSubmitStatus('success');
@@ -71,17 +71,17 @@ export default function TeklifAlPage() {
         <div className="absolute inset-0">
           <img 
             src="/bizimleiletisimegecin.jpg" 
-            alt="Teklif Al"
+            alt={t.getQuote.title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
-            Teklif Al
+            {t.getQuote.title}
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl">
-            Size özel çözümler ve en uygun fiyat teklifleri için detaylı bilgilerinizi paylaşın
+            {t.getQuote.subtitle}
           </p>
         </div>
       </section>
@@ -92,13 +92,13 @@ export default function TeklifAlPage() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h2 className="text-2xl md:text-3xl font-bold text-[#261dcf] mb-6 text-center">
-                Teklif İstek Formu
+                {t.getQuote.formTitle}
               </h2>
 
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                   <p className="text-green-800 font-semibold">
-                    ✓ Teklif talebiniz başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                    ✓ {t.getQuote.success}
                   </p>
                 </div>
               )}
@@ -106,7 +106,7 @@ export default function TeklifAlPage() {
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                   <p className="text-red-800 font-semibold">
-                    ✗ Bir hata oluştu. Lütfen tekrar deneyin veya bizimle iletişime geçin.
+                    ✗ {t.getQuote.error}
                   </p>
                 </div>
               )}
@@ -114,11 +114,11 @@ export default function TeklifAlPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Kişisel Bilgiler */}
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-4">Kişisel Bilgiler</h3>
+                  <h3 className="text-xl font-bold text-[#261dcf] mb-4">Personal Information</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Ad Soyad <span className="text-red-500">*</span>
+                        {t.getQuote.name} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -128,12 +128,12 @@ export default function TeklifAlPage() {
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                        placeholder="Adınız ve Soyadınız"
+                        placeholder={t.getQuote.name}
                       />
                     </div>
                     <div>
                       <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Firma/Şirket Adı
+                        {t.getQuote.company}
                       </label>
                       <input
                         type="text"
@@ -142,12 +142,12 @@ export default function TeklifAlPage() {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                        placeholder="Firma veya Şirket Adı"
+                        placeholder={t.getQuote.company}
                       />
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Telefon <span className="text-red-500">*</span>
+                        {t.getQuote.phone} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="tel"
@@ -157,12 +157,12 @@ export default function TeklifAlPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                        placeholder="0 (5XX) XXX XX XX"
+                        placeholder={t.getQuote.phone}
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                        E-posta <span className="text-red-500">*</span>
+                        {t.getQuote.email} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
@@ -172,7 +172,7 @@ export default function TeklifAlPage() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                        placeholder="ornek@email.com"
+                        placeholder={t.getQuote.email}
                       />
                     </div>
                   </div>
@@ -180,11 +180,11 @@ export default function TeklifAlPage() {
 
                 {/* Ürün/Hizmet Bilgileri */}
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-4">Ürün/Hizmet Bilgileri</h3>
+                  <h3 className="text-xl font-bold text-[#261dcf] mb-4">Product/Service Information</h3>
                   <div className="space-y-4">
                     <div>
                       <label htmlFor="productType" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Ürün/Hizmet Türü <span className="text-red-500">*</span>
+                        {t.getQuote.productType} <span className="text-red-500">*</span>
                       </label>
                       <select
                         id="productType"
@@ -194,27 +194,27 @@ export default function TeklifAlPage() {
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
                       >
-                        <option value="">Seçiniz</option>
-                        <optgroup label="Ürünler">
-                          <option value="zam">ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)</option>
-                          <option value="sicak-haddelenmis-sac">Sıcak Haddelenmiş Sac</option>
-                          <option value="galvanizli-sac">Galvanizli Sac</option>
-                          <option value="boyali-sac">Boyalı Sac</option>
-                          <option value="soguk-haddelenmis-sac">Soğuk Haddelenmiş Sac</option>
-                          <option value="asitlenmis-sac">Asitlenmiş Sac</option>
-                          <option value="silisli-sac">Silisli Sac</option>
-                          <option value="boru-ve-profil">Boru ve Profil</option>
-                          <option value="insaat-demiri">İnşaat Demiri</option>
+                        <option value="">Select</option>
+                        <optgroup label={t.common.products}>
+                          <option value="zam">{t.home.productsList.zam}</option>
+                          <option value="sicak-haddelenmis-sac">{t.home.productsList.sicakHaddelenmisSac}</option>
+                          <option value="galvanizli-sac">{t.home.productsList.galvanizliSac}</option>
+                          <option value="boyali-sac">{t.home.productsList.boyaliSac}</option>
+                          <option value="soguk-haddelenmis-sac">{t.home.productsList.sogukHaddelenmisSac}</option>
+                          <option value="asitlenmis-sac">{t.home.productsList.asitlenmisSac}</option>
+                          <option value="silisli-sac">{t.home.productsList.silisliSac}</option>
+                          <option value="boru-ve-profil">{t.home.productsList.boruProfil}</option>
+                          <option value="insaat-demiri">{t.home.productsList.insaatDemiri}</option>
                         </optgroup>
-                        <optgroup label="Hizmetler">
-                          <option value="celik-servis-hizmetleri">Çelik Servis Hizmetleri</option>
-                          <option value="musteri-teknik-hizmetleri">Müşteri Teknik Hizmetleri</option>
+                        <optgroup label={t.common.services}>
+                          <option value="celik-servis-hizmetleri">{t.home.servicesList.celikServis}</option>
+                          <option value="musteri-teknik-hizmetleri">{t.home.servicesList.musteriTeknik}</option>
                         </optgroup>
                       </select>
                     </div>
                     <div>
                       <label htmlFor="quantity" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Miktar/Tutar
+                        {t.getQuote.quantity}
                       </label>
                       <input
                         type="text"
@@ -223,12 +223,12 @@ export default function TeklifAlPage() {
                         value={formData.quantity}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
-                        placeholder="Örn: 100 ton, 500 m², vb."
+                        placeholder="E.g: 100 tons, 500 m², etc."
                       />
                     </div>
                     <div>
                       <label htmlFor="deliveryAddress" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Teslimat Adresi
+                        {t.getQuote.deliveryAddress}
                       </label>
                       <textarea
                         id="deliveryAddress"
@@ -237,7 +237,7 @@ export default function TeklifAlPage() {
                         value={formData.deliveryAddress}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                        placeholder="Teslimat yapılacak adres bilgileri"
+                        placeholder={t.getQuote.deliveryAddress}
                       />
                     </div>
                   </div>
@@ -245,11 +245,11 @@ export default function TeklifAlPage() {
 
                 {/* Ek Bilgiler */}
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-4">Ek Bilgiler</h3>
+                  <h3 className="text-xl font-bold text-[#261dcf] mb-4">Additional Information</h3>
                   <div className="space-y-4">
                     <div>
                       <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Mesaj/Notlar
+                        {t.getQuote.message}
                       </label>
                       <textarea
                         id="message"
@@ -258,12 +258,12 @@ export default function TeklifAlPage() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
-                        placeholder="Eklemek istediğiniz özel notlar, teknik şartlar, kalite gereksinimleri vb."
+                        placeholder={t.getQuote.message}
                       />
                     </div>
                     <div>
                       <label htmlFor="file" className="block text-sm font-semibold text-gray-700 mb-2">
-                        {t.getQuote.fileUploadWithDesc || 'Dosya Ekle (Teknik Çizim, Şartname, vb.)'}
+                        {t.getQuote.fileUploadWithDesc || t.getQuote.fileUpload}
                       </label>
                       <div className="relative">
                         <input
@@ -280,16 +280,16 @@ export default function TeklifAlPage() {
                             onClick={() => document.getElementById('file')?.click()}
                             className="px-4 py-2 bg-[#261dcf] text-white text-sm font-semibold rounded-lg hover:bg-[#1a16a8] transition-colors flex-shrink-0"
                           >
-                            {t.getQuote.chooseFile || 'Dosya Seç'}
+                            {t.getQuote.chooseFile || 'Choose File'}
                           </button>
                           <span className="text-sm text-gray-500 flex-1">
-                            {formData.file ? formData.file.name : (t.getQuote.noFileChosen || 'Dosya seçilmedi')}
+                            {formData.file ? formData.file.name : (t.getQuote.noFileChosen || 'No file chosen')}
                           </span>
                         </div>
                       </div>
                       {formData.file && (
                         <p className="mt-2 text-sm text-gray-600">
-                          {t.getQuote.selectedFile || 'Seçilen dosya:'} {formData.file.name}
+                          {t.getQuote.selectedFile || 'Selected file:'} {formData.file.name}
                         </p>
                       )}
                     </div>
@@ -303,13 +303,13 @@ export default function TeklifAlPage() {
                     disabled={isSubmitting}
                     className="flex-1 bg-[#261dcf] hover:bg-[#1a16a8] text-white font-bold py-4 px-8 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? 'Gönderiliyor...' : 'Teklif İste'}
+                    {isSubmitting ? t.getQuote.sending : t.getQuote.send}
                   </button>
                   <a
-                    href="/iletisim"
+                    href={getPathWithLocale('/iletisim', locale)}
                     className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-8 rounded-lg transition-colors text-center"
                   >
-                    İletişime Geç
+                    {t.common.contact}
                   </a>
                 </div>
               </form>
@@ -324,13 +324,11 @@ export default function TeklifAlPage() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-[#261dcf] mb-4">
-                Neden Bizimle Çalışmalısınız?
+                Why Work With Us?
               </h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. olarak, çelik sektöründe yılların verdiği deneyimle 
-                  müşterilerimize en kaliteli ürünleri ve hizmetleri sunuyoruz. Size özel teklif hazırlamak için 
-                  yukarıdaki formu doldurmanız yeterli.
+                  As Metal X Endüstriyel San. ve Tic. LTD. ŞTİ., we offer our customers the highest quality products and services with years of experience in the steel sector. To prepare a special quote for you, just fill out the form above.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                   <div className="flex items-start gap-3">
@@ -340,8 +338,8 @@ export default function TeklifAlPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">Hızlı Yanıt</h3>
-                      <p className="text-sm text-gray-600">24 saat içinde size özel teklif hazırlıyoruz</p>
+                      <h3 className="font-bold text-gray-900 mb-1">Quick Response</h3>
+                      <p className="text-sm text-gray-600">We prepare a special quote for you within 24 hours</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -351,8 +349,8 @@ export default function TeklifAlPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">Kaliteli Ürünler</h3>
-                      <p className="text-sm text-gray-600">Uluslararası standartlarda kalite garantisi</p>
+                      <h3 className="font-bold text-gray-900 mb-1">Quality Products</h3>
+                      <p className="text-sm text-gray-600">Quality guarantee in accordance with international standards</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -362,8 +360,8 @@ export default function TeklifAlPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">Rekabetçi Fiyatlar</h3>
-                      <p className="text-sm text-gray-600">En uygun fiyat garantisi ile hizmetinizdeyiz</p>
+                      <h3 className="font-bold text-gray-900 mb-1">Competitive Prices</h3>
+                      <p className="text-sm text-gray-600">We are at your service with the best price guarantee</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -373,8 +371,8 @@ export default function TeklifAlPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">Hızlı Teslimat</h3>
-                      <p className="text-sm text-gray-600">Zamanında ve güvenli teslimat garantisi</p>
+                      <h3 className="font-bold text-gray-900 mb-1">Fast Delivery</h3>
+                      <p className="text-sm text-gray-600">On-time and safe delivery guarantee</p>
                     </div>
                   </div>
                 </div>
@@ -389,7 +387,7 @@ export default function TeklifAlPage() {
         <div className="absolute inset-0">
           <img 
             src="/bizimleiletisimegecin.jpg" 
-            alt="Bizimle İletişime Geçin"
+            alt="Contact Us"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#261dcf]/80"></div>
@@ -397,13 +395,13 @@ export default function TeklifAlPage() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Sorularınız mı var?
+              Have Questions?
             </h2>
             <p className="text-xl mb-8 text-gray-100">
-              Teklif formunu doldurmak yerine doğrudan bizimle iletişime geçmek isterseniz, aşağıdaki butona tıklayın.
+              If you prefer to contact us directly instead of filling out the quote form, click the button below.
             </p>
-            <a href="/iletisim" className="inline-block px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
-              İletişim Sayfasına Git
+            <a href={getPathWithLocale('/iletisim', locale)} className="inline-block px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              Go to Contact Page
             </a>
           </div>
         </div>

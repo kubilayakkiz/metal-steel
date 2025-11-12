@@ -1,6 +1,10 @@
 'use client';
 
+import { useTranslations } from '@/lib/i18n/hooks';
+import { getPathWithLocale } from '@/lib/i18n/translations';
+
 export default function Footer() {
+  const { t, locale } = useTranslations();
   return (
     <footer className="w-full bg-[#261dcf] text-white">
       <div className="container mx-auto px-4 py-8 md:py-12">
@@ -9,7 +13,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="inline-flex items-center">
+              <a href={getPathWithLocale('/', locale)} className="inline-flex items-center">
                 <img 
                   src="/LogoMetalSteelWhite.png" 
                   alt="METAL X STEEL Logo" 
@@ -28,7 +32,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-300 text-xs mb-1">Telefon</p>
+                <p className="text-gray-300 text-xs mb-1">{t.common.phone || 'Telefon'}</p>
                 <a href="tel:+902123456789" className="text-white font-semibold hover:text-[#6dd5fb] transition-colors block">
                   +90 (212) 345 67 89
                 </a>
@@ -43,7 +47,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-300 text-xs mb-1">E-posta</p>
+                <p className="text-gray-300 text-xs mb-1">{t.common.email || 'E-posta'}</p>
                 <a href="mailto:info@metalxsteel.com" className="text-white font-semibold hover:text-[#6dd5fb] transition-colors block break-all">
                   info@metalxsteel.com
                 </a>
@@ -58,7 +62,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-300 text-xs mb-1">Sosyal Medya</p>
+                <p className="text-gray-300 text-xs mb-1">{t.common.socialMedia || 'Sosyal Medya'}</p>
                 <div className="flex items-center gap-3">
                   <a href="#" className="hover:text-[#6dd5fb] transition-colors" aria-label="LinkedIn">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -87,25 +91,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Main Footer Links - 5 Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 mb-8">
+        {/* Main Footer Links - 4 Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
           {/* Column 1: Kurumsal */}
           <div>
-            <h3 className="font-bold mb-4 text-white">Kurumsal</h3>
+            <h3 className="font-bold mb-4 text-white">{t.common.corporate || 'Kurumsal'}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Hakkımızda
+                <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="hover:text-white transition-colors">
+                  {t.common.about_us || 'Hakkımızda'}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Politikalarımız
+                <a href={getPathWithLocale('/kurumsal/politikalarimiz', locale)} className="hover:text-white transition-colors">
+                  {t.common.our_policies || 'Politikalarımız'}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Kurumsal Kimlik
+                <a href={getPathWithLocale('/kurumsal/kurumsal-kimlik', locale)} className="hover:text-white transition-colors">
+                  {t.common.corporate_identity || 'Kurumsal Kimlik'}
                 </a>
               </li>
             </ul>
@@ -113,44 +117,44 @@ export default function Footer() {
 
           {/* Column 2: Ürünler ve Hizmetler */}
           <div>
-            <h3 className="font-bold mb-4 text-white">Ürünler ve Hizmetler</h3>
+            <h3 className="font-bold mb-4 text-white">{t.home.productsAndServices.title || 'Ürünler ve Hizmetler'}</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold mb-2 text-white text-sm">Ürünler</h4>
+                <h4 className="font-semibold mb-2 text-white text-sm">{t.common.products || 'Ürünler'}</h4>
                 <ul className="space-y-2 text-sm text-gray-300 pl-2">
                   <li>
-                    <a href="/urunler/sicak-haddelenmis-asitlenmis-sac" className="hover:text-white transition-colors">
-                      Sıcak Haddelenmiş Asitlenmiş Sac
+                    <a href={getPathWithLocale('/urunler/sicak-haddelenmis-asitlenmis-sac', locale)} className="hover:text-white transition-colors">
+                      {t.home.productsList.sicakHaddelenmisAsitlenmisSac || 'Sıcak Haddelenmiş Asitlenmiş Sac'}
                     </a>
                   </li>
                   <li>
-                    <a href="/urunler/soguk-haddelenmis-sac" className="hover:text-white transition-colors">
-                      Soğuk Haddelenmiş Sac
+                    <a href={getPathWithLocale('/urunler/soguk-haddelenmis-sac', locale)} className="hover:text-white transition-colors">
+                      {t.home.productsList.sogukHaddelenmisSac || 'Soğuk Haddelenmiş Sac'}
                     </a>
                   </li>
                   <li>
-                    <a href="/urunler/galvanizli-sac" className="hover:text-white transition-colors">
-                      Galvanizli Sac
+                    <a href={getPathWithLocale('/urunler/galvanizli-sac', locale)} className="hover:text-white transition-colors">
+                      {t.home.productsList.galvanizliSac || 'Galvanizli Sac'}
                     </a>
                   </li>
                   <li>
-                    <a href="/urunler/boyali-sac" className="hover:text-white transition-colors">
-                      Boyalı Sac
+                    <a href={getPathWithLocale('/urunler/boyali-sac', locale)} className="hover:text-white transition-colors">
+                      {t.home.productsList.boyaliSac || 'Boyalı Sac'}
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-2 text-white text-sm">Hizmetler</h4>
+                <h4 className="font-semibold mb-2 text-white text-sm">{t.common.services || 'Hizmetler'}</h4>
                 <ul className="space-y-2 text-sm text-gray-300 pl-2">
                   <li>
-                    <a href="/hizmetler/celik-servis-hizmetleri" className="hover:text-white transition-colors">
-                      Çelik Servis Hizmetleri
+                    <a href={getPathWithLocale('/hizmetler/celik-servis-hizmetleri', locale)} className="hover:text-white transition-colors">
+                      {t.home.servicesList.celikServis || 'Çelik Servis Hizmetleri'}
                     </a>
                   </li>
                   <li>
-                    <a href="/hizmetler/musteri-teknik-hizmetleri" className="hover:text-white transition-colors">
-                      Müşteri Teknik Hizmetleri
+                    <a href={getPathWithLocale('/hizmetler/musteri-teknik-hizmetleri', locale)} className="hover:text-white transition-colors">
+                      {t.home.servicesList.musteriTeknik || 'Müşteri Teknik Hizmetleri'}
                     </a>
                   </li>
                 </ul>
@@ -160,80 +164,58 @@ export default function Footer() {
 
           {/* Column 3: Sektörler */}
           <div>
-            <h3 className="font-bold mb-4 text-white">Sektörler</h3>
+            <h3 className="font-bold mb-4 text-white">{t.common.sectors || 'Sektörler'}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="/sektorler/otomotiv" className="hover:text-white transition-colors">
-                  Otomotiv
+                <a href={getPathWithLocale('/sektorler/otomotiv', locale)} className="hover:text-white transition-colors">
+                  {t.home.sectorsList.otomotiv || 'Otomotiv'}
                 </a>
               </li>
               <li>
-                <a href="/sektorler/dayanikli-tuketim" className="hover:text-white transition-colors">
-                  Dayanıklı Tüketim
+                <a href={getPathWithLocale('/sektorler/dayanikli-tuketim', locale)} className="hover:text-white transition-colors">
+                  {t.home.sectorsList.dayanikliTuketim || 'Dayanıklı Tüketim'}
                 </a>
               </li>
               <li>
-                <a href="/sektorler/enerji" className="hover:text-white transition-colors">
-                  Enerji
+                <a href={getPathWithLocale('/sektorler/enerji', locale)} className="hover:text-white transition-colors">
+                  {t.home.sectorsList.enerji || 'Enerji'}
                 </a>
               </li>
               <li>
-                <a href="/sektorler/insaat" className="hover:text-white transition-colors">
-                  İnşaat
+                <a href={getPathWithLocale('/sektorler/insaat', locale)} className="hover:text-white transition-colors">
+                  {t.home.sectorsList.insaat || 'İnşaat'}
                 </a>
               </li>
               <li>
-                <a href="/sektorler/makine-ve-ekipman" className="hover:text-white transition-colors">
-                  Makine ve Ekipman
+                <a href={getPathWithLocale('/sektorler/makine-ve-ekipman', locale)} className="hover:text-white transition-colors">
+                  {t.home.sectorsList.makineEkipman || 'Makine ve Ekipman'}
                 </a>
               </li>
               <li>
-                <a href="/sektorler/ambalaj" className="hover:text-white transition-colors">
-                  Ambalaj
+                <a href={getPathWithLocale('/sektorler/ambalaj', locale)} className="hover:text-white transition-colors">
+                  {t.home.sectorsList.ambalaj || 'Ambalaj'}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Sürdürülebilirlik */}
+          {/* Column 4: Kariyer */}
           <div>
-            <h3 className="font-bold mb-4 text-white">Sürdürülebilirlik</h3>
+            <h3 className="font-bold mb-4 text-white">{t.common.career || 'Kariyer'}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Yönetim Sistemleri
+                <a href={getPathWithLocale('/kariyer/neden-metal-x', locale)} className="hover:text-white transition-colors">
+                  {t.common.why_metal_x || 'Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.'}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Etik Değerler
+                <a href={getPathWithLocale('/kariyer/insan-kaynaklari', locale)} className="hover:text-white transition-colors">
+                  {t.common.human_resources || 'İnsan Kaynakları'}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  EPD Belgeleri
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 5: Kariyer */}
-          <div>
-            <h3 className="font-bold mb-4 text-white">Kariyer</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>
-                <a href="/kariyer/neden-metal-x" className="hover:text-white transition-colors">
-                  Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.
-                </a>
-              </li>
-              <li>
-                <a href="/kariyer/insan-kaynaklari" className="hover:text-white transition-colors">
-                  İnsan Kaynakları
-                </a>
-              </li>
-              <li>
-                <a href="/kariyer/basvuru" className="hover:text-white transition-colors">
-                  Başvuru
+                <a href={getPathWithLocale('/kariyer/basvuru', locale)} className="hover:text-white transition-colors">
+                  {t.common.application || 'Başvuru'}
                 </a>
               </li>
             </ul>
@@ -248,15 +230,15 @@ export default function Footer() {
               <span>&copy; 2020 Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.</span>
               <span className="hidden md:inline">•</span>
               <a href="#" className="hover:text-white transition-colors">
-                Bilgi Toplumu Hizmetleri
+                {t.common.informationSocietyServices || 'Bilgi Toplumu Hizmetleri'}
               </a>
               <span className="hidden md:inline">•</span>
               <a href="#" className="hover:text-white transition-colors">
-                Çerez Politikası
+                {t.common.cookiePolicy || 'Çerez Politikası'}
               </a>
               <span className="hidden md:inline">•</span>
               <a href="#" className="hover:text-white transition-colors">
-                KVKK
+                {t.common.kvkk || 'KVKK'}
               </a>
             </div>
             <div className="text-gray-300">

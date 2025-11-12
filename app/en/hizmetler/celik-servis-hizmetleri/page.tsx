@@ -1,29 +1,29 @@
-import type { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Müşteri Teknik Hizmetleri - Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.',
-  description: 'Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. müşteri teknik hizmetleri. Teknik danışmanlık, malzeme seçimi ve mühendislik desteği hizmetleri.',
-};
+import { useTranslations } from '@/lib/i18n/hooks';
+import { getPathWithLocale } from '@/lib/i18n/translations';
 
-export default function MusteriTeknikHizmetleriPage() {
+export default function CelikServisHizmetleriPageEN() {
+  const { t, locale } = useTranslations();
+
   return (
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="/musteriservis1.JPG" 
-            alt="Müşteri Teknik Hizmetleri"
+            src="/celikservis1.JPG" 
+            alt={t.services.celikServis.title}
             className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
-            Müşteri Teknik Hizmetleri
+            {t.services.celikServis.title}
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl">
-            Profesyonel teknik danışmanlık ve mühendislik desteği
+            {t.services.celikServis.subtitle}
           </p>
         </div>
       </section>
@@ -34,32 +34,19 @@ export default function MusteriTeknikHizmetleriPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
-                src="/musteriservis2.jpg" 
-                alt="Müşteri Teknik Hizmetleri"
+                src="/celikservis2.jpg" 
+                alt={t.services.celikServis.title}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-[#261dcf]/30"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
-              Hizmet Hakkında
+              {t.services.celikServis.aboutTitle}
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
-              <p>
-                Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.'in müşteri teknik hizmetleri, müşterilerimize çelik malzeme seçimi, 
-                uygulama danışmanlığı ve teknik destek konularında kapsamlı çözümler sunmaktadır. 
-                Deneyimli mühendislik ekibimiz, projelerinizin her aşamasında yanınızda olarak 
-                en uygun çelik çözümlerini belirlemenize yardımcı olur.
-              </p>
-              <p>
-                Malzeme seçiminden tasarıma, üretim süreçlerinden kalite kontrolüne kadar geniş 
-                bir yelpazede teknik danışmanlık hizmetleri sunuyoruz. Müşterilerimizin proje 
-                hedeflerine ulaşmalarını ve en yüksek kalite standartlarını yakalamalarını 
-                sağlıyoruz.
-              </p>
-              <p>
-                Müşteri teknik hizmetlerimiz, tüm sektörlerde faaliyet gösteren firmalara 
-                yöneliktir ve özel ihtiyaçlarınıza göre özelleştirilebilir.
-              </p>
+              <p>{t.services.celikServis.aboutText1}</p>
+              <p>{t.services.celikServis.aboutText2}</p>
+              <p>{t.services.celikServis.aboutText3}</p>
             </div>
           </div>
         </div>
@@ -71,49 +58,77 @@ export default function MusteriTeknikHizmetleriPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
-                src="/musteriservis1.JPG" 
-                alt="Hizmet Alanları"
+                src="/celikservis1.JPG" 
+                alt={t.services.celikServis.serviceAreasTitle}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-[#261dcf]/30"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
-              Hizmet Alanları
+              {t.services.celikServis.serviceAreasTitle}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Malzeme Seçimi Danışmanlığı
+                  {t.services.celikServis.cuttingServices}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Uygulama bazlı malzeme önerileri</li>
-                  <li>• Teknik özelliklerin değerlendirilmesi</li>
-                  <li>• Maliyet analizi</li>
-                  <li>• Alternatif çözüm önerileri</li>
-                  <li>• Karşılaştırmalı analizler</li>
+                  {t.services.celikServis.cuttingList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Tasarım Desteği
+                  {t.services.celikServis.bendingServices}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Ürün tasarımı danışmanlığı</li>
-                  <li>• CAD/CAM destekli tasarım</li>
-                  <li>• Prototip geliştirme</li>
-                  <li>• Tasarım optimizasyonu</li>
-                  <li>• Üretilebilirlik analizi</li>
+                  {t.services.celikServis.bendingList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                  {t.services.celikServis.weldingServices}
+                </h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  {t.services.celikServis.weldingList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                  {t.services.celikServis.drillingServices}
+                </h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  {t.services.celikServis.drillingList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -124,68 +139,28 @@ export default function MusteriTeknikHizmetleriPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Üretim Süreçleri Danışmanlığı
+                  {t.services.celikServis.surfaceServices}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Üretim süreç optimizasyonu</li>
-                  <li>• İşleme teknikleri danışmanlığı</li>
-                  <li>• Kalite kontrol süreçleri</li>
-                  <li>• Verimlilik artırma önerileri</li>
-                  <li>• Problem çözme desteği</li>
+                  {t.services.celikServis.surfaceList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Kalite Kontrol ve Test
+                  {t.services.celikServis.assemblyServices}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Malzeme testleri</li>
-                  <li>• Kalite kontrol protokolleri</li>
-                  <li>• Sertifikasyon desteği</li>
-                  <li>• Raporlama ve dokümantasyon</li>
-                  <li>• Uygunluk değerlendirmesi</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Eğitim ve Seminerler
-                </h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Çelik malzeme eğitimleri</li>
-                  <li>• İşleme teknikleri seminerleri</li>
-                  <li>• Güvenlik eğitimleri</li>
-                  <li>• Teknik dokümantasyon</li>
-                  <li>• Uygulamalı atölye çalışmaları</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Teknik Destek ve Bakım
-                </h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• 7/24 teknik destek hattı</li>
-                  <li>• Sahada teknik destek</li>
-                  <li>• Problem çözme desteği</li>
-                  <li>• Bakım planlaması</li>
-                  <li>• Yedek parça danışmanlığı</li>
+                  {t.services.celikServis.assemblyList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -198,65 +173,77 @@ export default function MusteriTeknikHizmetleriPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
-              Hizmet Kapsamı
+              {t.services.celikServis.technicalSpecsTitle}
             </h2>
             <div className="bg-gray-50 p-6 rounded-lg space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Teknik Danışmanlık Süreçleri</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.services.celikServis.cuttingCapacities}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>İlk değerlendirme ve ihtiyaç analizi</span>
+                    <span>{t.services.celikServis.cuttingSpec1}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Detaylı teknik analiz ve öneriler</span>
+                    <span>{t.services.celikServis.cuttingSpec2}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Çözüm geliştirme ve uygulama planı</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Uygulama desteği ve takip</span>
+                    <span>{t.services.celikServis.cuttingSpec3}</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Uzmanlık Alanları</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.services.celikServis.bendingCapacities}</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{t.services.celikServis.bendingSpec1}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{t.services.celikServis.bendingSpec2}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{t.services.celikServis.bendingSpec3}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.services.celikServis.qualityStandards}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Malzeme bilimi ve mühendisliği</span>
+                    <span>{t.services.celikServis.qualitySpec1}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Üretim teknolojileri ve süreçleri</span>
+                    <span>{t.services.celikServis.qualitySpec2}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Kalite yönetimi ve kontrol sistemleri</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Proje yönetimi ve koordinasyon</span>
+                    <span>{t.services.celikServis.qualitySpec3}</span>
                   </li>
                 </ul>
               </div>
@@ -270,7 +257,7 @@ export default function MusteriTeknikHizmetleriPage() {
         <div className="absolute inset-0">
           <img 
             src="/bizimleiletisimegecin.jpg" 
-            alt="Bizimle İletişime Geçin"
+            alt={t.services.celikServis.ctaTitle}
             className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-[#261dcf]/80"></div>
@@ -278,17 +265,17 @@ export default function MusteriTeknikHizmetleriPage() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Bizimle İletişime Geçin
+              {t.services.celikServis.ctaTitle}
             </h2>
             <p className="text-xl mb-8 text-gray-100">
-              Müşteri teknik hizmetlerimiz hakkında detaylı bilgi ve teklif için bizimle iletişime geçin.
+              {t.services.celikServis.ctaDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
-                İletişime Geç
+              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                {t.common.contact}
               </a>
-              <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
-                Teklif Al
+              <a href={getPathWithLocale('/teklif-al', locale)} className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                {t.common.getQuote}
               </a>
             </div>
           </div>

@@ -2,7 +2,6 @@
 
 import Slider from '@/components/Slider';
 import NewsletterForm from '@/components/NewsletterForm';
-import BlogPostsSection from '@/components/BlogPostsSection';
 
 export default function Home() {
   // Slider görselleri - Görsellerinizi public klasörüne ekleyip yollarını buraya yazın
@@ -238,29 +237,6 @@ export default function Home() {
                 DETAYLI BİLGİ
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] text-center mb-6">
-            Son Blog Yazıları
-          </h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12 text-lg">
-            Güncel haberler, etkinlikler ve sektörden haberleri buradan takip edin.
-          </p>
-          
-          <BlogPostsSection />
-          
-          <div className="text-center">
-            <a 
-              href="/blog"
-              className="inline-block border-2 border-[#261dcf] text-[#261dcf] hover:bg-[#261dcf] hover:text-white font-bold py-3 px-8 rounded transition-colors"
-            >
-              TÜM BLOG YAZILARI
-            </a>
           </div>
         </div>
       </section>

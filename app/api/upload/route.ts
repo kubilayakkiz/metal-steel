@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
     const fileName = `${timestamp}_${originalName}`;
 
     // Public klasörüne kaydet
-    const publicPath = join(process.cwd(), 'public', 'uploads', 'blog');
+    const publicPath = join(process.cwd(), 'public', 'uploads');
     
     // Klasör yoksa oluştur (basit kontrol)
     try {
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     }
 
     // URL'yi döndür
-    const imageUrl = `/uploads/blog/${fileName}`;
+    const imageUrl = `/uploads/${fileName}`;
     return NextResponse.json({ url: imageUrl });
   } catch (error) {
     console.error('Yükleme hatası:', error);

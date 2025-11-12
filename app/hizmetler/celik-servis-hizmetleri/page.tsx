@@ -32,12 +32,13 @@ export default function CelikServisHizmetleriPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative">
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
                 src="/celikservis2.jpg" 
                 alt="Çelik Servis Hizmetleri"
-                className="w-full h-64 md:h-80 object-cover opacity-80"
+                className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-[#261dcf]/30"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
               Hizmet Hakkında
@@ -68,12 +69,13 @@ export default function CelikServisHizmetleriPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative">
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
                 src="/celikservis1.JPG" 
                 alt="Hizmet Alanları"
-                className="w-full h-48 md:h-64 object-cover opacity-70"
+                className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-[#261dcf]/30"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
               Hizmet Alanları
@@ -281,7 +283,7 @@ export default function CelikServisHizmetleriPage() {
           <img 
             src="/bizimleiletisimegecin.jpg" 
             alt="Bizimle İletişime Geçin"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-[#261dcf]/80"></div>
         </div>

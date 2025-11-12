@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Müşteri Teknik Hizmetleri - Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.',
-  description: 'Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. müşteri teknik hizmetleri. Teknik danışmanlık, malzeme seçimi ve mühendislik desteği hizmetleri.',
-};
+import { useTranslations } from '@/lib/i18n/hooks';
+import { getPathWithLocale } from '@/lib/i18n/translations';
 
-export default function MusteriTeknikHizmetleriPage() {
+export default function MusteriTeknikHizmetleriPageEN() {
+  const { t, locale } = useTranslations();
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -13,17 +13,17 @@ export default function MusteriTeknikHizmetleriPage() {
         <div className="absolute inset-0">
           <img 
             src="/musteriservis1.JPG" 
-            alt="Müşteri Teknik Hizmetleri"
+            alt={t.services.musteriTeknik.title}
             className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
-            Müşteri Teknik Hizmetleri
+            {t.services.musteriTeknik.title}
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl">
-            Profesyonel teknik danışmanlık ve mühendislik desteği
+            {t.services.musteriTeknik.subtitle}
           </p>
         </div>
       </section>
@@ -35,31 +35,18 @@ export default function MusteriTeknikHizmetleriPage() {
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
                 src="/musteriservis2.jpg" 
-                alt="Müşteri Teknik Hizmetleri"
+                alt={t.services.musteriTeknik.title}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-[#261dcf]/30"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
-              Hizmet Hakkında
+              {t.services.musteriTeknik.aboutTitle}
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
-              <p>
-                Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.'in müşteri teknik hizmetleri, müşterilerimize çelik malzeme seçimi, 
-                uygulama danışmanlığı ve teknik destek konularında kapsamlı çözümler sunmaktadır. 
-                Deneyimli mühendislik ekibimiz, projelerinizin her aşamasında yanınızda olarak 
-                en uygun çelik çözümlerini belirlemenize yardımcı olur.
-              </p>
-              <p>
-                Malzeme seçiminden tasarıma, üretim süreçlerinden kalite kontrolüne kadar geniş 
-                bir yelpazede teknik danışmanlık hizmetleri sunuyoruz. Müşterilerimizin proje 
-                hedeflerine ulaşmalarını ve en yüksek kalite standartlarını yakalamalarını 
-                sağlıyoruz.
-              </p>
-              <p>
-                Müşteri teknik hizmetlerimiz, tüm sektörlerde faaliyet gösteren firmalara 
-                yöneliktir ve özel ihtiyaçlarınıza göre özelleştirilebilir.
-              </p>
+              <p>{t.services.musteriTeknik.aboutText1}</p>
+              <p>{t.services.musteriTeknik.aboutText2}</p>
+              <p>{t.services.musteriTeknik.aboutText3}</p>
             </div>
           </div>
         </div>
@@ -72,13 +59,13 @@ export default function MusteriTeknikHizmetleriPage() {
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
                 src="/musteriservis1.JPG" 
-                alt="Hizmet Alanları"
+                alt={t.services.musteriTeknik.serviceAreasTitle}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-[#261dcf]/30"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
-              Hizmet Alanları
+              {t.services.musteriTeknik.serviceAreasTitle}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -88,14 +75,12 @@ export default function MusteriTeknikHizmetleriPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Malzeme Seçimi Danışmanlığı
+                  {t.services.musteriTeknik.materialConsulting}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Uygulama bazlı malzeme önerileri</li>
-                  <li>• Teknik özelliklerin değerlendirilmesi</li>
-                  <li>• Maliyet analizi</li>
-                  <li>• Alternatif çözüm önerileri</li>
-                  <li>• Karşılaştırmalı analizler</li>
+                  {t.services.musteriTeknik.materialList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -106,14 +91,12 @@ export default function MusteriTeknikHizmetleriPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Tasarım Desteği
+                  {t.services.musteriTeknik.designSupport}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Ürün tasarımı danışmanlığı</li>
-                  <li>• CAD/CAM destekli tasarım</li>
-                  <li>• Prototip geliştirme</li>
-                  <li>• Tasarım optimizasyonu</li>
-                  <li>• Üretilebilirlik analizi</li>
+                  {t.services.musteriTeknik.designList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -124,14 +107,12 @@ export default function MusteriTeknikHizmetleriPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Üretim Süreçleri Danışmanlığı
+                  {t.services.musteriTeknik.productionConsulting}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Üretim süreç optimizasyonu</li>
-                  <li>• İşleme teknikleri danışmanlığı</li>
-                  <li>• Kalite kontrol süreçleri</li>
-                  <li>• Verimlilik artırma önerileri</li>
-                  <li>• Problem çözme desteği</li>
+                  {t.services.musteriTeknik.productionList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -142,14 +123,12 @@ export default function MusteriTeknikHizmetleriPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Kalite Kontrol ve Test
+                  {t.services.musteriTeknik.qualityControl}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Malzeme testleri</li>
-                  <li>• Kalite kontrol protokolleri</li>
-                  <li>• Sertifikasyon desteği</li>
-                  <li>• Raporlama ve dokümantasyon</li>
-                  <li>• Uygunluk değerlendirmesi</li>
+                  {t.services.musteriTeknik.qualityList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -160,14 +139,12 @@ export default function MusteriTeknikHizmetleriPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Eğitim ve Seminerler
+                  {t.services.musteriTeknik.training}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Çelik malzeme eğitimleri</li>
-                  <li>• İşleme teknikleri seminerleri</li>
-                  <li>• Güvenlik eğitimleri</li>
-                  <li>• Teknik dokümantasyon</li>
-                  <li>• Uygulamalı atölye çalışmaları</li>
+                  {t.services.musteriTeknik.trainingList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -178,14 +155,12 @@ export default function MusteriTeknikHizmetleriPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  Teknik Destek ve Bakım
+                  {t.services.musteriTeknik.technicalSupport}
                 </h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• 7/24 teknik destek hattı</li>
-                  <li>• Sahada teknik destek</li>
-                  <li>• Problem çözme desteği</li>
-                  <li>• Bakım planlaması</li>
-                  <li>• Yedek parça danışmanlığı</li>
+                  {t.services.musteriTeknik.supportList.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -198,65 +173,65 @@ export default function MusteriTeknikHizmetleriPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
-              Hizmet Kapsamı
+              {t.services.musteriTeknik.serviceScopeTitle}
             </h2>
             <div className="bg-gray-50 p-6 rounded-lg space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Teknik Danışmanlık Süreçleri</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.services.musteriTeknik.consultingProcesses}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>İlk değerlendirme ve ihtiyaç analizi</span>
+                    <span>{t.services.musteriTeknik.process1}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Detaylı teknik analiz ve öneriler</span>
+                    <span>{t.services.musteriTeknik.process2}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Çözüm geliştirme ve uygulama planı</span>
+                    <span>{t.services.musteriTeknik.process3}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Uygulama desteği ve takip</span>
+                    <span>{t.services.musteriTeknik.process4}</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Uzmanlık Alanları</h3>
+                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.services.musteriTeknik.expertiseAreas}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Malzeme bilimi ve mühendisliği</span>
+                    <span>{t.services.musteriTeknik.expertise1}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Üretim teknolojileri ve süreçleri</span>
+                    <span>{t.services.musteriTeknik.expertise2}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Kalite yönetimi ve kontrol sistemleri</span>
+                    <span>{t.services.musteriTeknik.expertise3}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Proje yönetimi ve koordinasyon</span>
+                    <span>{t.services.musteriTeknik.expertise4}</span>
                   </li>
                 </ul>
               </div>
@@ -270,7 +245,7 @@ export default function MusteriTeknikHizmetleriPage() {
         <div className="absolute inset-0">
           <img 
             src="/bizimleiletisimegecin.jpg" 
-            alt="Bizimle İletişime Geçin"
+            alt={t.services.musteriTeknik.ctaTitle}
             className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-[#261dcf]/80"></div>
@@ -278,17 +253,17 @@ export default function MusteriTeknikHizmetleriPage() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Bizimle İletişime Geçin
+              {t.services.musteriTeknik.ctaTitle}
             </h2>
             <p className="text-xl mb-8 text-gray-100">
-              Müşteri teknik hizmetlerimiz hakkında detaylı bilgi ve teklif için bizimle iletişime geçin.
+              {t.services.musteriTeknik.ctaDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
-                İletişime Geç
+              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                {t.common.contact}
               </a>
-              <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
-                Teklif Al
+              <a href={getPathWithLocale('/teklif-al', locale)} className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                {t.common.getQuote}
               </a>
             </div>
           </div>

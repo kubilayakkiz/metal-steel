@@ -2,23 +2,27 @@
 
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useTranslations, useLocale } from '@/lib/i18n/hooks';
+import { getPathWithLocale } from '@/lib/i18n/translations';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mouseLeaveTimeout, setMouseLeaveTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+  const { t } = useTranslations();
+  const locale = useLocale();
   
   // Dil isimleri
   const languages: { [key: string]: string } = {
-    '/': 'Türkçe',
-    '/en': 'English',
-    '/ar': 'العربية',
-    '/ru': 'Русский',
-    '/fr': 'Français',
+    'tr': 'Türkçe',
+    'en': 'English',
+    'ar': 'العربية',
+    'ru': 'Русский',
+    'fr': 'Français',
   };
 
-  const currentLanguage = languages[pathname] || 'English';
+  const currentLanguage = languages[locale] || 'Türkçe';
 
   const handleDropdownToggle = (menu: string) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
@@ -53,7 +57,7 @@ export default function Header() {
             {/* Sol taraf - Slogan */}
             <div className="flex items-center">
               <p className="text-white text-sm md:text-base font-bold">
-                Endüstriyel Çeliğin Gücü
+                {t.common.slogan || 'Endüstriyel Çeliğin Gücü'}
               </p>
             </div>
 
@@ -71,30 +75,26 @@ export default function Header() {
                   className="flex items-center gap-1 hover:text-gray-300 transition-colors"
                   onClick={() => handleDropdownToggle('kariyer')}
                 >
-                  Kariyer
+                  {t.common.career || 'Kariyer'}
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {openDropdown === 'kariyer' && (
                   <div className="absolute top-full left-0 mt-0 pt-2 bg-[#261dcf] border border-[#6dd5fb]/30 rounded shadow-lg py-2 min-w-[200px] z-50">
-                    <a href="/kariyer/neden-metal-x" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                        Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.
+                    <a href={getPathWithLocale('/kariyer/neden-metal-x', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                        {t.common.why_metal_x || 'Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.'}
                     </a>
-                    <a href="/kariyer/insan-kaynaklari" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      İnsan Kaynakları
+                    <a href={getPathWithLocale('/kariyer/insan-kaynaklari', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.human_resources || 'İnsan Kaynakları'}
                     </a>
-                    <a href="/kariyer/basvuru" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Başvuru
+                    <a href={getPathWithLocale('/kariyer/basvuru', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.application || 'Başvuru'}
                     </a>
                   </div>
                 )}
               </div>
 
-                {/* Blog Link */}
-                <a href="/blog" className="hover:text-gray-300 transition-colors">
-                  Blog
-                </a>
             </div>
 
             {/* Social Media Icons */}
@@ -138,19 +138,19 @@ export default function Header() {
               </button>
               {openDropdown === 'language' && (
                 <div className="absolute top-full right-0 mt-0 pt-2 bg-[#261dcf] border border-[#6dd5fb]/30 rounded shadow-lg py-2 min-w-[180px] z-50">
-                  <a href="/" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                  <a href={getPathWithLocale(pathname, 'tr')} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                     Türkçe
                   </a>
-                  <a href="/en" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                  <a href={getPathWithLocale(pathname, 'en')} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                     English
                   </a>
-                  <a href="/ar" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                  <a href={getPathWithLocale(pathname, 'ar')} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                     العربية
                   </a>
-                  <a href="/ru" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                  <a href={getPathWithLocale(pathname, 'ru')} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                     Русский
                   </a>
-                  <a href="/fr" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                  <a href={getPathWithLocale(pathname, 'fr')} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                     Français
                   </a>
                 </div>
@@ -167,7 +167,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center pr-2 md:pr-4">
-              <a href="/" className="flex items-center">
+              <a href={getPathWithLocale('/', locale)} className="flex items-center">
                 <img 
                   src="/LogoMetalSteelWhite.png" 
                   alt="METAL X STEEL Logo" 
@@ -188,7 +188,7 @@ export default function Header() {
                   className="flex items-center gap-1 hover:text-gray-300 transition-colors"
                   onClick={() => handleDropdownToggle('urunler')}
                 >
-                  Ürünler
+                  {t.common.products || 'Ürünler'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -200,32 +200,32 @@ export default function Header() {
                     onMouseLeave={handleMouseLeave}
                     style={{ paddingTop: '8px' }}
                   >
-                    <a href="/urunler/zam" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)
+                    <a href={getPathWithLocale('/urunler/zam', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.zam || 'ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)'}
                     </a>
-                    <a href="/urunler/sicak-haddelenmis-sac" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Sıcak Haddelenmiş Sac
+                    <a href={getPathWithLocale('/urunler/sicak-haddelenmis-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.sicakHaddelenmisSac || 'Sıcak Haddelenmiş Sac'}
                     </a>
-                    <a href="/urunler/galvanizli-sac" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Galvanizli Sac
+                    <a href={getPathWithLocale('/urunler/galvanizli-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.galvanizliSac || 'Galvanizli Sac'}
                     </a>
-                    <a href="/urunler/boyali-sac" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Boyalı Sac
+                    <a href={getPathWithLocale('/urunler/boyali-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.boyaliSac || 'Boyalı Sac'}
                     </a>
-                    <a href="/urunler/soguk-haddelenmis-sac" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Soğuk Haddelenmiş Sac
+                    <a href={getPathWithLocale('/urunler/soguk-haddelenmis-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.sogukHaddelenmisSac || 'Soğuk Haddelenmiş Sac'}
                     </a>
-                    <a href="/urunler/asitlenmis-sac" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Asitlenmiş Sac
+                    <a href={getPathWithLocale('/urunler/asitlenmis-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.asitlenmisSac || 'Asitlenmiş Sac'}
                     </a>
-                    <a href="/urunler/silisli-sac" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Silisli Sac
+                    <a href={getPathWithLocale('/urunler/silisli-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.silisliSac || 'Silisli Sac'}
                     </a>
-                    <a href="/urunler/boru-ve-profil" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Boru ve Profil
+                    <a href={getPathWithLocale('/urunler/boru-ve-profil', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.boruProfil || 'Boru ve Profil'}
                     </a>
-                    <a href="/urunler/insaat-demiri" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      İnşaat Demiri
+                    <a href={getPathWithLocale('/urunler/insaat-demiri', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.insaatDemiri || 'İnşaat Demiri'}
                     </a>
                   </div>
                 )}
@@ -241,7 +241,7 @@ export default function Header() {
                   className="flex items-center gap-1 hover:text-gray-300 transition-colors"
                   onClick={() => handleDropdownToggle('hizmetler')}
                 >
-                      Hizmetler
+                      {t.common.services || 'Hizmetler'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -253,11 +253,11 @@ export default function Header() {
                     onMouseLeave={handleMouseLeave}
                     style={{ paddingTop: '8px' }}
                   >
-                    <a href="/hizmetler/celik-servis-hizmetleri" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Çelik Servis Hizmetleri
+                    <a href={getPathWithLocale('/hizmetler/celik-servis-hizmetleri', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.servicesList.celikServis || 'Çelik Servis Hizmetleri'}
                     </a>
-                    <a href="/hizmetler/musteri-teknik-hizmetleri" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Müşteri Teknik Hizmetleri
+                    <a href={getPathWithLocale('/hizmetler/musteri-teknik-hizmetleri', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.servicesList.musteriTeknik || 'Müşteri Teknik Hizmetleri'}
                     </a>
                   </div>
                 )}
@@ -273,30 +273,30 @@ export default function Header() {
                   className="flex items-center gap-1 hover:text-gray-300 transition-colors"
                   onClick={() => handleDropdownToggle('sektorler')}
                 >
-                  Sektörler
+                  {t.common.sectors || 'Sektörler'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {openDropdown === 'sektorler' && (
                   <div className="absolute top-full left-0 mt-0 pt-2 bg-[#261dcf] border border-[#6dd5fb]/30 rounded shadow-lg py-2 min-w-[220px] z-50">
-                    <a href="/sektorler/otomotiv" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Otomotiv
+                    <a href={getPathWithLocale('/sektorler/otomotiv', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.sectorsList.otomotiv || 'Otomotiv'}
                     </a>
-                    <a href="/sektorler/dayanikli-tuketim" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Dayanıklı Tüketim
+                    <a href={getPathWithLocale('/sektorler/dayanikli-tuketim', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.sectorsList.dayanikliTuketim || 'Dayanıklı Tüketim'}
                     </a>
-                    <a href="/sektorler/enerji" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Enerji
+                    <a href={getPathWithLocale('/sektorler/enerji', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.sectorsList.enerji || 'Enerji'}
                     </a>
-                    <a href="/sektorler/insaat" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      İnşaat
+                    <a href={getPathWithLocale('/sektorler/insaat', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.sectorsList.insaat || 'İnşaat'}
                     </a>
-                    <a href="/sektorler/makine-ve-ekipman" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Makine ve Ekipman
+                    <a href={getPathWithLocale('/sektorler/makine-ve-ekipman', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.sectorsList.makineEkipman || 'Makine ve Ekipman'}
                     </a>
-                    <a href="/sektorler/ambalaj" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Ambalaj
+                    <a href={getPathWithLocale('/sektorler/ambalaj', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.sectorsList.ambalaj || 'Ambalaj'}
                     </a>
                   </div>
                 )}
@@ -312,30 +312,30 @@ export default function Header() {
                   className="flex items-center gap-1 hover:text-gray-300 transition-colors"
                   onClick={() => handleDropdownToggle('kurumsal')}
                 >
-                  Kurumsal
+                  {t.common.corporate || 'Kurumsal'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {openDropdown === 'kurumsal' && (
                   <div className="absolute top-full left-0 mt-0 pt-2 bg-[#261dcf] border border-[#6dd5fb]/30 rounded shadow-lg py-2 min-w-[200px] z-50">
-                    <a href="/kurumsal/hakkimizda" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Hakkımızda
+                    <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.about_us || 'Hakkımızda'}
                     </a>
-                    <a href="/kurumsal/politikalarimiz" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Politikalarımız
+                    <a href={getPathWithLocale('/kurumsal/politikalarimiz', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.our_policies || 'Politikalarımız'}
                     </a>
-                    <a href="/kurumsal/kurumsal-kimlik" className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      Kurumsal Kimlik
+                    <a href={getPathWithLocale('/kurumsal/kurumsal-kimlik', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.corporate_identity || 'Kurumsal Kimlik'}
                     </a>
                   </div>
                 )}
               </div>
 
-              <a href="/iletisim" className="hover:text-gray-300 transition-colors">
-                İletişim
+              <a href={getPathWithLocale('/iletisim', locale)} className="hover:text-gray-300 transition-colors">
+                {t.common.contact || 'İletişim'}
               </a>
-              <button className="hover:text-gray-300 transition-colors ml-2">
+              <button className="hover:text-gray-300 transition-colors ml-2" aria-label={t.common.search || 'Ara'}>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
@@ -365,23 +365,18 @@ export default function Header() {
                       className="flex items-center justify-between w-full hover:text-gray-300 transition-colors text-sm"
                       onClick={() => handleDropdownToggle('kariyer-mobile')}
                     >
-                      Kariyer
+                      {t.common.career || 'Kariyer'}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     {openDropdown === 'kariyer-mobile' && (
                       <div className="pl-4 mt-2 space-y-2">
-                        <a href="/kariyer/neden-metal-x" className="block text-gray-300 hover:text-white text-sm">Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.</a>
-                        <a href="/kariyer/insan-kaynaklari" className="block text-gray-300 hover:text-white text-sm">İnsan Kaynakları</a>
-                        <a href="/kariyer/basvuru" className="block text-gray-300 hover:text-white text-sm">Başvuru</a>
+                        <a href={getPathWithLocale('/kariyer/neden-metal-x', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.why_metal_x || 'Neden Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.'}</a>
+                        <a href={getPathWithLocale('/kariyer/insan-kaynaklari', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.human_resources || 'İnsan Kaynakları'}</a>
+                        <a href={getPathWithLocale('/kariyer/basvuru', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.application || 'Başvuru'}</a>
                       </div>
                     )}
-                  </div>
-                  <div>
-                    <a href="/blog" className="block hover:text-gray-300 transition-colors text-sm">
-                      Blog
-                    </a>
                   </div>
                 </div>
 
@@ -392,22 +387,22 @@ export default function Header() {
                       className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
                       onClick={() => handleDropdownToggle('urunler-mobile')}
                     >
-                      Ürünler
+                      {t.common.products || 'Ürünler'}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     {openDropdown === 'urunler-mobile' && (
                       <div className="pl-4 mt-2 space-y-2">
-                        <a href="/urunler/zam" className="block text-gray-300 hover:text-white text-sm">ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)</a>
-                        <a href="/urunler/sicak-haddelenmis-sac" className="block text-gray-300 hover:text-white text-sm">Sıcak Haddelenmiş Sac</a>
-                        <a href="/urunler/galvanizli-sac" className="block text-gray-300 hover:text-white text-sm">Galvanizli Sac</a>
-                        <a href="/urunler/boyali-sac" className="block text-gray-300 hover:text-white text-sm">Boyalı Sac</a>
-                        <a href="/urunler/soguk-haddelenmis-sac" className="block text-gray-300 hover:text-white text-sm">Soğuk Haddelenmiş Sac</a>
-                        <a href="/urunler/asitlenmis-sac" className="block text-gray-300 hover:text-white text-sm">Asitlenmiş Sac</a>
-                        <a href="/urunler/silisli-sac" className="block text-gray-300 hover:text-white text-sm">Silisli Sac</a>
-                        <a href="/urunler/boru-ve-profil" className="block text-gray-300 hover:text-white text-sm">Boru ve Profil</a>
-                        <a href="/urunler/insaat-demiri" className="block text-gray-300 hover:text-white text-sm">İnşaat Demiri</a>
+                        <a href={getPathWithLocale('/urunler/zam', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.zam || 'ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)'}</a>
+                        <a href={getPathWithLocale('/urunler/sicak-haddelenmis-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.sicakHaddelenmisSac || 'Sıcak Haddelenmiş Sac'}</a>
+                        <a href={getPathWithLocale('/urunler/galvanizli-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.galvanizliSac || 'Galvanizli Sac'}</a>
+                        <a href={getPathWithLocale('/urunler/boyali-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.boyaliSac || 'Boyalı Sac'}</a>
+                        <a href={getPathWithLocale('/urunler/soguk-haddelenmis-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.sogukHaddelenmisSac || 'Soğuk Haddelenmiş Sac'}</a>
+                        <a href={getPathWithLocale('/urunler/asitlenmis-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.asitlenmisSac || 'Asitlenmiş Sac'}</a>
+                        <a href={getPathWithLocale('/urunler/silisli-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.silisliSac || 'Silisli Sac'}</a>
+                        <a href={getPathWithLocale('/urunler/boru-ve-profil', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.boruProfil || 'Boru ve Profil'}</a>
+                        <a href={getPathWithLocale('/urunler/insaat-demiri', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.insaatDemiri || 'İnşaat Demiri'}</a>
                       </div>
                     )}
                   </div>
@@ -416,15 +411,15 @@ export default function Header() {
                       className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
                       onClick={() => handleDropdownToggle('hizmetler-mobile')}
                     >
-                      Hizmetler
+                      {t.common.services || 'Hizmetler'}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     {openDropdown === 'hizmetler-mobile' && (
                       <div className="pl-4 mt-2 space-y-2">
-                        <a href="/hizmetler/celik-servis-hizmetleri" className="block text-gray-300 hover:text-white text-sm">Çelik Servis Hizmetleri</a>
-                        <a href="/hizmetler/musteri-teknik-hizmetleri" className="block text-gray-300 hover:text-white text-sm">Müşteri Teknik Hizmetleri</a>
+                        <a href={getPathWithLocale('/hizmetler/celik-servis-hizmetleri', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.servicesList.celikServis || 'Çelik Servis Hizmetleri'}</a>
+                        <a href={getPathWithLocale('/hizmetler/musteri-teknik-hizmetleri', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.servicesList.musteriTeknik || 'Müşteri Teknik Hizmetleri'}</a>
                       </div>
                     )}
                   </div>
@@ -433,19 +428,19 @@ export default function Header() {
                     className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
                     onClick={() => handleDropdownToggle('sektorler-mobile')}
                   >
-                    Sektörler
+                    {t.common.sectors || 'Sektörler'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
                   {openDropdown === 'sektorler-mobile' && (
                     <div className="pl-4 mt-2 space-y-2">
-                            <a href="/sektorler/otomotiv" className="block text-gray-300 hover:text-white">Otomotiv</a>
-                            <a href="/sektorler/dayanikli-tuketim" className="block text-gray-300 hover:text-white">Dayanıklı Tüketim</a>
-                            <a href="/sektorler/enerji" className="block text-gray-300 hover:text-white">Enerji</a>
-                            <a href="/sektorler/insaat" className="block text-gray-300 hover:text-white">İnşaat</a>
-                            <a href="/sektorler/makine-ve-ekipman" className="block text-gray-300 hover:text-white">Makine ve Ekipman</a>
-                            <a href="/sektorler/ambalaj" className="block text-gray-300 hover:text-white">Ambalaj</a>
+                            <a href={getPathWithLocale('/sektorler/otomotiv', locale)} className="block text-gray-300 hover:text-white">{t.home.sectorsList.otomotiv || 'Otomotiv'}</a>
+                            <a href={getPathWithLocale('/sektorler/dayanikli-tuketim', locale)} className="block text-gray-300 hover:text-white">{t.home.sectorsList.dayanikliTuketim || 'Dayanıklı Tüketim'}</a>
+                            <a href={getPathWithLocale('/sektorler/enerji', locale)} className="block text-gray-300 hover:text-white">{t.home.sectorsList.enerji || 'Enerji'}</a>
+                            <a href={getPathWithLocale('/sektorler/insaat', locale)} className="block text-gray-300 hover:text-white">{t.home.sectorsList.insaat || 'İnşaat'}</a>
+                            <a href={getPathWithLocale('/sektorler/makine-ve-ekipman', locale)} className="block text-gray-300 hover:text-white">{t.home.sectorsList.makineEkipman || 'Makine ve Ekipman'}</a>
+                            <a href={getPathWithLocale('/sektorler/ambalaj', locale)} className="block text-gray-300 hover:text-white">{t.home.sectorsList.ambalaj || 'Ambalaj'}</a>
                     </div>
                   )}
                 </div>
@@ -454,27 +449,27 @@ export default function Header() {
                       className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
                       onClick={() => handleDropdownToggle('kurumsal-mobile')}
                     >
-                      Kurumsal
+                      {t.common.corporate || 'Kurumsal'}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     {openDropdown === 'kurumsal-mobile' && (
                       <div className="pl-4 mt-2 space-y-2">
-                        <a href="/kurumsal/hakkimizda" className="block text-gray-300 hover:text-white text-sm">Hakkımızda</a>
-                        <a href="/kurumsal/politikalarimiz" className="block text-gray-300 hover:text-white text-sm">Politikalarımız</a>
-                        <a href="/kurumsal/kurumsal-kimlik" className="block text-gray-300 hover:text-white text-sm">Kurumsal Kimlik</a>
+                        <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.about_us || 'Hakkımızda'}</a>
+                        <a href={getPathWithLocale('/kurumsal/politikalarimiz', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.our_policies || 'Politikalarımız'}</a>
+                        <a href={getPathWithLocale('/kurumsal/kurumsal-kimlik', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.corporate_identity || 'Kurumsal Kimlik'}</a>
                       </div>
                     )}
                   </div>
-                <a href="/iletisim" className="block hover:text-gray-300 transition-colors">
-                  İletişim
+                <a href={getPathWithLocale('/iletisim', locale)} className="block hover:text-gray-300 transition-colors">
+                  {t.common.contact || 'İletişim'}
                 </a>
                 <button className="flex items-center gap-2 hover:text-gray-300 transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                  <span>Ara</span>
+                  <span>{t.common.search || 'Ara'}</span>
                 </button>
                 </div>
               </div>
