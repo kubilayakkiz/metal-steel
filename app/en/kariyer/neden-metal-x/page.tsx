@@ -200,9 +200,9 @@ export default function NedenMetalXPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-2">{t.career.nedenMetalX.teamwork}</h3>
+                  <h3 className="text-xl font-bold text-[#261dcf] mb-2">{t.career.nedenMetalX.valuesTeamwork}</h3>
                   <p className="text-gray-700">
-                    {t.career.nedenMetalX.teamworkDesc}
+                    {t.career.nedenMetalX.valuesTeamworkDesc}
                   </p>
                 </div>
               </div>
