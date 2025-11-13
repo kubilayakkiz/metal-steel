@@ -76,10 +76,10 @@ export default function NedenMetalXPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#261dcf] mb-3">
-                  {t.career.nedenMetalX.teamwork}
+                  {t.career.nedenMetalX.valuesTeamwork}
                 </h3>
                 <p className="text-gray-700">
-                  {t.career.nedenMetalX.teamworkDesc}
+                  {t.career.nedenMetalX.valuesTeamworkDesc}
                 </p>
               </div>
 
