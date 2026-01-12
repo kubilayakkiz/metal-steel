@@ -12,16 +12,25 @@ export default function NewsletterForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // Simüle edilmiş abonelik - Gerçek projede API endpoint'e gönderilir
     try {
-      // TODO: API endpoint'e e-posta gönder
-      // const response = await fetch('/api/newsletter', { ... });
-      
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Bir hata oluştu');
+      }
       
       setSubmitStatus('success');
       setEmail('');
     } catch (error) {
+      console.error('Newsletter form error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

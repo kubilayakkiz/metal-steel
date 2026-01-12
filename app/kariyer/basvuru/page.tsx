@@ -40,8 +40,28 @@ export default function BasvuruPage() {
     setSubmitStatus('idle');
 
     try {
-      // TODO: API endpoint'e form verilerini gönder
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('position', formData.position);
+      formDataToSend.append('experience', formData.experience);
+      formDataToSend.append('education', formData.education);
+      formDataToSend.append('coverLetter', formData.coverLetter);
+      if (formData.resume) {
+        formDataToSend.append('resume', formData.resume);
+      }
+
+      const response = await fetch('/api/application', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Bir hata oluştu');
+      }
       
       setSubmitStatus('success');
       setFormData({
@@ -55,6 +75,7 @@ export default function BasvuruPage() {
         resume: null,
       });
     } catch (error) {
+      console.error('Application form error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

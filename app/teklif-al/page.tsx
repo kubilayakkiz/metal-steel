@@ -41,8 +41,29 @@ export default function TeklifAlPage() {
     setSubmitStatus('idle');
 
     try {
-      // TODO: API endpoint'e form verilerini gönder
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('company', formData.company);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('productType', formData.productType);
+      formDataToSend.append('quantity', formData.quantity);
+      formDataToSend.append('deliveryAddress', formData.deliveryAddress);
+      formDataToSend.append('message', formData.message);
+      if (formData.file) {
+        formDataToSend.append('file', formData.file);
+      }
+
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Bir hata oluştu');
+      }
       
       setSubmitStatus('success');
       setFormData({
@@ -57,6 +78,7 @@ export default function TeklifAlPage() {
         file: null,
       });
     } catch (error) {
+      console.error('Quote form error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

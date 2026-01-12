@@ -49,6 +49,14 @@ Modern ve profesyonel kurumsal web sitesi - Next.js ile geliştirilmiş çelik �
 # Bağımlılıkları yükle
 npm install
 
+# Environment değişkenlerini ayarla
+# .env.local dosyası oluşturun ve aşağıdaki değişkenleri ekleyin:
+# RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# CONTACT_EMAIL=info@metalxsteel.com.tr
+# QUOTE_EMAIL=satis@metalxsteel.com.tr
+# NEWSLETTER_EMAIL=info@metalxsteel.com.tr
+# APPLICATION_EMAIL=ik@metalxsteel.com.tr
+
 # Development server'ı başlat
 npm run dev
 
@@ -56,6 +64,32 @@ npm run dev
 npm run build
 npm start
 ```
+
+## 📧 Form Yapılandırması
+
+Formların çalışması için Hostinger SMTP ayarları gereklidir:
+
+1. Hostinger kontrol panelinden email hesabınızın bilgilerini alın
+2. `.env.local` dosyası oluşturun ve aşağıdaki değişkenleri ekleyin:
+
+```env
+# SMTP Ayarları (Hostinger)
+SMTP_HOST=smtp.hostinger.com
+SMTP_PORT=465
+SMTP_USER=info@metalxsteel.com.tr
+SMTP_PASSWORD=your_email_password
+
+# Email adresleri (form gönderimlerinin gideceği adresler)
+CONTACT_EMAIL=info@metalxsteel.com.tr
+QUOTE_EMAIL=satis@metalxsteel.com.tr
+NEWSLETTER_EMAIL=info@metalxsteel.com.tr
+APPLICATION_EMAIL=ik@metalxsteel.com.tr
+```
+
+**Not:** 
+- SMTP_PORT: 465 (SSL) veya 587 (TLS) kullanılabilir
+- SMTP_USER: Hostinger'da oluşturduğunuz email adresi
+- SMTP_PASSWORD: Email hesabının şifresi
 
 ## 📦 Deployment
 

@@ -9,6 +9,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mouseLeaveTimeout, setMouseLeaveTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const pathname = usePathname();
   const { t } = useTranslations();
   const locale = useLocale();
@@ -48,6 +50,19 @@ export default function Header() {
     setOpenDropdown(menu);
   };
 
+  const handleSearch = () => {
+    if (!searchQuery.trim()) return;
+    
+    // Site içinde Google araması yap
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      const searchUrl = `https://www.google.com/search?q=site:${hostname} ${encodeURIComponent(searchQuery)}`;
+      window.open(searchUrl, '_blank');
+      setIsSearchOpen(false);
+      setSearchQuery('');
+    }
+  };
+
   return (
     <header className="w-full bg-[#261dcf] text-white">
       {/* Top Bar */}
@@ -65,6 +80,36 @@ export default function Header() {
             <div className="flex justify-end items-center gap-3 md:gap-6">
             {/* Top Navigation Links */}
             <div className="hidden md:flex items-center gap-6">
+              {/* Kurumsal Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setOpenDropdown('kurumsal-top')}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button 
+                  className="flex items-center gap-1 hover:text-gray-300 transition-colors"
+                  onClick={() => handleDropdownToggle('kurumsal-top')}
+                >
+                  {t.common.corporate || 'Kurumsal'}
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {openDropdown === 'kurumsal-top' && (
+                  <div className="absolute top-full left-0 mt-0 pt-2 bg-[#261dcf] border border-[#6dd5fb]/30 rounded shadow-lg py-2 min-w-[200px] z-50">
+                    <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.about_us || 'Hakkımızda'}
+                    </a>
+                    <a href={getPathWithLocale('/kurumsal/politikalarimiz', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.our_policies || 'Politikalarımız'}
+                    </a>
+                    <a href={getPathWithLocale('/kurumsal/kurumsal-kimlik', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.common.corporate_identity || 'Kurumsal Kimlik'}
+                    </a>
+                  </div>
+                )}
+              </div>
+
               {/* Kariyer Dropdown */}
               <div 
                 className="relative"
@@ -302,40 +347,14 @@ export default function Header() {
                 )}
               </div>
 
-              {/* Kurumsal Dropdown */}
-              <div 
-                className="relative"
-                onMouseEnter={() => handleMouseEnter('kurumsal')}
-                onMouseLeave={handleMouseLeave}
-              >
-                <button 
-                  className="flex items-center gap-1 hover:text-gray-300 transition-colors"
-                  onClick={() => handleDropdownToggle('kurumsal')}
-                >
-                  {t.common.corporate || 'Kurumsal'}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {openDropdown === 'kurumsal' && (
-                  <div className="absolute top-full left-0 mt-0 pt-2 bg-[#261dcf] border border-[#6dd5fb]/30 rounded shadow-lg py-2 min-w-[200px] z-50">
-                    <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      {t.common.about_us || 'Hakkımızda'}
-                    </a>
-                    <a href={getPathWithLocale('/kurumsal/politikalarimiz', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      {t.common.our_policies || 'Politikalarımız'}
-                    </a>
-                    <a href={getPathWithLocale('/kurumsal/kurumsal-kimlik', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
-                      {t.common.corporate_identity || 'Kurumsal Kimlik'}
-                    </a>
-                  </div>
-                )}
-              </div>
-
               <a href={getPathWithLocale('/iletisim', locale)} className="hover:text-gray-300 transition-colors">
                 {t.common.contact || 'İletişim'}
               </a>
-              <button className="hover:text-gray-300 transition-colors ml-2" aria-label={t.common.search || 'Ara'}>
+              <button 
+                className="hover:text-gray-300 transition-colors ml-2" 
+                aria-label={t.common.search || 'Ara'}
+                onClick={() => setIsSearchOpen(true)}
+              >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
@@ -360,6 +379,24 @@ export default function Header() {
               <div className="flex flex-col gap-4">
                 {/* Top Bar Menus */}
                 <div className="border-b border-[#6dd5fb]/30 pb-3 space-y-3">
+                  <div>
+                    <button 
+                      className="flex items-center justify-between w-full hover:text-gray-300 transition-colors text-sm"
+                      onClick={() => handleDropdownToggle('kurumsal-mobile-top')}
+                    >
+                      {t.common.corporate || 'Kurumsal'}
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {openDropdown === 'kurumsal-mobile-top' && (
+                      <div className="pl-4 mt-2 space-y-2">
+                        <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.about_us || 'Hakkımızda'}</a>
+                        <a href={getPathWithLocale('/kurumsal/politikalarimiz', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.our_policies || 'Politikalarımız'}</a>
+                        <a href={getPathWithLocale('/kurumsal/kurumsal-kimlik', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.corporate_identity || 'Kurumsal Kimlik'}</a>
+                      </div>
+                    )}
+                  </div>
                   <div>
                     <button 
                       className="flex items-center justify-between w-full hover:text-gray-300 transition-colors text-sm"
@@ -444,28 +481,13 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-                  <div>
-                    <button 
-                      className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
-                      onClick={() => handleDropdownToggle('kurumsal-mobile')}
-                    >
-                      {t.common.corporate || 'Kurumsal'}
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    {openDropdown === 'kurumsal-mobile' && (
-                      <div className="pl-4 mt-2 space-y-2">
-                        <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.about_us || 'Hakkımızda'}</a>
-                        <a href={getPathWithLocale('/kurumsal/politikalarimiz', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.our_policies || 'Politikalarımız'}</a>
-                        <a href={getPathWithLocale('/kurumsal/kurumsal-kimlik', locale)} className="block text-gray-300 hover:text-white text-sm">{t.common.corporate_identity || 'Kurumsal Kimlik'}</a>
-                      </div>
-                    )}
-                  </div>
                 <a href={getPathWithLocale('/iletisim', locale)} className="block hover:text-gray-300 transition-colors">
                   {t.common.contact || 'İletişim'}
                 </a>
-                <button className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                <button 
+                  className="flex items-center gap-2 hover:text-gray-300 transition-colors"
+                  onClick={() => setIsSearchOpen(true)}
+                >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
@@ -477,6 +499,71 @@ export default function Header() {
           )}
         </div>
       </div>
+
+      {/* Search Modal */}
+      {isSearchOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-[100] flex items-start justify-center pt-20 md:pt-32"
+          onClick={() => setIsSearchOpen(false)}
+        >
+          <div 
+            className="bg-white rounded-lg shadow-2xl w-full max-w-2xl mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl font-bold text-[#261dcf]">
+                  {t.common.search || 'Ara'}
+                </h2>
+                <button
+                  onClick={() => setIsSearchOpen(false)}
+                  className="text-gray-500 hover:text-gray-700 transition-colors"
+                  aria-label={t.common.close || 'Kapat'}
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder={locale === 'en' ? 'Search products, services, sectors...' : 'Ürünler, hizmetler, sektörler ara...'}
+                  className="w-full px-4 py-3 pr-12 border-2 border-gray-300 rounded-lg focus:border-[#261dcf] focus:outline-none text-gray-900"
+                  autoFocus
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && searchQuery.trim()) {
+                      handleSearch();
+                    }
+                    if (e.key === 'Escape') {
+                      setIsSearchOpen(false);
+                    }
+                  }}
+                />
+                <button
+                  onClick={handleSearch}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-[#261dcf] hover:bg-[#261dcf]/10 rounded transition-colors"
+                  aria-label={t.common.search || 'Ara'}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+              </div>
+              {searchQuery && (
+                <div className="mt-4 text-sm text-gray-600">
+                  {locale === 'en' 
+                    ? `Searching for: "${searchQuery}"`
+                    : `Aranıyor: "${searchQuery}"`
+                  }
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

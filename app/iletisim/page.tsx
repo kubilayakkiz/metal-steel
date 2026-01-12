@@ -27,8 +27,19 @@ export default function ContactPage() {
     setSubmitStatus('idle');
 
     try {
-      // TODO: API endpoint'e form verilerini gönder
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Bir hata oluştu');
+      }
       
       setSubmitStatus('success');
       setFormData({
@@ -40,6 +51,7 @@ export default function ContactPage() {
         message: '',
       });
     } catch (error) {
+      console.error('Contact form error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

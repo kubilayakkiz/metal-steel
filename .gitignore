@@ -38,4 +38,8 @@ next-env.d.ts
 # uploads
 /public/uploads
 
+# large files
+*.zip
+/dev/metal.zip
+
 
