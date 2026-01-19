@@ -130,6 +130,7 @@ export const translations = {
       },
       productsList: {
         zam: 'ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)',
+        magnelisZam: 'Magnelis (ZAM) Kaplamalı Çelik Sac',
         sicakHaddelenmisSac: 'Sıcak Haddelenmiş Sac',
         sicakHaddelenmisAsitlenmisSac: 'Sıcak Haddelenmiş Asitlenmiş Sac',
         galvanizliSac: 'Galvanizli Sac',
@@ -1078,6 +1079,7 @@ export const translations = {
       },
       productsList: {
         zam: 'ZAM (Min 25 Years High Corrosion Resistance)',
+        magnelisZam: 'Magnelis (ZAM) Coated Steel Sheet',
         sicakHaddelenmisSac: 'Hot Rolled Sheet',
         sicakHaddelenmisAsitlenmisSac: 'Hot Rolled Pickled Sheet',
         galvanizliSac: 'Galvanized Sheet',
@@ -2016,6 +2018,7 @@ export const translations = {
       },
       productsList: {
         zam: 'ZAM (مقاومة عالية للتآكل لمدة 25 عاماً على الأقل)',
+        magnelisZam: 'صفيح فولاذي مطلي بـ Magnelis (ZAM)',
         sicakHaddelenmisSac: 'صفيح مدلفن ساخن',
         sicakHaddelenmisAsitlenmisSac: 'صفيح مدلفن ساخن منقوع',
         galvanizliSac: 'صفيح مجلفن',
@@ -2963,6 +2966,7 @@ export const translations = {
       },
       productsList: {
         zam: 'ZAM (Минимум 25 лет высокой коррозионной стойкости)',
+        magnelisZam: 'Стальной лист с покрытием Magnelis (ZAM)',
         sicakHaddelenmisSac: 'Горячекатаный лист',
         sicakHaddelenmisAsitlenmisSac: 'Горячекатаный травленый лист',
         galvanizliSac: 'Оцинкованный лист',
@@ -3910,6 +3914,7 @@ export const translations = {
       },
       productsList: {
         zam: 'ZAM (Résistance à la corrosion élevée min. 25 ans)',
+        magnelisZam: 'Tôle d\'acier revêtue Magnelis (ZAM)',
         sicakHaddelenmisSac: 'Tôle laminée à chaud',
         sicakHaddelenmisAsitlenmisSac: 'Tôle laminée à chaud décapée',
         galvanizliSac: 'Tôle galvanisée',

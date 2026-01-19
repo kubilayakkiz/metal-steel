@@ -223,6 +223,11 @@ export default function Header() {
 
             {/* Navigation Links */}
             <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
+              {/* Hakkımızda Link */}
+              <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="hover:text-gray-300 transition-colors">
+                {t.common.about_us || 'Hakkımızda'}
+              </a>
+
               {/* Ürünler Dropdown */}
               <div 
                 className="relative urunler-dropdown-container"
@@ -247,6 +252,9 @@ export default function Header() {
                   >
                     <a href={getPathWithLocale('/urunler/zam', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                       {t.home.productsList.zam || 'ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)'}
+                    </a>
+                    <a href={getPathWithLocale('/urunler/magnelis-zam-kaplamali-celik-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
+                      {t.home.productsList.magnelisZam || 'Magnelis (ZAM) Kaplamalı Çelik Sac'}
                     </a>
                     <a href={getPathWithLocale('/urunler/sicak-haddelenmis-sac', locale)} className="block px-4 py-2 hover:bg-[#6dd5fb]/20 transition-colors">
                       {t.home.productsList.sicakHaddelenmisSac || 'Sıcak Haddelenmiş Sac'}
@@ -419,6 +427,11 @@ export default function Header() {
 
                 {/* Main Navigation */}
                 <div className="space-y-3">
+                  {/* Hakkımızda Link */}
+                  <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="block hover:text-gray-300 transition-colors">
+                    {t.common.about_us || 'Hakkımızda'}
+                  </a>
+                  
                   <div>
                     <button 
                       className="flex items-center justify-between w-full hover:text-gray-300 transition-colors"
@@ -432,6 +445,7 @@ export default function Header() {
                     {openDropdown === 'urunler-mobile' && (
                       <div className="pl-4 mt-2 space-y-2">
                         <a href={getPathWithLocale('/urunler/zam', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.zam || 'ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)'}</a>
+                        <a href={getPathWithLocale('/urunler/magnelis-zam-kaplamali-celik-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.magnelisZam || 'Magnelis (ZAM) Kaplamalı Çelik Sac'}</a>
                         <a href={getPathWithLocale('/urunler/sicak-haddelenmis-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.sicakHaddelenmisSac || 'Sıcak Haddelenmiş Sac'}</a>
                         <a href={getPathWithLocale('/urunler/galvanizli-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.galvanizliSac || 'Galvanizli Sac'}</a>
                         <a href={getPathWithLocale('/urunler/boyali-sac', locale)} className="block text-gray-300 hover:text-white text-sm">{t.home.productsList.boyaliSac || 'Boyalı Sac'}</a>

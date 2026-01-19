@@ -145,6 +145,9 @@ export default function Home() {
                     <a href="/urunler/zam" className="block border-t border-white/30 pt-3 hover:bg-white/10 transition-colors duration-200 rounded px-2">
                       <p className="text-sm md:text-base font-semibold text-center">ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)</p>
                     </a>
+                    <a href="/urunler/magnelis-zam-kaplamali-celik-sac" className="block border-t border-white/30 pt-3 hover:bg-white/10 transition-colors duration-200 rounded px-2">
+                      <p className="text-sm md:text-base font-semibold text-center">Magnelis (ZAM) Kaplamalı Çelik Sac</p>
+                    </a>
                     <a href="/urunler/sicak-haddelenmis-sac" className="block border-t border-white/30 pt-3 hover:bg-white/10 transition-colors duration-200 rounded px-2">
                       <p className="text-sm md:text-base font-semibold text-center">Sıcak Haddelenmiş Sac</p>
                     </a>
