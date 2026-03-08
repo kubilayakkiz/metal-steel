@@ -16,7 +16,7 @@ export default function NedenMetalXPage() {
             alt="Neden Metal X"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3d4f5f]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
@@ -32,7 +32,7 @@ export default function NedenMetalXPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Çalışma Kültürümüz
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
@@ -53,17 +53,17 @@ export default function NedenMetalXPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-12 text-center">
               Çalışan Avantajları
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Eğitim ve Gelişim
                 </h3>
                 <p className="text-gray-700">
@@ -72,12 +72,12 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Ekip Çalışması
                 </h3>
                 <p className="text-gray-700">
@@ -86,12 +86,12 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Rekabetçi Maaş
                 </h3>
                 <p className="text-gray-700">
@@ -100,12 +100,12 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Esnek Çalışma
                 </h3>
                 <p className="text-gray-700">
@@ -114,12 +114,12 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Sağlık ve Güvenlik
                 </h3>
                 <p className="text-gray-700">
@@ -128,12 +128,12 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Teknoloji ve İnovasyon
                 </h3>
                 <p className="text-gray-700">
@@ -149,18 +149,18 @@ export default function NedenMetalXPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Değerlerimiz
             </h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-2">Güvenilirlik</h3>
+                  <h3 className="text-xl font-bold text-[#3d4f5f] mb-2">Güvenilirlik</h3>
                   <p className="text-gray-700">
                     Sözümüzde durmak ve taahhütlerimizi yerine getirmek temel değerlerimizdendir.
                   </p>
@@ -168,13 +168,13 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-2">Mükemmellik</h3>
+                  <h3 className="text-xl font-bold text-[#3d4f5f] mb-2">Mükemmellik</h3>
                   <p className="text-gray-700">
                     Her işimizde en yüksek kalite standartlarını hedefler ve sürekli iyileştirme yaparız.
                   </p>
@@ -182,13 +182,13 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-2">İnovasyon</h3>
+                  <h3 className="text-xl font-bold text-[#3d4f5f] mb-2">İnovasyon</h3>
                   <p className="text-gray-700">
                     Yenilikçi çözümler geliştirerek sektörde öncü olmayı hedefleriz.
                   </p>
@@ -196,13 +196,13 @@ export default function NedenMetalXPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#261dcf] mb-2">Takım Çalışması</h3>
+                  <h3 className="text-xl font-bold text-[#3d4f5f] mb-2">Takım Çalışması</h3>
                   <p className="text-gray-700">
                     Birlikte çalışarak daha büyük başarılar elde edeceğimize inanıyoruz.
                   </p>
@@ -221,7 +221,7 @@ export default function NedenMetalXPage() {
             alt="Bizimle İletişime Geçin"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#261dcf]/80"></div>
+          <div className="absolute inset-0 bg-[#3d4f5f]/80"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -232,7 +232,7 @@ export default function NedenMetalXPage() {
               Kariyer fırsatlarımız hakkında daha fazla bilgi almak veya başvuru yapmak için bizimle iletişime geçin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/kariyer/basvuru" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href="/kariyer/basvuru" className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 Başvuru Yap
               </a>
               <a href="/iletisim" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

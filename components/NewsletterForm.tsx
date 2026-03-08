@@ -48,13 +48,13 @@ export default function NewsletterForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="E-posta adresiniz"
-            className="w-full px-6 py-4 rounded-lg border-2 border-gray-300 focus:border-[#261dcf] focus:ring-2 focus:ring-[#261dcf]/20 outline-none transition-all text-gray-900 placeholder-gray-400"
+            className="w-full px-6 py-4 rounded-lg border-2 border-gray-300 focus:border-[#3d4f5f] focus:ring-2 focus:ring-[#3d4f5f]/20 outline-none transition-all text-gray-900 placeholder-gray-400"
           />
         </div>
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`px-8 py-4 bg-[#261dcf] text-white font-bold rounded-lg transition-all whitespace-nowrap ${
+          className={`px-8 py-4 bg-[#3d4f5f] text-white font-bold rounded-lg transition-all whitespace-nowrap ${
             isSubmitting
               ? 'opacity-50 cursor-not-allowed'
               : 'hover:bg-[#1a16a8] hover:shadow-lg transform hover:scale-105'

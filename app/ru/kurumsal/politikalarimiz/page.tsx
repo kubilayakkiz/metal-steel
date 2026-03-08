@@ -84,7 +84,7 @@ export default function PolitikalarimizPage() {
             alt={t.corporate.politikalarimiz.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#261dcf]/90 via-[#261dcf]/80 to-[#261dcf]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3d4f5f]/90 via-[#3d4f5f]/80 to-[#3d4f5f]/70"></div>
         </div>
         
         <div className="relative container mx-auto px-4 text-white">
@@ -116,7 +116,7 @@ export default function PolitikalarimizPage() {
                       alt={policy.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#261dcf]/90 via-[#261dcf]/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#3d4f5f]/90 via-[#3d4f5f]/50 to-transparent"></div>
                     <div className="absolute top-4 right-4 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white group-hover:bg-white/30 transition-colors">
                       {policy.icon}
                     </div>
@@ -129,7 +129,7 @@ export default function PolitikalarimizPage() {
 
                   {/* Content */}
                   <div className="p-6 md:p-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#261dcf] mb-4">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3d4f5f] mb-4">
                       {policy.title}
                     </h2>
                     <p className="text-gray-700 mb-6 leading-relaxed">
@@ -138,14 +138,14 @@ export default function PolitikalarimizPage() {
 
                     {/* Principles */}
                     <div className="border-t border-gray-200 pt-6">
-                      <h3 className="text-sm font-semibold text-[#261dcf] mb-4 uppercase tracking-wide">
+                      <h3 className="text-sm font-semibold text-[#3d4f5f] mb-4 uppercase tracking-wide">
                         Core Principles
                       </h3>
                       <ul className="space-y-3">
                         {policy.principles.map((principle, idx) => (
                           <li key={idx} className="flex items-start gap-3">
-                            <div className="flex-shrink-0 w-6 h-6 bg-[#261dcf]/10 rounded-full flex items-center justify-center mt-0.5">
-                              <svg className="w-4 h-4 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="flex-shrink-0 w-6 h-6 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center mt-0.5">
+                              <svg className="w-4 h-4 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                               </svg>
                             </div>
@@ -166,7 +166,7 @@ export default function PolitikalarimizPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               {t.corporate.politikalarimiz.importanceTitle}
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -175,7 +175,7 @@ export default function PolitikalarimizPage() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-12">
               {policies.map((policy) => (
                 <div key={policy.id} className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-[#261dcf]/10 rounded-full flex items-center justify-center text-[#261dcf] mb-4">
+                  <div className="w-16 h-16 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center text-[#3d4f5f] mb-4">
                     {policy.icon}
                   </div>
                   <p className="text-sm font-semibold text-gray-700 text-center">{policy.standard}</p>
@@ -187,7 +187,7 @@ export default function PolitikalarimizPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-[#261dcf] text-white">
+      <section className="py-16 md:py-24 bg-[#3d4f5f] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -197,7 +197,7 @@ export default function PolitikalarimizPage() {
               {t.corporate.politikalarimiz.moreInfoText}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 {t.corporate.politikalarimiz.contactUs}
               </a>
               <a href={getPathWithLocale('/kurumsal/hakkimizda', locale)} className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

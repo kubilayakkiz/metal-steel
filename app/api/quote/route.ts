@@ -57,21 +57,21 @@ export async function POST(request: NextRequest) {
       subject: `Teklif Talebi: ${productType}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #261dcf;">Yeni Teklif Talebi</h2>
+          <h2 style="color: #3d4f5f;">Yeni Teklif Talebi</h2>
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #261dcf; margin-top: 0;">Kişisel Bilgiler</h3>
+            <h3 style="color: #3d4f5f; margin-top: 0;">Kişisel Bilgiler</h3>
             <p><strong>Ad Soyad:</strong> ${name}</p>
             ${company ? `<p><strong>Firma/Şirket:</strong> ${company}</p>` : ''}
             <p><strong>E-posta:</strong> ${email}</p>
             <p><strong>Telefon:</strong> ${phone}</p>
             
-            <h3 style="color: #261dcf; margin-top: 20px;">Ürün/Hizmet Bilgileri</h3>
+            <h3 style="color: #3d4f5f; margin-top: 20px;">Ürün/Hizmet Bilgileri</h3>
             <p><strong>Ürün/Hizmet Türü:</strong> ${productType}</p>
             ${quantity ? `<p><strong>Miktar/Tutar:</strong> ${quantity}</p>` : ''}
             ${deliveryAddress ? `<p><strong>Teslimat Adresi:</strong><br>${deliveryAddress.replace(/\n/g, '<br>')}</p>` : ''}
             
             ${message ? `
-              <h3 style="color: #261dcf; margin-top: 20px;">Ek Bilgiler</h3>
+              <h3 style="color: #3d4f5f; margin-top: 20px;">Ek Bilgiler</h3>
               <p style="white-space: pre-wrap;">${message}</p>
             ` : ''}
             

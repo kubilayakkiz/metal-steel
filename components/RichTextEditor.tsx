@@ -110,7 +110,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={`px-3 py-1 rounded text-sm font-bold transition-colors ${
-            editor.isActive('bold') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('bold') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Kalın"
@@ -120,7 +120,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().toggleItalic().run()}
           className={`px-3 py-1 rounded text-sm italic transition-colors ${
-            editor.isActive('italic') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('italic') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="İtalik"
@@ -130,7 +130,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().toggleUnderline().run()}
           className={`px-3 py-1 rounded text-sm underline transition-colors ${
-            editor.isActive('underline') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('underline') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Altı Çizili"
@@ -140,7 +140,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().toggleStrike().run()}
           className={`px-3 py-1 rounded text-sm line-through transition-colors ${
-            editor.isActive('strike') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('strike') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Üstü Çizili"
@@ -154,7 +154,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive('bulletList') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('bulletList') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Madde İşareti"
@@ -164,7 +164,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive('orderedList') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('orderedList') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Numaralı Liste"
@@ -174,7 +174,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive('blockquote') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('blockquote') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Alıntı"
@@ -188,7 +188,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().setTextAlign('left').run()}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive({ textAlign: 'left' }) ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive({ textAlign: 'left' }) ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Sola Hizala"
@@ -198,7 +198,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().setTextAlign('center').run()}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive({ textAlign: 'center' }) ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive({ textAlign: 'center' }) ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Ortala"
@@ -208,7 +208,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().setTextAlign('right').run()}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive({ textAlign: 'right' }) ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive({ textAlign: 'right' }) ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Sağa Hizala"
@@ -218,7 +218,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <button
           onClick={() => editor.chain().focus().setTextAlign('justify').run()}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive({ textAlign: 'justify' }) ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive({ textAlign: 'justify' }) ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="İki Yana Yasla"
@@ -261,7 +261,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
             }
           }}
           className={`px-3 py-1 rounded text-sm transition-colors ${
-            editor.isActive('link') ? 'bg-[#261dcf] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
+            editor.isActive('link') ? 'bg-[#3d4f5f] text-white' : 'bg-white hover:bg-gray-100 text-gray-700'
           }`}
           type="button"
           title="Link Ekle/Kaldır"
@@ -327,7 +327,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
           margin: 0.5rem 0;
         }
         .ProseMirror blockquote {
-          border-left: 4px solid #261dcf;
+          border-left: 4px solid #3d4f5f;
           padding-left: 1rem;
           margin: 1rem 0;
           font-style: italic;
@@ -338,7 +338,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
           margin: 1rem 0;
         }
         .ProseMirror a {
-          color: #261dcf;
+          color: #3d4f5f;
           text-decoration: underline;
         }
         .ProseMirror mark {

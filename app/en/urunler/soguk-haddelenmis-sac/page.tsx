@@ -16,7 +16,7 @@ export default function SogukHaddelenmisSacPageEN() {
             alt={t.products.sogukHaddelenmisSac.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3d4f5f]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
@@ -38,9 +38,9 @@ export default function SogukHaddelenmisSacPageEN() {
                 alt={t.products.sogukHaddelenmisSac.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-[#261dcf]/30"></div>
+              <div className="absolute inset-0 bg-[#3d4f5f]/30"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               {t.products.sogukHaddelenmisSac.aboutTitle}
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -56,33 +56,33 @@ export default function SogukHaddelenmisSacPageEN() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               {t.products.sogukHaddelenmisSac.productionLimitsTitle}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.products.sogukHaddelenmisSac.thickness}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.products.sogukHaddelenmisSac.thickness}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.thicknessMin}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.thicknessMax}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.thicknessStandard}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.thicknessTolerance}</span>
@@ -91,22 +91,22 @@ export default function SogukHaddelenmisSacPageEN() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.products.sogukHaddelenmisSac.width}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.products.sogukHaddelenmisSac.width}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.widthMin}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.widthMax}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.widthTolerance}</span>
@@ -115,22 +115,22 @@ export default function SogukHaddelenmisSacPageEN() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.products.sogukHaddelenmisSac.length}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.products.sogukHaddelenmisSac.length}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.lengthMin}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.lengthMax}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.lengthStandard}</span>
@@ -139,16 +139,16 @@ export default function SogukHaddelenmisSacPageEN() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.products.sogukHaddelenmisSac.weight}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.products.sogukHaddelenmisSac.weight}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.weightMin}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.weightMax}</span>
@@ -164,27 +164,27 @@ export default function SogukHaddelenmisSacPageEN() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               {t.products.sogukHaddelenmisSac.qualityStandardsTitle}
             </h2>
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.products.sogukHaddelenmisSac.internationalStandards}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">{t.products.sogukHaddelenmisSac.internationalStandards}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>EN 10130:</strong> {t.products.sogukHaddelenmisSac.standard1}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>ASTM A1008:</strong> {t.products.sogukHaddelenmisSac.standard2}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>DIN 1623:</strong> {t.products.sogukHaddelenmisSac.standard3}</span>
@@ -193,7 +193,7 @@ export default function SogukHaddelenmisSacPageEN() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.products.sogukHaddelenmisSac.qualityProperties}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">{t.products.sogukHaddelenmisSac.qualityProperties}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                   <div>
                     <p className="font-semibold mb-2">{t.products.sogukHaddelenmisSac.mechanicalProperties}</p>
@@ -217,28 +217,28 @@ export default function SogukHaddelenmisSacPageEN() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.products.sogukHaddelenmisSac.surfaceQuality}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">{t.products.sogukHaddelenmisSac.surfaceQuality}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.surface1}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.surface2}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.surface3}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.surface4}</span>
@@ -247,28 +247,28 @@ export default function SogukHaddelenmisSacPageEN() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.products.sogukHaddelenmisSac.qualityControl}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">{t.products.sogukHaddelenmisSac.qualityControl}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.control1}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.control2}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.control3}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{t.products.sogukHaddelenmisSac.control4}</span>
@@ -288,7 +288,7 @@ export default function SogukHaddelenmisSacPageEN() {
             alt={t.products.sogukHaddelenmisSac.ctaTitle}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#261dcf]/80"></div>
+          <div className="absolute inset-0 bg-[#3d4f5f]/80"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -299,7 +299,7 @@ export default function SogukHaddelenmisSacPageEN() {
               {t.products.sogukHaddelenmisSac.ctaDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 {t.common.contact}
               </a>
               <a href={getPathWithLocale('/teklif-al', locale)} className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

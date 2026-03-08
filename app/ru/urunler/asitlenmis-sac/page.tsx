@@ -16,7 +16,7 @@ export default function AsitlenmisSacPageRU() {
             alt={t.products.asitlenmisSac.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3d4f5f]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
@@ -38,9 +38,9 @@ export default function AsitlenmisSacPageRU() {
                 alt={t.products.asitlenmisSac.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-[#261dcf]/30"></div>
+              <div className="absolute inset-0 bg-[#3d4f5f]/30"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               {t.products.asitlenmisSac.aboutTitle}
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -56,21 +56,21 @@ export default function AsitlenmisSacPageRU() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               {t.products.asitlenmisSac.productionLimitsTitle}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.products.asitlenmisSac.thickness}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.products.asitlenmisSac.thickness}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.asitlenmisSac.thicknessMin}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.asitlenmisSac.thicknessMax}</span>
@@ -79,16 +79,16 @@ export default function AsitlenmisSacPageRU() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.products.asitlenmisSac.width}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.products.asitlenmisSac.width}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.asitlenmisSac.widthMin}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{t.products.asitlenmisSac.widthMax}</span>
@@ -104,21 +104,21 @@ export default function AsitlenmisSacPageRU() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               {t.products.asitlenmisSac.qualityStandardsTitle}
             </h2>
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">{t.products.asitlenmisSac.internationalStandards}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">{t.products.asitlenmisSac.internationalStandards}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>EN 10025:</strong> {t.products.asitlenmisSac.standard1}</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>ASTM A36:</strong> {t.products.asitlenmisSac.standard2}</span>
@@ -138,7 +138,7 @@ export default function AsitlenmisSacPageRU() {
             alt={t.products.asitlenmisSac.ctaTitle}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#261dcf]/80"></div>
+          <div className="absolute inset-0 bg-[#3d4f5f]/80"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -149,7 +149,7 @@ export default function AsitlenmisSacPageRU() {
               {t.products.asitlenmisSac.ctaDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href={getPathWithLocale('/iletisim', locale)} className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 {t.common.contact}
               </a>
               <a href={getPathWithLocale('/teklif-al', locale)} className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

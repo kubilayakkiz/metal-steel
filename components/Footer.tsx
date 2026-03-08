@@ -6,7 +6,7 @@ import { getPathWithLocale } from '@/lib/i18n/translations';
 export default function Footer() {
   const { t, locale } = useTranslations();
   return (
-    <footer className="w-full bg-[#261dcf] text-white">
+    <footer className="w-full bg-[#3d4f5f] text-white">
       <div className="container mx-auto px-4 py-8 md:py-12">
         {/* Top Section: Logo, Contact Info and Social Media */}
         <div className="mb-6 pb-6 border-b border-[#6dd5fb]/30">
@@ -123,23 +123,18 @@ export default function Footer() {
                 <h4 className="font-semibold mb-2 text-white text-sm">{t.common.products || 'Ürünler'}</h4>
                 <ul className="space-y-2 text-sm text-gray-300 pl-2">
                   <li>
-                    <a href={getPathWithLocale('/urunler/sicak-haddelenmis-asitlenmis-sac', locale)} className="hover:text-white transition-colors">
-                      {t.home.productsList.sicakHaddelenmisAsitlenmisSac || 'Sıcak Haddelenmiş Asitlenmiş Sac'}
+                    <a href={getPathWithLocale('/urunler/yassi-celikler', locale)} className="hover:text-white transition-colors font-medium">
+                      Yassı Çelikler
                     </a>
                   </li>
                   <li>
-                    <a href={getPathWithLocale('/urunler/soguk-haddelenmis-sac', locale)} className="hover:text-white transition-colors">
-                      {t.home.productsList.sogukHaddelenmisSac || 'Soğuk Haddelenmiş Sac'}
+                    <a href={getPathWithLocale('/urunler/boru-ve-kutu-profiller', locale)} className="hover:text-white transition-colors font-medium">
+                      Boru ve Kutu Profiller
                     </a>
                   </li>
                   <li>
-                    <a href={getPathWithLocale('/urunler/galvanizli-sac', locale)} className="hover:text-white transition-colors">
-                      {t.home.productsList.galvanizliSac || 'Galvanizli Sac'}
-                    </a>
-                  </li>
-                  <li>
-                    <a href={getPathWithLocale('/urunler/boyali-sac', locale)} className="hover:text-white transition-colors">
-                      {t.home.productsList.boyaliSac || 'Boyalı Sac'}
+                    <a href={getPathWithLocale('/urunler/hadde-profil', locale)} className="hover:text-white transition-colors font-medium">
+                      Hadde Profil Grubu
                     </a>
                   </li>
                 </ul>

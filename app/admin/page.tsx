@@ -42,9 +42,9 @@ export default function AdminDashboard() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-[#261dcf]">Admin Paneli</h1>
+          <h1 className="text-2xl font-bold text-[#3d4f5f]">Admin Paneli</h1>
           <div className="flex items-center gap-4">
-            <Link href="/" className="text-gray-600 hover:text-[#261dcf] transition-colors">
+            <Link href="/" className="text-gray-600 hover:text-[#3d4f5f] transition-colors">
               Ana Sayfa
             </Link>
             <button

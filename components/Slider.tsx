@@ -53,8 +53,8 @@ export default function Slider({ images, autoPlayInterval = 5000 }: SliderProps)
   if (images.length === 0) return null;
 
   return (
-    <div className="relative w-full h-[65vh] md:h-[70vh] lg:h-[75vh] overflow-hidden">
-      {/* Slider Images */}
+    <div className="relative w-full h-[85vh] md:h-[90vh] lg:h-screen overflow-hidden">
+      {/* Slider Images - full görünüm */}
       <div className="relative w-full h-full">
         {images.map((slide, index) => (
           <div
@@ -66,7 +66,7 @@ export default function Slider({ images, autoPlayInterval = 5000 }: SliderProps)
             <img
               src={slide.src}
               alt={slide.alt}
-              className="w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
             {/* Overlay for better text readability */}
             <div className="absolute inset-0 bg-black/30"></div>
@@ -93,8 +93,8 @@ export default function Slider({ images, autoPlayInterval = 5000 }: SliderProps)
                           href={button.href}
                           className={`px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 ${
                             button.variant === 'secondary'
-                              ? 'bg-white/90 text-[#261dcf] hover:bg-white hover:scale-105 shadow-lg'
-                              : 'bg-[#261dcf] text-white hover:bg-[#1a16a8] hover:scale-105 shadow-lg'
+                              ? 'bg-white/90 text-[#3d4f5f] hover:bg-white hover:scale-105 shadow-lg'
+                              : 'bg-[#3d4f5f] text-white hover:bg-[#1a16a8] hover:scale-105 shadow-lg'
                           }`}
                         >
                           {button.text}
@@ -114,7 +114,7 @@ export default function Slider({ images, autoPlayInterval = 5000 }: SliderProps)
         <>
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#261dcf] p-3 rounded-full transition-all duration-300 shadow-lg hover:scale-110"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#3d4f5f] p-3 rounded-full transition-all duration-300 shadow-lg hover:scale-110"
             aria-label="Previous slide"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -123,7 +123,7 @@ export default function Slider({ images, autoPlayInterval = 5000 }: SliderProps)
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#261dcf] p-3 rounded-full transition-all duration-300 shadow-lg hover:scale-110"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#3d4f5f] p-3 rounded-full transition-all duration-300 shadow-lg hover:scale-110"
             aria-label="Next slide"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +142,7 @@ export default function Slider({ images, autoPlayInterval = 5000 }: SliderProps)
               onClick={() => goToSlide(index)}
               className={`transition-all duration-300 rounded-full ${
                 index === currentIndex
-                  ? 'bg-[#261dcf] w-8 h-3'
+                  ? 'bg-[#3d4f5f] w-8 h-3'
                   : 'bg-white/60 hover:bg-white/80 w-3 h-3'
               }`}
               aria-label={`Go to slide ${index + 1}`}

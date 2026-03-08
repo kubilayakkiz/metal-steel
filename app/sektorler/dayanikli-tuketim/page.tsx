@@ -18,7 +18,7 @@ export default function DayanikliTuketimPage() {
             className="w-full h-full object-cover"
           />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#261dcf]/90 via-[#261dcf]/80 to-[#261dcf]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3d4f5f]/90 via-[#3d4f5f]/80 to-[#3d4f5f]/70"></div>
         </div>
         
         {/* Content */}
@@ -36,7 +36,7 @@ export default function DayanikliTuketimPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               Dayanıklı Tüketim Sektöründe Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -63,12 +63,12 @@ export default function DayanikliTuketimPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Hizmet Alanları
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Beyaz Eşya Üretimi
                 </h3>
                 <p className="text-gray-700">
@@ -78,7 +78,7 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Elektronik Ürünler
                 </h3>
                 <p className="text-gray-700">
@@ -88,7 +88,7 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Küçük Ev Aletleri
                 </h3>
                 <p className="text-gray-700">
@@ -98,7 +98,7 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Mobilya ve İç Tasarım
                 </h3>
                 <p className="text-gray-700">
@@ -108,7 +108,7 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Ambalaj ve Muhafaza
                 </h3>
                 <p className="text-gray-700">
@@ -118,7 +118,7 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Özel Tasarım Çözümleri
                 </h3>
                 <p className="text-gray-700">
@@ -135,13 +135,13 @@ export default function DayanikliTuketimPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Dayanıklı Tüketim Sektöründe Çeliğin Avantajları
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -155,8 +155,8 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                   </svg>
                 </div>
@@ -170,8 +170,8 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                   </svg>
                 </div>
@@ -185,8 +185,8 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
                 </div>
@@ -200,8 +200,8 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -215,8 +215,8 @@ export default function DayanikliTuketimPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                   </svg>
                 </div>
@@ -237,78 +237,78 @@ export default function DayanikliTuketimPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Dayanıklı Tüketim Sektörü İçin İlgili Ürünler
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Boyalı Sac
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Estetik ve koruyucu özellikleri ile beyaz eşya ve elektronik ürünlerde kullanılan boyalı saclar.
                 </p>
-                <a href="/urunler/boyali-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boyali-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Galvanizli Sac
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Korozyona dayanıklı galvanizli sac, dayanıklı tüketim ürünlerinde uzun ömür sağlar.
                 </p>
-                <a href="/urunler/galvanizli-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/galvanizli-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Soğuk Haddelenmiş Sac
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Hassas toleranslar ve mükemmel yüzey kalitesi ile hassas üretim gerektiren uygulamalar.
                 </p>
-                <a href="/urunler/soguk-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/soguk-haddelenmis-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Paslanmaz Çelik
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Hijyen ve dayanıklılık gerektiren uygulamalar için paslanmaz çelik çözümleri.
                 </p>
-                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Özel Kaplamalı Sac
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Estetik ve koruyucu özellikleri ile özel kaplama seçenekleri.
                 </p>
-                <a href="/urunler/boyali-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/boyali-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Teknik Destek
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Ürün seçimi ve uygulama konularında uzman teknik danışmanlık hizmetleri.
                 </p>
-                <a href="/iletisim" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/iletisim" className="text-[#3d4f5f] font-semibold hover:underline">
                   İletişime Geç →
                 </a>
               </div>
@@ -325,7 +325,7 @@ export default function DayanikliTuketimPage() {
             alt="Bizimle İletişime Geçin"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#261dcf]/80"></div>
+          <div className="absolute inset-0 bg-[#3d4f5f]/80"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -336,7 +336,7 @@ export default function DayanikliTuketimPage() {
               Dayanıklı tüketim sektörü için çelik çözümlerimiz hakkında daha fazla bilgi almak veya teklif almak için bizimle iletişime geçin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href="/iletisim" className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 İletişime Geç
               </a>
               <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

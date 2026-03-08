@@ -16,7 +16,7 @@ export default function MagnelisZAMPage() {
             alt="Magnelis (ZAM) Coated Steel Sheet"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3d4f5f]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
@@ -41,9 +41,9 @@ export default function MagnelisZAMPage() {
                 alt="Magnelis (ZAM) Coated Steel Sheet"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-[#261dcf]/30"></div>
+              <div className="absolute inset-0 bg-[#3d4f5f]/30"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               About the Product
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -73,7 +73,7 @@ export default function MagnelisZAMPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6 text-center">
               Why ZAM? (Magnelis)
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -84,13 +84,13 @@ export default function MagnelisZAMPage() {
               </p>
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-bold text-[#261dcf] mb-6 mt-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#3d4f5f] mb-6 mt-12">
               Key Advantages
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
@@ -100,7 +100,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
@@ -110,7 +110,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
@@ -120,7 +120,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
@@ -130,7 +130,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
@@ -147,27 +147,27 @@ export default function MagnelisZAMPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Production / Supply Limits
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Thickness</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">Thickness</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Minimum: 0.4 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Maximum: 3.0 mm</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Standard thicknesses: 0.5 / 0.7 / 0.8 / 1.0 / 1.2 / 1.5 / 2.0 / 2.5 / 3.0 mm</span>
@@ -176,22 +176,22 @@ export default function MagnelisZAMPage() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Width</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">Width</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Minimum: 600 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Maximum: 1500 mm</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Custom widths: Contact our customer team for project-based requests.</span>
@@ -200,16 +200,16 @@ export default function MagnelisZAMPage() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Coating Weight</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">Coating Weight</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Minimum: 100 g/m²</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Maximum: 350 g/m²</span>
@@ -218,16 +218,16 @@ export default function MagnelisZAMPage() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">Order Quantity</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">Order Quantity</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Minimum order: 3 tons</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Maximum order: 300 tons</span>
@@ -243,27 +243,27 @@ export default function MagnelisZAMPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Quality Standards
             </h2>
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">International Standards</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">International Standards</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>EN 10346:</strong> Continuously hot-dip coated steel products</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>ASTM A653:</strong> Standard for zinc-coated steel</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>JIS G 3315:</strong> Japanese steel coating standard</span>
@@ -272,32 +272,32 @@ export default function MagnelisZAMPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Corrosion Protection Performance</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">Corrosion Protection Performance</h3>
                 <p className="text-gray-700 mb-4">
                   ZAM coated steel sheet is a strong alternative in corrosion-risk environments. 
                   With proper selection and correct coating weight, it supports the following targets:
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Coating performance targeting minimum 25 years corrosion resistance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>3–4 times higher protection compared to traditional galvanized</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Strong protection behavior even on cut edges</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>High resistance to environmental conditions</span>
@@ -317,7 +317,7 @@ export default function MagnelisZAMPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Application Areas
             </h2>
             <p className="text-center text-gray-700 mb-8 text-lg">
@@ -326,7 +326,7 @@ export default function MagnelisZAMPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium">Automotive and automotive industry</span>
@@ -334,7 +334,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium">Construction and steel structure applications</span>
@@ -342,7 +342,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium">Agricultural machinery and agricultural structures</span>
@@ -350,7 +350,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium">General industrial manufacturing</span>
@@ -358,7 +358,7 @@ export default function MagnelisZAMPage() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md md:col-span-2">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium">Outdoor equipment and systems</span>
@@ -373,7 +373,7 @@ export default function MagnelisZAMPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6 text-center">
               ZAM Supply with Metal X Steel
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -390,7 +390,7 @@ export default function MagnelisZAMPage() {
               <p className="font-semibold">
                 topics.
               </p>
-              <p className="text-center text-lg font-bold text-[#261dcf] mt-6">
+              <p className="text-center text-lg font-bold text-[#3d4f5f] mt-6">
                 Metal X Steel – the power of industrial steel.
               </p>
             </div>
@@ -402,7 +402,7 @@ export default function MagnelisZAMPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6 text-center">
               Get Quote / Technical Consultation
             </h2>
             <div className="bg-gray-50 p-8 rounded-lg shadow-md">
@@ -411,41 +411,41 @@ export default function MagnelisZAMPage() {
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Application area (construction / automotive / agriculture / industry)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Thickness – width – coating weight</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Quality standard expectations</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Quantity (tonnage) and delivery schedule</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#261dcf] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Delivery location / shipping plan</span>
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                <a href="/en/teklif-al" className="px-8 py-4 bg-[#261dcf] text-white font-bold rounded-lg hover:bg-[#1a1a5e] transition-colors text-center">
+                <a href="/en/teklif-al" className="px-8 py-4 bg-[#3d4f5f] text-white font-bold rounded-lg hover:bg-[#1a1a5e] transition-colors text-center">
                   Get Quote
                 </a>
-                <a href="/en/iletisim" className="px-8 py-4 bg-transparent border-2 border-[#261dcf] text-[#261dcf] font-bold rounded-lg hover:bg-[#261dcf]/10 transition-colors text-center">
+                <a href="/en/iletisim" className="px-8 py-4 bg-transparent border-2 border-[#3d4f5f] text-[#3d4f5f] font-bold rounded-lg hover:bg-[#3d4f5f]/10 transition-colors text-center">
                   Technical Consultation
                 </a>
               </div>
@@ -458,12 +458,12 @@ export default function MagnelisZAMPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Frequently Asked Questions (FAQ)
             </h2>
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   What is the main difference between ZAM and galvanized?
                 </h3>
                 <p className="text-gray-700">
@@ -472,7 +472,7 @@ export default function MagnelisZAMPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Does protection continue after cutting/drilling?
                 </h3>
                 <p className="text-gray-700">
@@ -480,7 +480,7 @@ export default function MagnelisZAMPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   In what sizes can it be supplied?
                 </h3>
                 <p className="text-gray-700">
@@ -489,7 +489,7 @@ export default function MagnelisZAMPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   What is the minimum order quantity?
                 </h3>
                 <p className="text-gray-700">
@@ -497,7 +497,7 @@ export default function MagnelisZAMPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Under which standards is it offered?
                 </h3>
                 <p className="text-gray-700">
@@ -505,7 +505,7 @@ export default function MagnelisZAMPage() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   What information is needed for a quote?
                 </h3>
                 <p className="text-gray-700">
@@ -517,7 +517,7 @@ export default function MagnelisZAMPage() {
               If you are looking for a long-lasting solution in challenging conditions, let's clarify the appropriate ZAM 
               selection for your project together.
             </p>
-            <p className="text-center text-lg font-bold text-[#261dcf] mt-4">
+            <p className="text-center text-lg font-bold text-[#3d4f5f] mt-4">
               Metal X Steel – the power of industrial steel.
             </p>
           </div>
@@ -532,7 +532,7 @@ export default function MagnelisZAMPage() {
             alt="Contact Us"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#261dcf]/80"></div>
+          <div className="absolute inset-0 bg-[#3d4f5f]/80"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -543,7 +543,7 @@ export default function MagnelisZAMPage() {
               Contact us for detailed information and quotes about our Magnelis (ZAM) coated sheet products.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/en/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href="/en/iletisim" className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 Contact
               </a>
               <a href="/en/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

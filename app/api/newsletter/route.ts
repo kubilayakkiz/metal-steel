@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
       subject: 'Yeni Newsletter Aboneliği',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #261dcf;">Yeni Newsletter Aboneliği</h2>
+          <h2 style="color: #3d4f5f;">Yeni Newsletter Aboneliği</h2>
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <p><strong>E-posta:</strong> ${email}</p>
             <p><strong>Abonelik Tarihi:</strong> ${new Date().toLocaleString('tr-TR')}</p>

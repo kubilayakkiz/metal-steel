@@ -18,7 +18,7 @@ export default function OtomotivPage() {
             className="w-full h-full object-cover"
           />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#261dcf]/90 via-[#261dcf]/80 to-[#261dcf]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3d4f5f]/90 via-[#3d4f5f]/80 to-[#3d4f5f]/70"></div>
         </div>
         
         {/* Content */}
@@ -36,7 +36,7 @@ export default function OtomotivPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               Otomotiv Sektöründe Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -63,12 +63,12 @@ export default function OtomotivPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Hizmet Alanları
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Otomotiv Gövdeleri
                 </h3>
                 <p className="text-gray-700">
@@ -78,7 +78,7 @@ export default function OtomotivPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Güvenlik Bileşenleri
                 </h3>
                 <p className="text-gray-700">
@@ -88,7 +88,7 @@ export default function OtomotivPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Motor ve Şanzıman Bileşenleri
                 </h3>
                 <p className="text-gray-700">
@@ -98,7 +98,7 @@ export default function OtomotivPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Süspansiyon Sistemleri
                 </h3>
                 <p className="text-gray-700">
@@ -108,7 +108,7 @@ export default function OtomotivPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Elektrikli Araçlar
                 </h3>
                 <p className="text-gray-700">
@@ -118,7 +118,7 @@ export default function OtomotivPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">
                   Teknik Danışmanlık
                 </h3>
                 <p className="text-gray-700">
@@ -135,13 +135,13 @@ export default function OtomotivPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Otomotiv Sektöründe Çeliğin Avantajları
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -155,8 +155,8 @@ export default function OtomotivPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -170,8 +170,8 @@ export default function OtomotivPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
@@ -185,8 +185,8 @@ export default function OtomotivPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
                 </div>
@@ -200,8 +200,8 @@ export default function OtomotivPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
@@ -215,8 +215,8 @@ export default function OtomotivPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#261dcf]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#261dcf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -238,78 +238,78 @@ export default function OtomotivPage() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Otomotiv Sektörü İçin İlgili Ürünler
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Sıcak Haddelenmiş Sac
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Otomotiv gövde ve şasi üretimi için yüksek kaliteli sıcak haddelenmiş saclar.
                 </p>
-                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Soğuk Haddelenmiş Sac
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Hassas kalınlık toleransları ve mükemmel yüzey kalitesi ile otomotiv uygulamaları.
                 </p>
-                <a href="/urunler/soguk-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/soguk-haddelenmis-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Galvanizli Sac
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Korozyona dayanıklı galvanizli sac, otomotiv ömrünü uzatır ve bakım maliyetlerini düşürür.
                 </p>
-                <a href="/urunler/galvanizli-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/galvanizli-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Yüksek Dayanımlı Çelik
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Güvenlik bileşenleri ve kritik parçalar için yüksek dayanımlı çelik çözümleri.
                 </p>
-                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/sicak-haddelenmis-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Özel Alaşımlı Çelik
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Motor ve şanzıman bileşenleri için özel alaşımlı çelik ürünleri.
                 </p>
-                <a href="/urunler/zam" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/urunler/zam" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-[#261dcf] mb-3">
+                <h3 className="text-lg font-bold text-[#3d4f5f] mb-3">
                   Teknik Danışmanlık
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Otomotiv uygulamalarınız için uzman teknik danışmanlık ve destek hizmetleri.
                 </p>
-                <a href="/iletisim" className="text-[#261dcf] font-semibold hover:underline">
+                <a href="/iletisim" className="text-[#3d4f5f] font-semibold hover:underline">
                   İletişime Geç →
                 </a>
               </div>
@@ -326,7 +326,7 @@ export default function OtomotivPage() {
             alt="Bizimle İletişime Geçin"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#261dcf]/80"></div>
+          <div className="absolute inset-0 bg-[#3d4f5f]/80"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -337,7 +337,7 @@ export default function OtomotivPage() {
               Otomotiv sektörü için çelik çözümlerimiz hakkında daha fazla bilgi almak veya teklif almak için bizimle iletişime geçin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href="/iletisim" className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 İletişime Geç
               </a>
               <a href="/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

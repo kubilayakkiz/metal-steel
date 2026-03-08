@@ -54,6 +54,11 @@
   animation: fadeIn 1.2s ease-out 0.4s both;
 }
 
+/* Mega menu quick fade */
+.animate-mega-menu {
+  animation: fadeIn 0.2s ease-out both;
+}
+
 /* Proxima Nova Font */
 @font-face {
   font-family: 'Proxima Nova';
@@ -96,7 +101,7 @@
 }
 
 :root {
-  --primary-dark: #1a2744;
+  --primary-dark: #3d4f5f;
 }
 
 body {

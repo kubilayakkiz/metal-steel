@@ -44,10 +44,10 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#261dcf] to-[#1a1a5e] px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3d4f5f] to-[#1a1a5e] px-4">
       <div className="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-[#261dcf] mb-2">Admin Paneli</h1>
+          <h1 className="text-3xl font-bold text-[#3d4f5f] mb-2">Admin Paneli</h1>
           <p className="text-gray-600">Giriş yapmak için şifrenizi girin</p>
         </div>
 
@@ -61,7 +61,7 @@ export default function AdminLogin() {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
               placeholder="Şifrenizi girin"
               required
             />
@@ -76,14 +76,14 @@ export default function AdminLogin() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-[#261dcf] hover:bg-[#1a16a8] text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-[#3d4f5f] hover:bg-[#1a16a8] text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? 'Giriş yapılıyor...' : 'Giriş Yap'}
           </button>
         </form>
 
         <div className="mt-6 text-center">
-          <a href="/" className="text-sm text-gray-600 hover:text-[#261dcf] transition-colors">
+          <a href="/" className="text-sm text-gray-600 hover:text-[#3d4f5f] transition-colors">
             ← Ana Sayfaya Dön
           </a>
         </div>

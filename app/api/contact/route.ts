@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
       subject: `İletişim Formu: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #261dcf;">Yeni İletişim Formu Mesajı</h2>
+          <h2 style="color: #3d4f5f;">Yeni İletişim Formu Mesajı</h2>
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <p><strong>Ad Soyad:</strong> ${name}</p>
             <p><strong>E-posta:</strong> ${email}</p>

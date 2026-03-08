@@ -16,7 +16,7 @@ export default function HakkimizdaPageFR() {
             alt="À propos de nous"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#261dcf]/90 via-[#261dcf]/80 to-[#261dcf]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3d4f5f]/90 via-[#3d4f5f]/80 to-[#3d4f5f]/70"></div>
         </div>
         
         <div className="relative container mx-auto px-4 text-white">
@@ -33,7 +33,7 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               À propos de nous
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -58,7 +58,7 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg border-l-4 border-[#261dcf]">
+            <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg border-l-4 border-[#3d4f5f]">
               <p className="text-xl md:text-2xl text-gray-700 mb-4 leading-relaxed">
                 La valeur dans l'approvisionnement en acier ; n'est pas créée seulement dans le matériau, mais dans la bonne décision et la livraison en temps voulu.
               </p>
@@ -74,7 +74,7 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Nos groupes de produits
             </h2>
             <p className="text-center text-gray-700 mb-8 text-lg">
@@ -83,7 +83,7 @@ export default function HakkimizdaPageFR() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium text-lg">Tôle laminée à froid (TLF)</span>
@@ -91,7 +91,7 @@ export default function HakkimizdaPageFR() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium text-lg">Tôle laminée à chaud décapée (TLCD)</span>
@@ -99,7 +99,7 @@ export default function HakkimizdaPageFR() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium text-lg">Tôle noire</span>
@@ -107,7 +107,7 @@ export default function HakkimizdaPageFR() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium text-lg">Tôle galvanisée</span>
@@ -115,7 +115,7 @@ export default function HakkimizdaPageFR() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium text-lg">Solutions de tôles revêtues spéciales (Magnelis / ZAM, etc.)</span>
@@ -123,7 +123,7 @@ export default function HakkimizdaPageFR() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium text-lg">Groupes de tubes–profilés (basés sur projet)</span>
@@ -131,7 +131,7 @@ export default function HakkimizdaPageFR() {
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md md:col-span-2">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-gray-700 font-medium text-lg">Approvisionnement basé sur projet et gestion des délais</span>
@@ -151,7 +151,7 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               Produit stratégique en acier revêtu : Magnelis (ZAM)
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -185,7 +185,7 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
               Approche Metal X Steel
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -202,7 +202,7 @@ export default function HakkimizdaPageFR() {
                 Avec notre structure capable de prendre des décisions rapides dans des conditions de marché changeantes, nous offrons à nos clients 
                 un approvisionnement fiable et une valeur à long terme.
               </p>
-              <p className="text-center text-lg font-bold text-[#261dcf] mt-6">
+              <p className="text-center text-lg font-bold text-[#3d4f5f] mt-6">
                 Metal X Steel – la puissance de l'acier industriel.
               </p>
             </div>
@@ -214,41 +214,41 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-12 text-center">
               Metal X Steel en chiffres
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#261dcf]">
-                <div className="text-4xl md:text-5xl font-bold text-[#261dcf] mb-2">15+</div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#3d4f5f]">
+                <div className="text-4xl md:text-5xl font-bold text-[#3d4f5f] mb-2">15+</div>
                 <div className="text-lg font-semibold text-gray-800 mb-2">Ans</div>
                 <p className="text-sm text-gray-600">Expérience sur le terrain dans l'approvisionnement en fer-acier</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#261dcf]">
-                <div className="text-4xl md:text-5xl font-bold text-[#261dcf] mb-2">200+</div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#3d4f5f]">
+                <div className="text-4xl md:text-5xl font-bold text-[#3d4f5f] mb-2">200+</div>
                 <div className="text-lg font-semibold text-gray-800 mb-2">Clients / Partenaires</div>
                 <p className="text-sm text-gray-600">Réseau client continu</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#261dcf]">
-                <div className="text-4xl md:text-5xl font-bold text-[#261dcf] mb-2">8+</div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#3d4f5f]">
+                <div className="text-4xl md:text-5xl font-bold text-[#3d4f5f] mb-2">8+</div>
                 <div className="text-lg font-semibold text-gray-800 mb-2">Groupes</div>
                 <p className="text-sm text-gray-600">Acier plat, produits revêtus, tubes–profilés, etc.</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#261dcf]">
-                <div className="text-4xl md:text-5xl font-bold text-[#261dcf] mb-2">3,000</div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#3d4f5f]">
+                <div className="text-4xl md:text-5xl font-bold text-[#3d4f5f] mb-2">3,000</div>
                 <div className="text-lg font-semibold text-gray-800 mb-2">Tonnes/Mois</div>
                 <p className="text-sm text-gray-600">Capacité d'approvisionnement et d'expédition (évolutive basée sur projet)</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#261dcf]">
-                <div className="text-4xl md:text-5xl font-bold text-[#261dcf] mb-2">0–1</div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#3d4f5f]">
+                <div className="text-4xl md:text-5xl font-bold text-[#3d4f5f] mb-2">0–1</div>
                 <div className="text-lg font-semibold text-gray-800 mb-2">Jour</div>
                 <p className="text-sm text-gray-600">Réponse le jour même pour la plupart des demandes</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#261dcf]">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#3d4f5f]">
                 <div className="text-lg font-semibold text-gray-800 mb-2">Toute la Turquie</div>
                 <p className="text-sm text-gray-600">Planification des délais et organisation de l'expédition</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#261dcf]">
-                <div className="text-4xl md:text-5xl font-bold text-[#261dcf] mb-2">95%+</div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#3d4f5f]">
+                <div className="text-4xl md:text-5xl font-bold text-[#3d4f5f] mb-2">95%+</div>
                 <div className="text-lg font-semibold text-gray-800 mb-2">Objectif</div>
                 <p className="text-sm text-gray-600">Avec expédition planifiée et suivi du processus</p>
               </div>
@@ -263,7 +263,7 @@ export default function HakkimizdaPageFR() {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
                   Mission
                 </h2>
                 <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -284,7 +284,7 @@ export default function HakkimizdaPageFR() {
                   alt="Notre mission"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#261dcf]/30"></div>
+                <div className="absolute inset-0 bg-[#3d4f5f]/30"></div>
               </div>
             </div>
           </div>
@@ -302,10 +302,10 @@ export default function HakkimizdaPageFR() {
                   alt="Notre vision"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#261dcf]/30"></div>
+                <div className="absolute inset-0 bg-[#3d4f5f]/30"></div>
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
                   Vision
                 </h2>
                 <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
@@ -329,7 +329,7 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Pourquoi Metal X Steel ?
             </h2>
             <p className="text-center text-gray-700 mb-8 text-lg">
@@ -338,55 +338,55 @@ export default function HakkimizdaPageFR() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <h3 className="font-bold text-lg mb-2 text-[#261dcf]">Bon choix de produit</h3>
+                    <h3 className="font-bold text-lg mb-2 text-[#3d4f5f]">Bon choix de produit</h3>
                     <p className="text-gray-700">Guidance qualité/revêtement/taille selon les conditions du projet</p>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <h3 className="font-bold text-lg mb-2 text-[#261dcf]">Discipline des délais</h3>
+                    <h3 className="font-bold text-lg mb-2 text-[#3d4f5f]">Discipline des délais</h3>
                     <p className="text-gray-700">Suivi du processus, expédition planifiée et calendrier de livraison clair</p>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <h3 className="font-bold text-lg mb-2 text-[#261dcf]">Réseau d'approvisionnement solide</h3>
+                    <h3 className="font-bold text-lg mb-2 text-[#3d4f5f]">Réseau d'approvisionnement solide</h3>
                     <p className="text-gray-700">Continuité et gestion des sources alternatives</p>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <h3 className="font-bold text-lg mb-2 text-[#261dcf]">Communication transparente</h3>
+                    <h3 className="font-bold text-lg mb-2 text-[#3d4f5f]">Communication transparente</h3>
                     <p className="text-gray-700">Informations claires, délais réalistes et réponse rapide</p>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md md:col-span-2">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[#261dcf] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#3d4f5f] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <h3 className="font-bold text-lg mb-2 text-[#261dcf]">Partenariat à long terme</h3>
+                    <h3 className="font-bold text-lg mb-2 text-[#3d4f5f]">Partenariat à long terme</h3>
                     <p className="text-gray-700">Pas une vente unique, mais une relation commerciale durable</p>
                   </div>
                 </div>
@@ -400,7 +400,7 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Nos valeurs
             </h2>
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative">
@@ -409,38 +409,38 @@ export default function HakkimizdaPageFR() {
                 alt="Nos valeurs"
                 className="w-full h-[250px] md:h-[300px] object-cover"
               />
-              <div className="absolute inset-0 bg-[#261dcf]/30"></div>
+              <div className="absolute inset-0 bg-[#3d4f5f]/30"></div>
             </div>
             <p className="text-center text-gray-700 mb-8 text-lg">
               La culture de travail de Metal X Steel est construite sur la confiance et la continuité plutôt que sur les gains à court terme.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Confiance</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">Confiance</h3>
                 <p className="text-gray-700">
                   Une approche qui fait ce qu'elle dit et tient ses engagements
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Qualité</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">Qualité</h3>
                 <p className="text-gray-700">
                   Approvisionnement conforme aux normes, traçable et contrôlé
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Vitesse</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">Vitesse</h3>
                 <p className="text-gray-700">
                   Opérations agiles dans les devis, approbations, livraisons et expéditions
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Transparence</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">Transparence</h3>
                 <p className="text-gray-700">
                   Communication ouverte, planification réaliste, informations précises
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-3">Durabilité</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-3">Durabilité</h3>
                 <p className="text-gray-700">
                   Solutions durables, bon choix de produit, bon coût
                 </p>
@@ -454,10 +454,10 @@ export default function HakkimizdaPageFR() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#261dcf] mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8 text-center">
               Message du fondateur
             </h2>
-            <div className="bg-gray-50 p-8 md:p-12 rounded-lg shadow-lg border-l-4 border-[#261dcf]">
+            <div className="bg-gray-50 p-8 md:p-12 rounded-lg shadow-lg border-l-4 border-[#3d4f5f]">
               <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
                 <p>
                   Nous avons positionné Metal X Steel comme un partenaire de solutions qui livre le bon matériau au projet au bon moment, 
@@ -468,7 +468,7 @@ export default function HakkimizdaPageFR() {
                   Au point où nous sommes arrivés aujourd'hui, nous combinons notre expérience de 15 ans avec un réseau d'approvisionnement 
                   plus fort et une approche logistique plus disciplinée ; nous continuons à produire continuité et confiance dans les projets de nos clients.
                 </p>
-                <p className="text-center text-lg font-bold text-[#261dcf] mt-6">
+                <p className="text-center text-lg font-bold text-[#3d4f5f] mt-6">
                   Metal X Steel – la puissance de l'acier industriel.
                 </p>
               </div>
@@ -485,7 +485,7 @@ export default function HakkimizdaPageFR() {
             alt="Contactez-nous"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#261dcf]/80"></div>
+          <div className="absolute inset-0 bg-[#3d4f5f]/80"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -496,7 +496,7 @@ export default function HakkimizdaPageFR() {
               Contactez-nous pour en savoir plus sur nous ou explorer les opportunités de collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/fr/iletisim" className="px-8 py-4 bg-white text-[#261dcf] font-bold rounded-lg hover:bg-gray-100 transition-colors">
+              <a href="/fr/iletisim" className="px-8 py-4 bg-white text-[#3d4f5f] font-bold rounded-lg hover:bg-gray-100 transition-colors">
                 Contact
               </a>
               <a href="/fr/teklif-al" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">

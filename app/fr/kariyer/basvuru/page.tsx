@@ -73,7 +73,7 @@ export default function BasvuruPage() {
             alt={t.career.basvuru.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#261dcf]/90 to-[#1a1a5e]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3d4f5f]/90 to-[#1a1a5e]/90"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-3xl">
@@ -90,7 +90,7 @@ export default function BasvuruPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#261dcf] mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#3d4f5f] mb-4">
                 {t.career.basvuru.formTitle}
               </h2>
               <p className="text-gray-700 mb-6">
@@ -101,7 +101,7 @@ export default function BasvuruPage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Kişisel Bilgiler */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.personalInfo}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.career.basvuru.personalInfo}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -114,7 +114,7 @@ export default function BasvuruPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                       placeholder={t.career.basvuru.name}
                     />
                   </div>
@@ -130,7 +130,7 @@ export default function BasvuruPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                       placeholder="example@email.com"
                     />
                   </div>
@@ -146,7 +146,7 @@ export default function BasvuruPage() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                       placeholder="0 (5XX) XXX XX XX"
                     />
                   </div>
@@ -160,7 +160,7 @@ export default function BasvuruPage() {
                       name="position"
                       value={formData.position}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none bg-white"
                     >
                       <option value="">{t.career.basvuru.generalApplication}</option>
                       <option value="uretim-muhendisi">{t.career.basvuru.productionEngineer}</option>
@@ -177,7 +177,7 @@ export default function BasvuruPage() {
 
               {/* Eğitim ve Deneyim */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.educationExperience}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.career.basvuru.educationExperience}</h3>
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="education" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -190,7 +190,7 @@ export default function BasvuruPage() {
                       rows={4}
                       value={formData.education}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none resize-none"
                       placeholder={t.career.basvuru.educationPlaceholder}
                     />
                   </div>
@@ -206,7 +206,7 @@ export default function BasvuruPage() {
                       rows={4}
                       value={formData.experience}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none resize-none"
                       placeholder={t.career.basvuru.workExperiencePlaceholder}
                     />
                   </div>
@@ -215,7 +215,7 @@ export default function BasvuruPage() {
 
               {/* Ön Yazı */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.coverLetter}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.career.basvuru.coverLetter}</h3>
                 <div>
                   <label htmlFor="coverLetter" className="block text-sm font-semibold text-gray-700 mb-2">
                     {t.career.basvuru.coverLetterQuestion} <span className="text-red-500">*</span>
@@ -227,7 +227,7 @@ export default function BasvuruPage() {
                     rows={6}
                     value={formData.coverLetter}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none resize-none"
                     placeholder={t.career.basvuru.coverLetterPlaceholder}
                   />
                 </div>
@@ -235,7 +235,7 @@ export default function BasvuruPage() {
 
               {/* CV Yükleme */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-[#261dcf] mb-4">{t.career.basvuru.resume}</h3>
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">{t.career.basvuru.resume}</h3>
                 <div>
                   <label htmlFor="resume" className="block text-sm font-semibold text-gray-700 mb-2">
                     {t.career.basvuru.resumeFile} <span className="text-red-500">*</span>
@@ -255,7 +255,7 @@ export default function BasvuruPage() {
                       <button
                         type="button"
                         onClick={() => document.getElementById('resume')?.click()}
-                        className="px-4 py-2 bg-[#261dcf] text-white text-sm font-semibold rounded-lg hover:bg-[#1a16a8] transition-colors flex-shrink-0"
+                        className="px-4 py-2 bg-[#3d4f5f] text-white text-sm font-semibold rounded-lg hover:bg-[#1a16a8] transition-colors flex-shrink-0"
                       >
                         {t.career.basvuru.chooseFile || 'Choose File'}
                       </button>
@@ -277,7 +277,7 @@ export default function BasvuruPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full px-8 py-4 bg-[#261dcf] text-white font-bold rounded-lg transition-all ${
+                  className={`w-full px-8 py-4 bg-[#3d4f5f] text-white font-bold rounded-lg transition-all ${
                     isSubmitting
                       ? 'opacity-50 cursor-not-allowed'
                       : 'hover:bg-[#1a16a8] hover:shadow-lg transform hover:scale-105'

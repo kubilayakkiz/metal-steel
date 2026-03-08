@@ -98,7 +98,7 @@ export default function FloatingButton() {
         {/* Icon Button */}
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-gradient-to-b from-[#261dcf]/30 to-[#1a16a8]/30 hover:from-[#261dcf] hover:to-[#1a16a8] text-white/70 hover:text-white shadow-[0_4px_20px_rgba(38,29,207,0.2)] hover:shadow-[0_6px_30px_rgba(38,29,207,0.6)] transition-all duration-300 transform hover:translate-x-[-4px] group rounded-l-2xl border-l-2 border-white/10 hover:border-white/30 backdrop-blur-sm px-4 py-6 flex flex-col items-center gap-3"
+          className="bg-gradient-to-b from-[#3d4f5f]/30 to-[#1a16a8]/30 hover:from-[#3d4f5f] hover:to-[#1a16a8] text-white/70 hover:text-white shadow-[0_4px_20px_rgba(38,29,207,0.2)] hover:shadow-[0_6px_30px_rgba(38,29,207,0.6)] transition-all duration-300 transform hover:translate-x-[-4px] group rounded-l-2xl border-l-2 border-white/10 hover:border-white/30 backdrop-blur-sm px-4 py-6 flex flex-col items-center gap-3"
           aria-label={t.common.floatingButton.getQuote}
         >
           <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +142,7 @@ export default function FloatingButton() {
           <div className="relative h-full flex flex-col">
           {/* Header */}
           <div className="flex items-center justify-between p-6 md:p-8 pb-4 border-b border-gray-200 flex-shrink-0">
-            <h2 className="text-xl md:text-2xl font-bold text-[#261dcf]">
+            <h2 className="text-xl md:text-2xl font-bold text-[#3d4f5f]">
               {t.common.floatingButton.getQuote}
             </h2>
             <button
@@ -178,7 +178,7 @@ export default function FloatingButton() {
 
             {/* Kişisel Bilgiler */}
             <div className="bg-gray-50 p-3 rounded-lg">
-              <h3 className="text-base font-bold text-[#261dcf] mb-2">{t.common.floatingButton.personalInfo}</h3>
+              <h3 className="text-base font-bold text-[#3d4f5f] mb-2">{t.common.floatingButton.personalInfo}</h3>
               <div className="grid grid-cols-1 gap-2">
                 <div>
                   <label htmlFor="teklif-name" className="block text-xs font-semibold text-gray-700 mb-1">
@@ -191,7 +191,7 @@ export default function FloatingButton() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                     placeholder={t.common.floatingButton.namePlaceholder}
                   />
                 </div>
@@ -205,7 +205,7 @@ export default function FloatingButton() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                     placeholder={t.common.floatingButton.companyPlaceholder}
                   />
                 </div>
@@ -221,7 +221,7 @@ export default function FloatingButton() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                      className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                       placeholder={t.common.floatingButton.phonePlaceholder}
                     />
                   </div>
@@ -236,7 +236,7 @@ export default function FloatingButton() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                      className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                       placeholder={t.common.floatingButton.emailPlaceholder}
                     />
                   </div>
@@ -246,7 +246,7 @@ export default function FloatingButton() {
 
             {/* Ürün/Hizmet Bilgileri */}
             <div className="bg-gray-50 p-3 rounded-lg">
-              <h3 className="text-base font-bold text-[#261dcf] mb-2">{t.common.floatingButton.productServiceInfo}</h3>
+              <h3 className="text-base font-bold text-[#3d4f5f] mb-2">{t.common.floatingButton.productServiceInfo}</h3>
               <div className="space-y-2">
                 <div>
                   <label htmlFor="teklif-productType" className="block text-xs font-semibold text-gray-700 mb-1">
@@ -258,7 +258,7 @@ export default function FloatingButton() {
                     required
                     value={formData.productType}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none bg-white"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none bg-white"
                   >
                     <option value="">{t.common.floatingButton.select}</option>
                     <optgroup label={t.common.floatingButton.products}>
@@ -288,7 +288,7 @@ export default function FloatingButton() {
                     name="quantity"
                     value={formData.quantity}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none"
                     placeholder={t.common.floatingButton.quantityPlaceholder}
                   />
                 </div>
@@ -302,7 +302,7 @@ export default function FloatingButton() {
                     rows={2}
                     value={formData.deliveryAddress}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none resize-none"
                     placeholder={t.common.floatingButton.deliveryAddressPlaceholder}
                   />
                 </div>
@@ -311,7 +311,7 @@ export default function FloatingButton() {
 
             {/* Ek Bilgiler */}
             <div className="bg-gray-50 p-3 rounded-lg">
-              <h3 className="text-base font-bold text-[#261dcf] mb-2">{t.common.floatingButton.additionalInfo}</h3>
+              <h3 className="text-base font-bold text-[#3d4f5f] mb-2">{t.common.floatingButton.additionalInfo}</h3>
               <div className="space-y-2">
                 <div>
                   <label htmlFor="teklif-message" className="block text-xs font-semibold text-gray-700 mb-1">
@@ -323,7 +323,7 @@ export default function FloatingButton() {
                     rows={3}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#261dcf] focus:border-transparent transition-all outline-none resize-none"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none resize-none"
                     placeholder={t.common.floatingButton.messagePlaceholder}
                   />
                 </div>
@@ -344,7 +344,7 @@ export default function FloatingButton() {
                       <button
                         type="button"
                         onClick={() => document.getElementById('teklif-file')?.click()}
-                        className="px-3 py-1.5 bg-[#261dcf] text-white text-xs font-semibold rounded-lg hover:bg-[#1a16a8] transition-colors flex-shrink-0"
+                        className="px-3 py-1.5 bg-[#3d4f5f] text-white text-xs font-semibold rounded-lg hover:bg-[#1a16a8] transition-colors flex-shrink-0"
                       >
                         {t.getQuote?.chooseFile || t.common.floatingButton.fileUpload || 'Dosya Seç'}
                       </button>
@@ -366,7 +366,7 @@ export default function FloatingButton() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#261dcf] hover:bg-[#1a16a8] text-white font-bold py-2.5 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                className="w-full bg-[#3d4f5f] hover:bg-[#1a16a8] text-white font-bold py-2.5 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
                 {isSubmitting ? t.common.floatingButton.submitting : t.common.floatingButton.submit}
               </button>

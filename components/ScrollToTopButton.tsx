@@ -36,7 +36,7 @@ export default function ScrollToTopButton() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-[#261dcf]/80 hover:bg-[#261dcf] text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group"
+          className="fixed bottom-6 right-6 z-50 bg-[#3d4f5f]/80 hover:bg-[#3d4f5f] text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group"
           aria-label={t.common.scrollToTop || 'Yukarı Git'}
         >
           <svg 

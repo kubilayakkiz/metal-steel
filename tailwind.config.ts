@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          light: "#6dd5fb", // Light cyan-blue
-          dark: "#261dcf", // Deep indigo-blue
+          light: "#94a3b8", // Light slate (accent)
+          dark: "#3d4f5f", // Steel gray - demir çelik endüstrisi
         },
       },
       fontFamily: {
