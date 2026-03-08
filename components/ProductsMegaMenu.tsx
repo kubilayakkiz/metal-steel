@@ -65,7 +65,7 @@ export default function ProductsMegaMenu({ locale, isOpen, onMouseEnter, onMouse
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-bold text-[#3d4f5f] text-lg mb-1 group-hover:text-[#1a1a5e] transition-colors">
+                    <h4 className="font-bold text-[#3d4f5f] text-xl mb-1 group-hover:text-[#1a1a5e] transition-colors">
                       {categoryName(category)}
                     </h4>
                     {category.description && (
@@ -80,7 +80,7 @@ export default function ProductsMegaMenu({ locale, isOpen, onMouseEnter, onMouse
                     <a
                       key={product.slug}
                       href={getPathWithLocale(`/urunler/${product.slug}`, locale)}
-                      className="block text-sm text-gray-600 hover:text-[#3d4f5f] hover:translate-x-1 transition-all duration-150 py-0.5"
+                      className="block text-base text-gray-600 hover:text-[#3d4f5f] hover:translate-x-1 transition-all duration-150 py-0.5"
                     >
                       <span className="flex items-center gap-2">
                         <span className="w-1 h-1 rounded-full bg-[#3d4f5f]/40 group-hover:bg-[#3d4f5f] transition-colors flex-shrink-0" />
@@ -91,7 +91,7 @@ export default function ProductsMegaMenu({ locale, isOpen, onMouseEnter, onMouse
                   {category.products.length > 5 && (
                     <a
                       href={getPathWithLocale(`/urunler/${category.slug}`, locale)}
-                      className="inline-flex items-center gap-1 text-sm font-medium text-[#3d4f5f] hover:text-[#1a1a5e] mt-2"
+                      className="inline-flex items-center gap-1 text-base font-medium text-[#3d4f5f] hover:text-[#1a1a5e] mt-2"
                     >
                       +{category.products.length - 5} {locale === 'en' ? 'more' : 'daha'}
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
