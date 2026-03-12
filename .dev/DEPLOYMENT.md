@@ -42,8 +42,8 @@ cd /home/username/domains/yourdomain.com/public_html
 # veya
 cd /home/username/domains/yourdomain.com/public_html/metal
 
-# Node.js modüllerini yükleyin
-npm install --production
+# Node.js modüllerini yükleyin (build için devDependencies gerekir)
+npm install
 ```
 
 ## 4. Production Build
@@ -163,6 +163,41 @@ sudo ufw allow 3000/tcp
 
 ## Sorun Giderme
 
+### Internal Server Error (500) - Site açılmıyor
+Build başarılı ama siteye girildiğinde "Internal Server Error" alıyorsanız:
+
+1. **PM2 loglarını kontrol edin** (en önemli adım):
+```bash
+pm2 logs metal-website --lines 100
+# veya hata detayı için:
+pm2 logs metal-website --err --lines 50
+```
+
+2. **Node.js versiyonu**: Next.js 16 için Node 18.18+ veya 20+ gerekir:
+```bash
+node -v
+# 18.18+ veya 20.x olmalı
+```
+
+3. **npm install sırası**: Önce tam kurulum, sonra build:
+```bash
+npm install          # --production KULLANMAYIN (build için devDependencies gerekir)
+npm run build
+pm2 restart metal-website
+```
+
+4. **Environment variables**: `.env.local` sunucuya yüklenmez. Gerekli değişkenleri sunucuda tanımlayın:
+```bash
+# Proje klasöründe
+nano .env.local
+# SMTP_USER, SMTP_PASSWORD, ADMIN_PASSWORD vb. ekleyin
+```
+
+5. **Bellek**: Düşük RAM'de çalıştırıyorsanız:
+```bash
+pm2 start npm --name "metal-website" --max-memory-restart 500M -- start
+```
+
 ### Uygulama çalışmıyor
 ```bash
 # PM2 loglarını kontrol edin
@@ -199,7 +234,7 @@ cd /home/username/domains/yourdomain.com/public_html/metal
 git pull origin main
 
 # Bağımlılıkları güncelleyin
-npm install --production
+npm install
 
 # Yeni build oluşturun
 npm run build
