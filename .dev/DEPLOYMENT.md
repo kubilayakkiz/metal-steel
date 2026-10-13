@@ -161,39 +161,53 @@ Next.js varsayılan olarak 3000 portunda çalışır. Cloud Panel'de Node.js sit
 sudo ufw allow 3000/tcp
 ```
 
+## Git Deploy (Vercel, Netlify, Railway vb.)
+
+Git tabanlı otomatik dağıtım kullanıyorsanız:
+
+| Ayar | Değer |
+|------|-------|
+| **Derleme komutu** | `npm run build` |
+| **Çıktı dizini** | `.next` |
+| **Başlatma komutu** | `npm run start -- -p $PORT` |
+
+**Önemli:** Platform `$PORT` değişkeni ile dinlenecek portu belirtir. Start command olmadan veya yanlış portta çalışırsa 500 hatası alırsınız. `.next` varsa build başarılıdır; 500 genelde uygulamanın yanlış portta çalışması veya Node process'in hiç başlamamasından kaynaklanır.
+
 ## Sorun Giderme
 
 ### Internal Server Error (500) - Site açılmıyor
 Build başarılı ama siteye girildiğinde "Internal Server Error" alıyorsanız:
 
-1. **PM2 loglarını kontrol edin** (en önemli adım):
+1. **Git Deploy kullanıyorsanız:** Start command'i `npm run start -- -p $PORT` olarak ayarlayın, sonra yeniden deploy/restart edin.
+
+2. **PM2 loglarını kontrol edin** (VPS için en önemli adım):
 ```bash
 pm2 logs metal-website --lines 100
 # veya hata detayı için:
 pm2 logs metal-website --err --lines 50
 ```
 
-2. **Node.js versiyonu**: Next.js 16 için Node 18.18+ veya 20+ gerekir:
+3. **Node.js versiyonu**: Next.js 16 için Node 18.18+ veya 20+ gerekir:
 ```bash
 node -v
 # 18.18+ veya 20.x olmalı
 ```
 
-3. **npm install sırası**: Önce tam kurulum, sonra build:
+4. **npm install sırası**: Önce tam kurulum, sonra build:
 ```bash
 npm install          # --production KULLANMAYIN (build için devDependencies gerekir)
 npm run build
 pm2 restart metal-website
 ```
 
-4. **Environment variables**: `.env.local` sunucuya yüklenmez. Gerekli değişkenleri sunucuda tanımlayın:
+5. **Environment variables**: `.env.local` sunucuya yüklenmez. Gerekli değişkenleri sunucuda tanımlayın:
 ```bash
 # Proje klasöründe
 nano .env.local
 # SMTP_USER, SMTP_PASSWORD, ADMIN_PASSWORD vb. ekleyin
 ```
 
-5. **Bellek**: Düşük RAM'de çalıştırıyorsanız:
+6. **Bellek**: Düşük RAM'de çalıştırıyorsanız:
 ```bash
 pm2 start npm --name "metal-website" --max-memory-restart 500M -- start
 ```

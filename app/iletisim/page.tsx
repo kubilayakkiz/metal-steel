@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import DepartmentEmails from '@/components/DepartmentEmails';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -102,24 +103,21 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* E-posta */}
+                <DepartmentEmails />
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">E-posta</h3>
-                    <a href="mailto:info@metalxsteel.com" className="text-[#3d4f5f] hover:underline block break-all">
-                      info@metalxsteel.com
-                    </a>
-                    <a href="mailto:satis@metalxsteel.com" className="text-[#3d4f5f] hover:underline block break-all">
-                      satis@metalxsteel.com
-                    </a>
+                    <h3 className="font-bold text-gray-900 mb-2">Çalışma Saatleri</h3>
+                    <p className="text-gray-700">Pazartesi - Cuma: 09:00 - 18:00</p>
+                    <p className="text-gray-700">Cumartesi: 09:00 - 13:00</p>
+                    <p className="text-gray-700">Pazar: Kapalı</p>
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -215,11 +213,12 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none bg-white"
                   >
                     <option value="">Konu Seçiniz</option>
-                    <option value="teklif">Teklif Talebi</option>
-                    <option value="bilgi">Genel Bilgi</option>
-                    <option value="urun">Ürün Hakkında</option>
-                    <option value="hizmet">Hizmet Hakkında</option>
-                    <option value="diger">Diğer</option>
+                    <option value="corporate">Genel İletişim</option>
+                    <option value="sales">Yurt İçi Satış</option>
+                    <option value="export">İhracat / Yurt Dışı Satış</option>
+                    <option value="import">İthalat / Yurt Dışı Satın Alma</option>
+                    <option value="quote">Teklif Talebi</option>
+                    <option value="other">Diğer</option>
                   </select>
                 </div>
 

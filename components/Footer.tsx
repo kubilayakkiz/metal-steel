@@ -48,8 +48,8 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-gray-300 text-xs mb-1">{t.common.email || 'E-posta'}</p>
-                <a href="mailto:info@metalxsteel.com" className="text-white font-semibold hover:text-[#6dd5fb] transition-colors block break-all">
-                  info@metalxsteel.com
+                <a href="mailto:info@metalxsteel.com.tr" className="text-white font-semibold hover:text-[#6dd5fb] transition-colors block break-all">
+                  info@metalxsteel.com.tr
                 </a>
               </div>
             </div>

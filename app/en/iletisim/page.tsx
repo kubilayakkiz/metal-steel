@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { useTranslations } from '@/lib/i18n/hooks';
-import { getPathWithLocale } from '@/lib/i18n/translations';
+import DepartmentEmails from '@/components/DepartmentEmails';
 
 export default function ContactPageEN() {
-  const { t, locale } = useTranslations();
+  const { t } = useTranslations();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,8 +30,20 @@ export default function ContactPageEN() {
     setSubmitStatus('idle');
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'An error occurred');
+      }
+
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -92,23 +104,7 @@ export default function ContactPageEN() {
                   </div>
                 </div>
 
-                {/* E-posta */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#3d4f5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-2">{t.contact.emailAddress}</h3>
-                    <a href="mailto:info@metalxsteel.com" className="text-[#3d4f5f] hover:underline block break-all">
-                      info@metalxsteel.com
-                    </a>
-                    <a href="mailto:satis@metalxsteel.com" className="text-[#3d4f5f] hover:underline block break-all">
-                      satis@metalxsteel.com
-                    </a>
-                  </div>
-                </div>
+                <DepartmentEmails />
 
                 {/* Çalışma Saatleri */}
                 <div className="flex items-start gap-4">
@@ -218,12 +214,13 @@ export default function ContactPageEN() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3d4f5f] focus:border-transparent transition-all outline-none bg-white"
                   >
-                    <option value="">Select Subject</option>
-                    <option value="quote">Quote Request</option>
-                    <option value="info">General Information</option>
-                    <option value="product">About Product</option>
-                    <option value="service">About Service</option>
-                    <option value="other">Other</option>
+                    <option value="">{t.contact.selectSubject}</option>
+                    <option value="corporate">{t.contact.subjects.corporate}</option>
+                    <option value="sales">{t.contact.subjects.sales}</option>
+                    <option value="export">{t.contact.subjects.export}</option>
+                    <option value="import">{t.contact.subjects.import}</option>
+                    <option value="quote">{t.contact.subjects.quote}</option>
+                    <option value="other">{t.contact.subjects.other}</option>
                   </select>
                 </div>
 

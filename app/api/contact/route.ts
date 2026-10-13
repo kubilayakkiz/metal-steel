@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { getEmailForSubject, getSubjectLabel } from '@/lib/contact-departments';
 
 // SMTP transporter oluştur
 const createTransporter = () => {
@@ -29,13 +30,14 @@ export async function POST(request: NextRequest) {
 
     // SMTP transporter oluştur
     const transporter = createTransporter();
+    const subjectLabel = getSubjectLabel(subject);
 
     // Email gönder
     const info = await transporter.sendMail({
       from: `"Metal X Website" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
+      to: getEmailForSubject(subject),
       replyTo: email,
-      subject: `İletişim Formu: ${subject}`,
+      subject: `İletişim Formu: ${subjectLabel}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #3d4f5f;">Yeni İletişim Formu Mesajı</h2>
@@ -44,7 +46,7 @@ export async function POST(request: NextRequest) {
             <p><strong>E-posta:</strong> ${email}</p>
             <p><strong>Telefon:</strong> ${phone}</p>
             ${company ? `<p><strong>Şirket:</strong> ${company}</p>` : ''}
-            <p><strong>Konu:</strong> ${subject}</p>
+            <p><strong>Konu:</strong> ${subjectLabel}</p>
             <p><strong>Mesaj:</strong></p>
             <p style="white-space: pre-wrap;">${message}</p>
           </div>
@@ -60,7 +62,7 @@ Ad Soyad: ${name}
 E-posta: ${email}
 Telefon: ${phone}
 ${company ? `Şirket: ${company}` : ''}
-Konu: ${subject}
+Konu: ${subjectLabel}
 
 Mesaj:
 ${message}
