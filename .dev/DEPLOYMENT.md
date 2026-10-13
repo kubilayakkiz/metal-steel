@@ -175,6 +175,9 @@ Git tabanlı otomatik dağıtım kullanıyorsanız:
 
 ## Sorun Giderme
 
+### Turbopack panic: Failed to write app endpoint /page
+Hostinger Git Deploy’da `next build` varsayılan Turbopack ile CSS/PostCSS işlerken çökebilir (`node process exited before we could connect`). Projede `npm run build` webpack kullanır (`next build --webpack`). Bu komutu değiştirmeden yeniden deploy edin.
+
 ### Internal Server Error (500) - Site açılmıyor
 Build başarılı ama siteye girildiğinde "Internal Server Error" alıyorsanız:
 
