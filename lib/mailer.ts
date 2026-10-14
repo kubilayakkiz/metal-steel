@@ -15,40 +15,29 @@ function getSmtpUser() {
   return normalizeMailbox(process.env.SMTP_USER);
 }
 
-function getSmtpHost() {
-  const host = (process.env.SMTP_HOST || '').trim();
-  if (!host || host.includes('hostinger')) {
-    return 'smtp.office365.com';
-  }
-  return host;
-}
-
-function getSmtpPort(host: string) {
-  const configured = parseInt(process.env.SMTP_PORT || '', 10);
-  if (host.includes('office365') || host.includes('outlook')) {
-    return 587;
-  }
-  if (!Number.isNaN(configured) && configured > 0) {
-    return configured;
-  }
-  return 587;
+function getSmtpPassword() {
+  return (process.env.SMTP_PASSWORD || '').trim().replace(/^["']|["']$/g, '');
 }
 
 export function createMailTransporter() {
   const user = getSmtpUser();
-  const host = getSmtpHost();
-  const port = getSmtpPort(host);
+  const pass = getSmtpPassword();
+
+  if (!pass) {
+    throw new Error('SMTP_PASSWORD Hostinger ortam değişkenlerinde boş. Kaydedip siteyi yeniden deploy edin.');
+  }
 
   return nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    requireTLS: port === 587,
+    host: 'smtp.office365.com',
+    port: 587,
+    secure: false,
+    requireTLS: true,
     auth: {
       user,
-      pass: process.env.SMTP_PASSWORD,
+      pass,
     },
     tls: {
+      ciphers: 'TLSv1.2',
       minVersion: 'TLSv1.2',
     },
     connectionTimeout: 20000,
@@ -66,9 +55,49 @@ export function logMailError(context: string, error: unknown) {
     code: err?.code,
     command: err?.command,
     response: err?.response,
-    host: getSmtpHost(),
-    port: getSmtpPort(getSmtpHost()),
+    host: 'smtp.office365.com',
+    port: 587,
     user: getSmtpUser(),
-    hasPassword: Boolean(process.env.SMTP_PASSWORD),
+    hasPassword: Boolean(getSmtpPassword()),
   });
+}
+
+export function getMailErrorPayload(error: unknown) {
+  const err = error as { message?: string; response?: string };
+  const detail = [err?.message, err?.response].filter(Boolean).join(' — ');
+  const text = detail.toLowerCase();
+
+  if (text.includes('smtp_password')) {
+    return {
+      error: 'SMTP_PASSWORD tanımlı değil. Hostinger ortam değişkenlerini kaydedip siteyi yeniden deploy edin.',
+      detail,
+    };
+  }
+
+  if (
+    text.includes('535') ||
+    text.includes('5.7.139') ||
+    text.includes('5.7.57') ||
+    text.includes('authentication unsuccessful') ||
+    text.includes('invalid login') ||
+    text.includes('smtpclientauthentication')
+  ) {
+    return {
+      error:
+        'Office 365 SMTP girişi reddedildi. bulent@ hesabında Authenticated SMTP açık olmalı. MFA varsa uygulama şifresi kullanın.',
+      detail,
+    };
+  }
+
+  if (text.includes('etimedout') || text.includes('econnrefused') || text.includes('esocket')) {
+    return {
+      error: 'Office 365 SMTP sunucusuna bağlanılamadı (port 587).',
+      detail,
+    };
+  }
+
+  return {
+    error: 'E-posta gönderilemedi. Office 365 SMTP ayarlarını kontrol edin.',
+    detail,
+  };
 }

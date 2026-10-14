@@ -18,6 +18,7 @@ export default function TeklifAlPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -39,6 +40,7 @@ export default function TeklifAlPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setSubmitError('');
 
     try {
       const formDataToSend = new FormData();
@@ -62,7 +64,7 @@ export default function TeklifAlPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Bir hata oluştu');
+        throw new Error([data.error, data.detail].filter(Boolean).join(' '));
       }
       
       setSubmitStatus('success');
@@ -79,6 +81,7 @@ export default function TeklifAlPage() {
       });
     } catch (error) {
       console.error('Quote form error:', error);
+      setSubmitError(error instanceof Error ? error.message : 'Bir hata oluştu. Lütfen tekrar deneyin veya bizimle iletişime geçin.');
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -128,7 +131,7 @@ export default function TeklifAlPage() {
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                   <p className="text-red-800 font-semibold">
-                    ✗ Bir hata oluştu. Lütfen tekrar deneyin veya bizimle iletişime geçin.
+                    ✗ {submitError || 'Bir hata oluştu. Lütfen tekrar deneyin veya bizimle iletişime geçin.'}
                   </p>
                 </div>
               )}

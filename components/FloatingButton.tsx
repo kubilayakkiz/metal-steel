@@ -20,6 +20,7 @@ export default function FloatingButton() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -41,6 +42,7 @@ export default function FloatingButton() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setSubmitError('');
 
     try {
       const formDataToSend = new FormData();
@@ -64,7 +66,7 @@ export default function FloatingButton() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Bir hata oluştu');
+        throw new Error([data.error, data.detail].filter(Boolean).join(' '));
       }
       
       setSubmitStatus('success');
@@ -85,6 +87,7 @@ export default function FloatingButton() {
       }, 2000);
     } catch (error) {
       console.error('Quote form error:', error);
+      setSubmitError(error instanceof Error ? error.message : t.common.floatingButton.error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -171,7 +174,7 @@ export default function FloatingButton() {
             {submitStatus === 'error' && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
                 <p className="text-red-800 font-semibold text-sm">
-                  {t.common.floatingButton.error}
+                  {submitError || t.common.floatingButton.error}
                 </p>
               </div>
             )}

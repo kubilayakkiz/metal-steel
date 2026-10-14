@@ -14,6 +14,7 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -26,6 +27,7 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setSubmitError('');
 
     try {
       const response = await fetch('/api/contact', {
@@ -39,7 +41,7 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Bir hata oluştu');
+        throw new Error([data.error, data.detail].filter(Boolean).join(' '));
       }
       
       setSubmitStatus('success');
@@ -53,6 +55,7 @@ export default function ContactPage() {
       });
     } catch (error) {
       console.error('Contact form error:', error);
+      setSubmitError(error instanceof Error ? error.message : 'Bir hata oluştu. Lütfen tekrar deneyin veya bizimle doğrudan iletişime geçin.');
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -262,7 +265,7 @@ export default function ContactPage() {
                 )}
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
-                    Bir hata oluştu. Lütfen tekrar deneyin veya bizimle doğrudan iletişime geçin.
+                    {submitError || 'Bir hata oluştu. Lütfen tekrar deneyin veya bizimle doğrudan iletişime geçin.'}
                   </div>
                 )}
               </form>

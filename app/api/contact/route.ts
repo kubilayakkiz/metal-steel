@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getEmailForSubject, getSubjectLabel } from '@/lib/contact-departments';
-import { createMailTransporter, getMailFromAddress, logMailError } from '@/lib/mailer';
+import { createMailTransporter, getMailFromAddress, logMailError, getMailErrorPayload } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -62,9 +62,6 @@ ${message}
     );
   } catch (error) {
     logMailError('Contact form error', error);
-    return NextResponse.json(
-      { error: 'Bir hata oluştu. Lütfen tekrar deneyin.' },
-      { status: 500 }
-    );
+    return NextResponse.json(getMailErrorPayload(error), { status: 500 });
   }
 }
