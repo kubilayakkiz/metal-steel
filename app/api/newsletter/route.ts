@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { FORM_INBOX_EMAIL } from '@/lib/contact-departments';
-import { createMailTransporter, getMailFromAddress } from '@/lib/mailer';
+import { createMailTransporter, getMailFromAddress, logMailError } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -48,7 +48,7 @@ Abonelik Tarihi: ${new Date().toLocaleString('tr-TR')}
       { status: 200 }
     );
   } catch (error) {
-    console.error('Newsletter form error:', error);
+    logMailError('Newsletter form error', error);
     return NextResponse.json(
       { error: 'Bir hata oluştu. Lütfen tekrar deneyin.' },
       { status: 500 }
