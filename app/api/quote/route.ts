@@ -1,18 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-
-// SMTP transporter oluştur
-const createTransporter = () => {
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'smtp.hostinger.com',
-    port: parseInt(process.env.SMTP_PORT || '465'),
-    secure: process.env.SMTP_PORT === '465', // 465 için true, 587 için false
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
-    },
-  });
-};
+import { FORM_INBOX_EMAIL } from '@/lib/contact-departments';
+import { createMailTransporter, getMailFromAddress } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -36,7 +24,7 @@ export async function POST(request: NextRequest) {
     }
 
     // SMTP transporter oluştur
-    const transporter = createTransporter();
+    const transporter = createMailTransporter();
 
     // File attachment için buffer
     let attachments = [];
@@ -51,8 +39,8 @@ export async function POST(request: NextRequest) {
 
     // Email gönder
     const info = await transporter.sendMail({
-      from: `"Metal X Website" <${process.env.SMTP_USER}>`,
-      to: process.env.QUOTE_EMAIL || process.env.SMTP_USER,
+      from: getMailFromAddress(),
+      to: FORM_INBOX_EMAIL,
       replyTo: email,
       subject: `Teklif Talebi: ${productType}`,
       html: `

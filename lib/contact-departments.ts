@@ -19,12 +19,8 @@ export const DEPARTMENT_EMAILS = [
 
 export type DepartmentId = (typeof DEPARTMENT_EMAILS)[number]['id'];
 
-const DEPARTMENT_BY_SUBJECT: Record<string, string> = {
-  corporate: 'info@metalxsteel.com.tr',
-  sales: 'sales@metalxsteel.com.tr',
-  export: 'export@metalxsteel.com.tr',
-  import: 'import@metalxsteel.com.tr',
-};
+/** Tüm form gönderimleri bu Office 365 kutusuna düşer. */
+export const FORM_INBOX_EMAIL = 'info@metalxsteel.com.tr';
 
 const SUBJECT_LABELS: Record<string, string> = {
   corporate: 'Genel İletişim',
@@ -35,8 +31,8 @@ const SUBJECT_LABELS: Record<string, string> = {
   other: 'Diğer',
 };
 
-export function getEmailForSubject(subject: string): string {
-  return DEPARTMENT_BY_SUBJECT[subject] || 'info@metalxsteel.com.tr';
+export function getEmailForSubject(): string {
+  return FORM_INBOX_EMAIL;
 }
 
 export function getSubjectLabel(subject: string): string {
