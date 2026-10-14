@@ -15,7 +15,7 @@ const tr: Record<LegalDocumentId, LegalDocument> = {
       {
         heading: 'Veri sorumlusu',
         paragraphs: [
-          'Veri sorumlusu: Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. İletişim: info@metalxsteel.com.tr · +90 (212) 345 67 89.',
+          'Veri sorumlusu: Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. İletişim: info@metalxsteel.com.tr · +90 (216) 606 62 62.',
         ],
       },
       {
@@ -82,7 +82,7 @@ const tr: Record<LegalDocumentId, LegalDocument> = {
         paragraphs: [
           'E-posta: info@metalxsteel.com.tr',
           'Yurt içi satış: sales@metalxsteel.com.tr · İhracat: export@metalxsteel.com.tr · İthalat: import@metalxsteel.com.tr',
-          'Telefon: +90 (212) 345 67 89',
+          'Telefon: +90 (216) 606 62 62',
         ],
       },
       {
@@ -105,7 +105,7 @@ const en: Record<LegalDocumentId, LegalDocument> = {
       {
         heading: 'Data controller',
         paragraphs: [
-          'Controller: Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. Contact: info@metalxsteel.com.tr · +90 (212) 345 67 89.',
+          'Controller: Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. Contact: info@metalxsteel.com.tr · +90 (216) 606 62 62.',
         ],
       },
       {
@@ -172,7 +172,7 @@ const en: Record<LegalDocumentId, LegalDocument> = {
         paragraphs: [
           'Email: info@metalxsteel.com.tr',
           'Domestic sales: sales@metalxsteel.com.tr · Export: export@metalxsteel.com.tr · Import: import@metalxsteel.com.tr',
-          'Phone: +90 (212) 345 67 89',
+          'Phone: +90 (216) 606 62 62',
         ],
       },
       {

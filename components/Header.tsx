@@ -239,7 +239,7 @@ export default function Header() {
               <a href={getPathWithLocale('/', locale)} className="flex items-center">
                 <img 
                   src="/LogoMetalSteelWhite.png" 
-                  alt="METAL X STEEL Logo" 
+                  alt="Metal X Steel" 
                   className="h-10 md:h-12 lg:h-16 w-auto object-cover min-w-[120px] md:min-w-[180px] lg:min-w-[200px]"
                 />
               </a>

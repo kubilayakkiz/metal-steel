@@ -33,7 +33,7 @@ export default function KurumsalKimlikPage() {
                 <div className="bg-[#3d4f5f] p-6 rounded-lg flex items-center justify-center">
                   <img 
                     src="/LogoMetalSteelWhite.png" 
-                    alt="Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. Logo - White"
+                    alt="Metal X Steel white logo"
                     className="h-20 w-auto"
                   />
                 </div>
@@ -47,7 +47,7 @@ export default function KurumsalKimlikPage() {
                 <div className="bg-white border-2 border-gray-200 p-6 rounded-lg flex items-center justify-center">
                   <img 
                     src="/LogoMetalSteel.png" 
-                    alt="Metal X Endüstriyel San. ve Tic. LTD. ŞTİ. Logo"
+                    alt="Metal X Steel"
                     className="h-20 w-auto"
                   />
                 </div>

@@ -83,11 +83,8 @@ export default function ContactPageAR() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2">{t.contact.phoneNumber}</h3>
-                    <a href="tel:+902123456789" className="text-[#3d4f5f] hover:underline block">
-                      +90 (212) 345 67 89
-                    </a>
-                    <a href="tel:+902123456790" className="text-[#3d4f5f] hover:underline block">
-                      +90 (212) 345 67 90
+                    <a href="tel:+902166066262" className="text-[#3d4f5f] hover:underline block">
+                      +90 (216) 606 62 62
                     </a>
                   </div>
                 </div>

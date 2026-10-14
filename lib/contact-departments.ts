@@ -1,3 +1,9 @@
+export const SITE_URL = 'https://www.metalxsteel.com.tr';
+export const COMPANY_NAME = 'Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.';
+export const COMPANY_BRAND = 'Metal X Steel';
+export const COMPANY_PHONE_DISPLAY = '+90 (216) 606 62 62';
+export const COMPANY_PHONE_TEL = '+902166066262';
+
 export const DEPARTMENT_EMAILS = [
   {
     id: 'corporate' as const,

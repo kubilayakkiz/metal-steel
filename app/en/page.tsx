@@ -11,8 +11,28 @@ export default function HomeEN() {
 
   const sliderImages = [
     {
-      src: '/slider1.jpg',
-      alt: 'Slider Image 1',
+      src: '/slider-generated.mp4',
+      type: 'video' as const,
+      alt: 'Metal X Steel — sustainable future',
+      title: t.home.slider3.title,
+      subtitle: t.home.slider3.subtitle,
+      buttons: [
+        {
+          text: t.home.slider3.button1,
+          href: '#products-and-services',
+          variant: 'primary' as const,
+        },
+        {
+          text: t.home.slider3.button2,
+          href: getPathWithLocale('/teklif-al', locale),
+          variant: 'secondary' as const,
+        },
+      ],
+    },
+    {
+      src: '/slider-warehouse.mp4',
+      type: 'video' as const,
+      alt: 'Metal X Steel — value for the future',
       title: t.home.slider1.title,
       subtitle: t.home.slider1.subtitle,
       buttons: [
@@ -29,8 +49,9 @@ export default function HomeEN() {
       ],
     },
     {
-      src: '/slider2.jpg',
-      alt: 'Slider Image 2',
+      src: '/slider-coils.mp4',
+      type: 'video' as const,
+      alt: 'Metal X Steel — quality production, reliable service',
       title: t.home.slider2.title,
       subtitle: t.home.slider2.subtitle,
       buttons: [
@@ -42,24 +63,6 @@ export default function HomeEN() {
         {
           text: t.home.slider2.button2,
           href: getPathWithLocale('/iletisim', locale),
-          variant: 'secondary' as const,
-        },
-      ],
-    },
-    {
-      src: '/slider3.jpg',
-      alt: 'Slider Image 3',
-      title: t.home.slider3.title,
-      subtitle: t.home.slider3.subtitle,
-      buttons: [
-        {
-          text: t.home.slider3.button1,
-          href: '#products-and-services',
-          variant: 'primary' as const,
-        },
-        {
-          text: t.home.slider3.button2,
-          href: getPathWithLocale('/teklif-al', locale),
           variant: 'secondary' as const,
         },
       ],

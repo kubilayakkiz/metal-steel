@@ -2,6 +2,7 @@
 
 import { useTranslations } from '@/lib/i18n/hooks';
 import { getPathWithLocale } from '@/lib/i18n/translations';
+import { COMPANY_PHONE_DISPLAY, COMPANY_PHONE_TEL } from '@/lib/contact-departments';
 
 export default function Footer() {
   const { t, locale } = useTranslations();
@@ -16,7 +17,7 @@ export default function Footer() {
               <a href={getPathWithLocale('/', locale)} className="inline-flex items-center">
                 <img 
                   src="/LogoMetalSteelWhite.png" 
-                  alt="METAL X STEEL Logo" 
+                  alt="Metal X Steel" 
                   className="h-10 md:h-12 lg:h-16 w-auto object-cover min-w-[150px] md:min-w-[180px] lg:min-w-[200px]"
                 />
               </a>
@@ -33,8 +34,8 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-gray-300 text-xs mb-1">{t.common.phone || 'Telefon'}</p>
-                <a href="tel:+902123456789" className="text-white font-semibold hover:text-[#6dd5fb] transition-colors block">
-                  +90 (212) 345 67 89
+                <a href={`tel:${COMPANY_PHONE_TEL}`} className="text-white font-semibold hover:text-[#6dd5fb] transition-colors block">
+                  {COMPANY_PHONE_DISPLAY}
                 </a>
               </div>
             </div>
