@@ -297,7 +297,7 @@ export default function OtomotivPage() {
                 <p className="text-gray-700 mb-4">
                   Motor ve şanzıman bileşenleri için özel alaşımlı çelik ürünleri.
                 </p>
-                <a href="/urunler/zam" className="text-[#3d4f5f] font-semibold hover:underline">
+                <a href="/urunler/magnelis-zam-kaplamali-celik-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>

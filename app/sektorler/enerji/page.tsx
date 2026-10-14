@@ -260,7 +260,7 @@ export default function EnerjiPage() {
                 <p className="text-gray-700 mb-4">
                   Yüksek sıcaklık uygulamaları için özel alaşımlı çelik çözümleri.
                 </p>
-                <a href="/urunler/zam" className="text-[#3d4f5f] font-semibold hover:underline">
+                <a href="/urunler/magnelis-zam-kaplamali-celik-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>

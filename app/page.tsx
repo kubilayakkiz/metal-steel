@@ -144,7 +144,7 @@ export default function Home() {
                   <div className="space-y-3 max-w-md mx-auto w-full">
                     <a href="/urunler/yassi-celikler" className="block border-t border-white/30 pt-3 hover:bg-white/10 transition-colors duration-200 rounded px-2">
                       <p className="text-sm md:text-base font-semibold text-center">Yassı Çelikler</p>
-                      <p className="text-xs text-gray-300 text-center mt-1">ZAM, galvanizli, boyalı sac ve daha fazlası</p>
+                      <p className="text-xs text-gray-300 text-center mt-1">Corten, hadde, galvaniz, boyalı ve Magnelis</p>
                     </a>
                     <a href="/urunler/boru-ve-kutu-profiller" className="block border-t border-white/30 pt-3 hover:bg-white/10 transition-colors duration-200 rounded px-2">
                       <p className="text-sm md:text-base font-semibold text-center">Boru ve Kutu Profiller</p>

@@ -22,24 +22,20 @@ export const productCategories: ProductCategory[] = [
     slug: 'yassi-celikler',
     nameTr: 'Yassı Çelikler',
     nameEn: 'Flat Steels',
-    description: 'Sıcak ve soğuk haddelenmiş, kaplamalı ve işlenmiş yassı çelik ürünleri. Corten, galvaniz, elektro galvaniz, Alusi, Aluzinc, Galvanil, Galfan ve Magnelis.',
+    description: 'Corten, sıcak ve soğuk hadde, asitlenmiş, galvaniz, elektro galvaniz, boyalı, Alusi, Aluzinc, Galvanil, Galfan ve Magnelis yassı çelik ürünleri.',
     products: [
       { slug: 'corten-sac', nameTr: 'Corten Sac', nameEn: 'Corten Steel', image: '/products/corten-sac.png' },
       { slug: 'sicak-haddelenmis-sac', nameTr: 'Sıcak Haddelenmiş Sac', nameEn: 'Hot Rolled Steel', image: '/products/sicak-haddelenmis-sac.jpg' },
       { slug: 'sicak-haddelenmis-asitlenmis-sac', nameTr: 'Sıcak Haddelenmiş Asitlenmiş Sac', nameEn: 'Pickled Hot Rolled', image: '/products/asitlenmis-sac.png' },
       { slug: 'soguk-haddelenmis-sac', nameTr: 'Soğuk Haddelenmiş Sac', nameEn: 'Cold Rolled Steel', image: '/products/soguk-haddelenmis-sac.jpg' },
-      { slug: 'galvanizli-sac', nameTr: 'Galvanizli Sac', nameEn: 'Galvanized Steel', image: '/products/galvanizli-sac.jpg' },
-      { slug: 'elektro-galvanizli-sac', nameTr: 'Elektro Galvanizli Sac', nameEn: 'Electro-galvanized Steel', image: '/products/elektro-galvanizli-sac.jpg' },
+      { slug: 'galvanizli-sac', nameTr: 'Galvaniz Kaplı Sac', nameEn: 'Galvanized Steel', image: '/products/galvanizli-sac.jpg' },
+      { slug: 'elektro-galvanizli-sac', nameTr: 'Elektro Galvaniz Kaplı Sac', nameEn: 'Electro-galvanized Steel', image: '/products/elektro-galvanizli-sac.jpg' },
       { slug: 'boyali-sac', nameTr: 'Boyalı Sac', nameEn: 'Pre-painted Steel', image: '/products/boyali-sac.jpg' },
-      { slug: 'alusi-sac', nameTr: 'Alusi Sac', nameEn: 'Alusi Steel', image: '/products/alusi-sac.jpg' },
-      { slug: 'aluzinc-sac', nameTr: 'Aluzinc Sac', nameEn: 'Aluzinc Steel', image: '/products/aluzinc-sac.jpg' },
-      { slug: 'galvanil-sac', nameTr: 'Galvanil Sac', nameEn: 'Galvannealed Steel', image: '/products/galvanil-sac.png' },
+      { slug: 'alusi-sac', nameTr: 'Alüminyum-Silikon Alaşımlı (Alusi) Sac', nameEn: 'Alusi Steel', image: '/products/alusi-sac.jpg' },
+      { slug: 'aluzinc-sac', nameTr: 'Alüminyum-Çinko-Silikon Alaşımlı (Aluzinc) Sac', nameEn: 'Aluzinc Steel', image: '/products/aluzinc-sac.jpg' },
+      { slug: 'galvanil-sac', nameTr: 'Galvanil (Galvannealed) Sac', nameEn: 'Galvannealed Steel', image: '/products/galvanil-sac.png' },
       { slug: 'galfan-sac', nameTr: 'Galfan Sac', nameEn: 'Galfan Steel', image: '/products/galfan-sac.jpg' },
-      { slug: 'magnelis-zam-kaplamali-celik-sac', nameTr: 'Magnelis (ZAM) Kaplamalı Çelik Sac', nameEn: 'Magnelis ZAM', image: '/products/magnelis-sac.jpg' },
-      { slug: 'zam', nameTr: 'ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)', nameEn: 'ZAM', image: '/ZAM.jpg' },
-      { slug: 'asitlenmis-sac', nameTr: 'Asitlenmiş Sac', nameEn: 'Pickled Steel', image: '/products/asitlenmis-sac.png' },
-      { slug: 'silisli-sac', nameTr: 'Silisli Sac', nameEn: 'Silicon Steel', image: '/urunler.jpg' },
-      { slug: 'gunes-enerji-santralleri', nameTr: 'Güneş Enerji Santralleri', nameEn: 'Solar Energy', image: '/urunler.jpg' },
+      { slug: 'magnelis-zam-kaplamali-celik-sac', nameTr: 'Zinc-Magnezyum (Magnelis) Sac', nameEn: 'Zinc-Magnesium (Magnelis)', image: '/products/magnelis-sac.jpg' },
     ],
   },
   {
@@ -80,4 +76,12 @@ export function getProductBySlug(slug: string): ProductItem | undefined {
     if (product) return product;
   }
   return undefined;
+}
+
+export function getYassiProducts(): ProductItem[] {
+  return getCategoryBySlug('yassi-celikler')?.products ?? [];
+}
+
+export function getProductDisplayName(product: ProductItem, locale?: string): string {
+  return locale === 'en' && product.nameEn ? product.nameEn : product.nameTr;
 }

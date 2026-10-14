@@ -4,6 +4,7 @@ import Slider from '@/components/Slider';
 import NewsletterForm from '@/components/NewsletterForm';
 import { useTranslations } from '@/lib/i18n/hooks';
 import { getPathWithLocale } from '@/lib/i18n/translations';
+import { getProductDisplayName, getYassiProducts } from '@/lib/productCategories';
 
 export default function HomeEN() {
   const { t, locale } = useTranslations();
@@ -75,13 +76,10 @@ export default function HomeEN() {
   ];
 
   const products = [
-    { name: t.home.productsList.zam, slug: 'zam' },
-    { name: t.home.productsList.sicakHaddelenmisSac, slug: 'sicak-haddelenmis-sac' },
-    { name: t.home.productsList.galvanizliSac, slug: 'galvanizli-sac' },
-    { name: t.home.productsList.boyaliSac, slug: 'boyali-sac' },
-    { name: t.home.productsList.sogukHaddelenmisSac, slug: 'soguk-haddelenmis-sac' },
-    { name: t.home.productsList.asitlenmisSac, slug: 'asitlenmis-sac' },
-    { name: t.home.productsList.silisliSac, slug: 'silisli-sac' },
+    ...getYassiProducts().map((product) => ({
+      name: getProductDisplayName(product, locale),
+      slug: product.slug,
+    })),
     { name: t.home.productsList.boruProfil, slug: 'boru-ve-profil' },
     { name: t.home.productsList.insaatDemiri, slug: 'insaat-demiri' },
   ];

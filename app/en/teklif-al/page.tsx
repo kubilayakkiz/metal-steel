@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from '@/lib/i18n/hooks';
 import { getPathWithLocale } from '@/lib/i18n/translations';
+import { getProductDisplayName, getYassiProducts } from '@/lib/productCategories';
 
 export default function TeklifAlPageEN() {
   const { t, locale } = useTranslations();
@@ -196,13 +197,11 @@ export default function TeklifAlPageEN() {
                       >
                         <option value="">Select</option>
                         <optgroup label={t.common.products}>
-                          <option value="zam">{t.home.productsList.zam}</option>
-                          <option value="sicak-haddelenmis-sac">{t.home.productsList.sicakHaddelenmisSac}</option>
-                          <option value="galvanizli-sac">{t.home.productsList.galvanizliSac}</option>
-                          <option value="boyali-sac">{t.home.productsList.boyaliSac}</option>
-                          <option value="soguk-haddelenmis-sac">{t.home.productsList.sogukHaddelenmisSac}</option>
-                          <option value="asitlenmis-sac">{t.home.productsList.asitlenmisSac}</option>
-                          <option value="silisli-sac">{t.home.productsList.silisliSac}</option>
+                          {getYassiProducts().map((product) => (
+                            <option key={product.slug} value={product.slug}>
+                              {getProductDisplayName(product, locale)}
+                            </option>
+                          ))}
                           <option value="boru-ve-profil">{t.home.productsList.boruProfil}</option>
                           <option value="insaat-demiri">{t.home.productsList.insaatDemiri}</option>
                         </optgroup>

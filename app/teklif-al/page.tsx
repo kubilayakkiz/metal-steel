@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from '@/lib/i18n/hooks';
+import { getYassiProducts } from '@/lib/productCategories';
 
 export default function TeklifAlPage() {
   const { t } = useTranslations();
@@ -221,19 +222,11 @@ export default function TeklifAlPage() {
                       >
                         <option value="">Seçiniz</option>
                         <optgroup label="Ürünler">
-                          <option value="corten-sac">Corten Sac</option>
-                          <option value="sicak-haddelenmis-sac">Sıcak Haddelenmiş Sac</option>
-                          <option value="galvanizli-sac">Galvanizli Sac</option>
-                          <option value="elektro-galvanizli-sac">Elektro Galvanizli Sac</option>
-                          <option value="boyali-sac">Boyalı Sac</option>
-                          <option value="alusi-sac">Alusi Sac</option>
-                          <option value="aluzinc-sac">Aluzinc Sac</option>
-                          <option value="galvanil-sac">Galvanil Sac</option>
-                          <option value="galfan-sac">Galfan Sac</option>
-                          <option value="soguk-haddelenmis-sac">Soğuk Haddelenmiş Sac</option>
-                          <option value="zam">ZAM (Min 25 Yıl Yüksek Korozyon Dayanımı)</option>
-                          <option value="asitlenmis-sac">Asitlenmiş Sac</option>
-                          <option value="silisli-sac">Silisli Sac</option>
+                          {getYassiProducts().map((product) => (
+                            <option key={product.slug} value={product.slug}>
+                              {product.nameTr}
+                            </option>
+                          ))}
                           <option value="boru-ve-profil">Boru ve Profil</option>
                           <option value="insaat-demiri">İnşaat Demiri</option>
                         </optgroup>

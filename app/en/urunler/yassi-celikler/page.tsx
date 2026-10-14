@@ -4,7 +4,7 @@ import { getCategoryBySlug } from '@/lib/productCategories';
 
 export const metadata: Metadata = {
   title: 'Flat Steels - Metal X Industrial',
-  description: 'Hot and cold rolled, coated and processed flat steel products. ZAM, galvanized, pre-painted steel and more.',
+  description: 'Corten, hot and cold rolled, pickled, galvanized, electro-galvanized, pre-painted, Alusi, Aluzinc, galvannealed, Galfan and Magnelis flat steel products.',
 };
 
 export default function FlatSteelsPage() {

@@ -259,7 +259,7 @@ export default function InsaatPage() {
                 <p className="text-gray-700 mb-4">
                   Galvanizli ve boyalı çatı kaplama sacları ile uzun ömürlü çözümler.
                 </p>
-                <a href="/urunler/galvanizli-sac" className="text-[#3d4f5f] font-semibold hover:underline">
+                <a href="/urunler/boyali-sac" className="text-[#3d4f5f] font-semibold hover:underline">
                   Detayları Gör →
                 </a>
               </div>

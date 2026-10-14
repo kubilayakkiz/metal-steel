@@ -271,7 +271,7 @@ export default function OtomotivPageAR() {
                 <p className="text-gray-700 mb-4">
                   {t.sectors.otomotiv.specialAlloyDesc}
                 </p>
-                <a href={getPathWithLocale('/urunler/zam', locale)} className="text-[#3d4f5f] font-semibold hover:underline">
+                <a href={getPathWithLocale('/urunler/magnelis-zam-kaplamali-celik-sac', locale)} className="text-[#3d4f5f] font-semibold hover:underline">
                   {t.sectors.otomotiv.viewDetails}
                 </a>
               </div>

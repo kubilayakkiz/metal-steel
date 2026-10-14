@@ -280,7 +280,7 @@ export default function BoyaliSacPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#3d4f5f] mb-6 text-center">İlgili ürünler</h2>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/urunler/galvanizli-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Galvanizli Sac</a>
-            <a href="/urunler/aluzinc-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Aluzinc Sac</a>
+            <a href="/urunler/magnelis-zam-kaplamali-celik-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Magnelis (ZAM)</a>
           </div>
         </div>
       </section>
