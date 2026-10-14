@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import ProductSectionWithImage from '@/components/ProductSectionWithImage';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function GalvanizliSacPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="/galvanizsac.jpg" 
+            src="/products/galvanizli-sac.jpg" 
             alt="Galvanizli Sac"
             className="w-full h-full object-cover"
           />
@@ -29,31 +29,30 @@ export default function GalvanizliSacPage() {
         </div>
       </section>
 
-      <ProductSectionWithImage src="/galvanizsac.jpg" alt="Galvanizli Sac" imagePosition="left">
+      <ProductSectionWithImage src="/products/galvanizli-sac.jpg" alt="Galvanizli Sac" imagePosition="left">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
           Ürün Hakkında
         </h2>
         <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
           <p>
-            Galvanizli sac, çelik sacın yüzeyine çinko kaplama uygulanması ile elde edilen 
-            korozyona dayanıklı çelik ürünüdür. Bu işlem, sacın uzun yıllar korunmasını 
-            sağlayarak bakım maliyetlerini önemli ölçüde düşürür.
+            Galvanizli sac, çelik yüzeyine sürekli hat üzerinde sıcak daldırma çinko kaplama 
+            (+Z, EN 10346) uygulanarak üretilir. Çinko hem bariyer hem katodik koruma sağlar; 
+            açık hava ve nemli ortamlarda bakım aralığını uzatır.
           </p>
           <p>
-            Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.'in galvanizli sac ürünleri, inşaat, otomotiv, beyaz eşya, tarım 
-            makinaları ve açık hava uygulamaları gerektiren tüm sektörlerde yaygın olarak 
-            kullanılmaktadır. Ürünlerimiz, en yüksek kalite standartlarına uygun olarak 
-            üretilmekte ve müşterilerimizin en zorlu koşullarda bile güvenilir çözümler 
-            elde etmelerini sağlamaktadır.
+            Metal X Endüstriyel San. ve Tic. LTD. ŞTİ., yapı, otomotiv, beyaz eşya, tarım 
+            makineleri ve dış ortam uygulamaları için DX, yapısal SxxxGD, HSLA ve DP kalitelerinde 
+            sıcak daldırma galvaniz tedarik eder. Elektro galvaniz (+ZE), Galvanil (+ZF) ve 
+            Galfan (+ZA) ayrı ürün aileleridir; korozyon, kaynak ve boya ihtiyacına göre birlikte seçilir.
           </p>
           <p>
-            Üstün korozyon direnci, uzun kullanım ömrü ve ekonomik avantajları ile galvanizli 
-            sac, açık hava ve zorlu çevre koşullarında kullanılan uygulamalar için ideal bir seçimdir.
+            Kaplama kütlesi Z10–Z600 aralığında talep edilir. İnce kaplama şekillendirme ve 
+            kaynak için; yüksek gramaj (Z275 ve üzeri) dış ortam ömrü için tercih edilir.
           </p>
         </div>
       </ProductSectionWithImage>
 
-      <ProductSectionWithImage src="/galvanizsac.jpg" alt="Galvanizli Sac" imagePosition="right" bgColor="gray">
+      <ProductSectionWithImage src="/products/galvanizli-sac.jpg" alt="Galvanizli Sac" imagePosition="right" bgColor="gray">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8">
           Üretim Limitleri
         </h2>
@@ -65,13 +64,13 @@ export default function GalvanizliSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 0.4 mm</span>
+                    <span>Minimum: 0.11 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 5.0 mm</span>
+                    <span>Maksimum: 6.00 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,13 +88,13 @@ export default function GalvanizliSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 600 mm</span>
+                    <span>Minimum: 800 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 1800 mm</span>
+                    <span>Maksimum: 2000 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,6 +129,30 @@ export default function GalvanizliSacPage() {
                 </ul>
               </div>
 
+              <div className="bg-white p-6 rounded-lg shadow-md sm:col-span-2">
+                <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">Kaliteler</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>DX51D+Z – DX57D+Z</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>S220GD+Z – S550GD+Z</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>HSLA ve DP kaliteler: HX…LAD+Z, HCT…X+Z</span>
+                  </li>
+                </ul>
+              </div>
+
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-[#3d4f5f] mb-4">Çinko Kaplama</h3>
                 <ul className="space-y-2 text-gray-700">
@@ -137,19 +160,19 @@ export default function GalvanizliSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 100 g/m² (Z100)</span>
+                    <span>Minimum: Z10</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 600 g/m² (Z600)</span>
+                    <span>Maksimum: Z600</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Standart kaplamalar: Z100, Z180, Z275, Z350, Z450</span>
+                    <span>Yaygın kaplamalar: Z100, Z180, Z275, Z350, Z450, Z600</span>
                   </li>
                 </ul>
               </div>
@@ -272,6 +295,18 @@ export default function GalvanizliSacPage() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#3d4f5f] mb-6 text-center">İlgili ürünler</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="/urunler/elektro-galvanizli-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Elektro Galvanizli Sac</a>
+            <a href="/urunler/galvanil-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Galvanil Sac</a>
+            <a href="/urunler/galfan-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Galfan Sac</a>
+            <a href="/urunler/boyali-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Boyalı Sac</a>
           </div>
         </div>
       </section>

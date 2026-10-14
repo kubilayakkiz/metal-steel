@@ -151,7 +151,7 @@ export default function MagnelisZAMPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 3,0 mm</span>
+                    <span>Maksimum: 6,00 mm</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,13 +169,13 @@ export default function MagnelisZAMPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 600 mm</span>
+                    <span>Minimum: 800 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 1500 mm</span>
+                    <span>Maksimum: 1680 mm</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -193,13 +193,13 @@ export default function MagnelisZAMPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 100 g/m²</span>
+                    <span>Minimum: ZM70</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 350 g/m²</span>
+                    <span>Maksimum: ZM450</span>
                   </li>
                 </ul>
               </div>
@@ -399,7 +399,7 @@ export default function MagnelisZAMPage() {
                   Hangi ölçülerde tedarik edilebilir?
                 </h3>
                 <p className="text-gray-700 text-sm">
-                  0,4–3,0 mm kalınlık; 600–1500 mm genişlik; 100–350 g/m² kaplama gramajında tedarik seçenekleri sunulur.
+                  0,40–6,00 mm kalınlık; 800–1680 mm genişlik; ZM70–ZM450 kaplama aralığında tedarik seçenekleri sunulur.
                 </p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">

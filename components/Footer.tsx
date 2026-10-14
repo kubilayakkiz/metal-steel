@@ -222,17 +222,17 @@ export default function Footer() {
         <div className="border-t border-[#6dd5fb]/30 pt-4 md:pt-6 mt-6 md:mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-xs md:text-sm text-gray-300">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-              <span>&copy; 2020 Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.</span>
+              <span>&copy; 2026 Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.</span>
               <span className="hidden md:inline">•</span>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href={getPathWithLocale('/bilgi-toplumu-hizmetleri', locale)} className="hover:text-white transition-colors">
                 {t.common.informationSocietyServices || 'Bilgi Toplumu Hizmetleri'}
               </a>
               <span className="hidden md:inline">•</span>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href={getPathWithLocale('/cerez-politikasi', locale)} className="hover:text-white transition-colors">
                 {t.common.cookiePolicy || 'Çerez Politikası'}
               </a>
               <span className="hidden md:inline">•</span>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href={getPathWithLocale('/kvkk', locale)} className="hover:text-white transition-colors">
                 {t.common.kvkk || 'KVKK'}
               </a>
             </div>

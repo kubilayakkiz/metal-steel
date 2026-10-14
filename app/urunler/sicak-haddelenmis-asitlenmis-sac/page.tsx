@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import ProductSectionWithImage from '@/components/ProductSectionWithImage';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function SicakHaddelenmisAsitlenmisSacPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="/asitlenmissac.jpg" 
+            src="/products/asitlenmis-sac.png" 
             alt="Sıcak Haddelenmiş Asitlenmiş Sac"
             className="w-full h-full object-cover"
           />
@@ -35,7 +35,7 @@ export default function SicakHaddelenmisAsitlenmisSacPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
-                src="/asitlenmissac.jpg" 
+                src="/products/asitlenmis-sac.png" 
                 alt="Sıcak Haddelenmiş Asitlenmiş Sac"
                 className="w-full h-full object-cover"
               />
@@ -80,13 +80,13 @@ export default function SicakHaddelenmisAsitlenmisSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 1.5 mm</span>
+                    <span>Minimum: 1.20 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 25 mm</span>
+                    <span>Maksimum: 12.00 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

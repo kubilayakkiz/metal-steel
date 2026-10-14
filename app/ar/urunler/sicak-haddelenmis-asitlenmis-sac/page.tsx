@@ -12,7 +12,7 @@ export default function SicakHaddelenmisAsitlenmisSacPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="https://placehold.co/1200x400/261dcf/ffffff?text=Hot+Rolled+Pickled+Sheet" 
+            src="/products/asitlenmis-sac.png" 
             alt="Hot Rolled Pickled Sheet"
             className="w-full h-full object-cover"
           />
@@ -34,7 +34,7 @@ export default function SicakHaddelenmisAsitlenmisSacPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
-                src="https://placehold.co/1200x400/261dcf/ffffff?text=Hot+Rolled+Pickled+Sheet" 
+                src="/products/asitlenmis-sac.png" 
                 alt="Hot Rolled Pickled Sheet"
                 className="w-full h-full object-cover"
               />

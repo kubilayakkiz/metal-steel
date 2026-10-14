@@ -265,11 +265,17 @@ export default function FloatingButton() {
                   >
                     <option value="">{t.common.floatingButton.select}</option>
                     <optgroup label={t.common.floatingButton.products}>
-                      <option value="zam">{t.home.productsList.zam}</option>
+                      <option value="corten-sac">{locale === 'en' ? 'Corten Steel' : 'Corten Sac'}</option>
                       <option value="sicak-haddelenmis-sac">{t.home.productsList.sicakHaddelenmisSac}</option>
                       <option value="galvanizli-sac">{t.home.productsList.galvanizliSac}</option>
+                      <option value="elektro-galvanizli-sac">{locale === 'en' ? 'Electro-galvanized Steel' : 'Elektro Galvanizli Sac'}</option>
                       <option value="boyali-sac">{t.home.productsList.boyaliSac}</option>
+                      <option value="alusi-sac">{locale === 'en' ? 'Alusi Steel' : 'Alusi Sac'}</option>
+                      <option value="aluzinc-sac">{locale === 'en' ? 'Aluzinc Steel' : 'Aluzinc Sac'}</option>
+                      <option value="galvanil-sac">{locale === 'en' ? 'Galvannealed Steel' : 'Galvanil Sac'}</option>
+                      <option value="galfan-sac">{locale === 'en' ? 'Galfan Steel' : 'Galfan Sac'}</option>
                       <option value="soguk-haddelenmis-sac">{t.home.productsList.sogukHaddelenmisSac}</option>
+                      <option value="zam">{t.home.productsList.zam}</option>
                       <option value="asitlenmis-sac">{t.home.productsList.asitlenmisSac}</option>
                       <option value="silisli-sac">{t.home.productsList.silisliSac}</option>
                       <option value="boru-ve-profil">{t.home.productsList.boruProfil}</option>

@@ -76,7 +76,7 @@ export default function ProductsMegaMenu({ locale, isOpen, onMouseEnter, onMouse
                   </div>
                 </a>
                 <div className="space-y-1.5 mt-2">
-                  {category.products.slice(0, 5).map((product) => (
+                  {category.products.slice(0, 8).map((product) => (
                     <a
                       key={product.slug}
                       href={getPathWithLocale(`/urunler/${product.slug}`, locale)}
@@ -88,12 +88,12 @@ export default function ProductsMegaMenu({ locale, isOpen, onMouseEnter, onMouse
                       </span>
                     </a>
                   ))}
-                  {category.products.length > 5 && (
+                  {category.products.length > 8 && (
                     <a
                       href={getPathWithLocale(`/urunler/${category.slug}`, locale)}
                       className="inline-flex items-center gap-1 text-base font-medium text-[#3d4f5f] hover:text-[#1a1a5e] mt-2"
                     >
-                      +{category.products.length - 5} {locale === 'en' ? 'more' : 'daha'}
+                      +{category.products.length - 8} {locale === 'en' ? 'more' : 'daha'}
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>

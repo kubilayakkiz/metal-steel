@@ -4,7 +4,7 @@ import { getCategoryBySlug } from '@/lib/productCategories';
 
 export const metadata: Metadata = {
   title: 'Yassı Çelikler - Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.',
-  description: 'Sıcak ve soğuk haddelenmiş, kaplamalı ve işlenmiş yassı çelik ürünleri. ZAM, galvanizli sac, boyalı sac ve daha fazlası.',
+  description: 'Sıcak ve soğuk haddelenmiş, kaplamalı yassı çelik: Corten, galvaniz, elektro galvaniz, Alusi, Aluzinc, Galvanil, Galfan, Magnelis ve boyalı sac.',
 };
 
 export default function YassiCeliklerPage() {

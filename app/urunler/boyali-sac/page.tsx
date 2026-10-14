@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import ProductSectionWithImage from '@/components/ProductSectionWithImage';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function BoyaliSacPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="/Boyali-Sac.jpg" 
+            src="/products/boyali-sac.jpg" 
             alt="Boyalı Sac"
             className="w-full h-full object-cover"
           />
@@ -29,15 +29,15 @@ export default function BoyaliSacPage() {
         </div>
       </section>
 
-      <ProductSectionWithImage src="/Boyali-Sac.jpg" alt="Boyalı Sac" imagePosition="left">
+      <ProductSectionWithImage src="/products/boyali-sac.jpg" alt="Boyalı Sac" imagePosition="left">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
           Ürün Hakkında
         </h2>
         <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
           <p>
-            Boyalı sac, galvanizli veya soğuk haddelenmiş çelik sacın yüzeyine organik veya 
-            inorganik kaplama uygulanması ile elde edilen estetik ve koruyucu özelliklere 
-            sahip çelik ürünüdür. Bu işlem, hem görsel çekicilik hem de korozyon koruması sağlar.
+            Boyalı sac (organik kaplamalı / pre-painted), galvaniz (+Z) veya Aluzinc (+AZ) 
+            altlık üzerine hat üzerinde renkli son kat uygulanarak üretilir. Estetik ve 
+            korozyon korumasını aynı sacda birleştirir.
           </p>
           <p>
             Metal X Endüstriyel San. ve Tic. LTD. ŞTİ.'in boyalı sac ürünleri, beyaz eşya, yapı, otomotiv, mobilya ve 
@@ -52,7 +52,7 @@ export default function BoyaliSacPage() {
         </div>
       </ProductSectionWithImage>
 
-      <ProductSectionWithImage src="/Boyali-Sac.jpg" alt="Boyalı Sac" imagePosition="right" bgColor="gray">
+      <ProductSectionWithImage src="/products/boyali-sac.jpg" alt="Boyalı Sac" imagePosition="right" bgColor="gray">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8">
           Üretim Limitleri
         </h2>
@@ -64,13 +64,13 @@ export default function BoyaliSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 0.3 mm</span>
+                    <span>Minimum: 0.25 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 2.0 mm</span>
+                    <span>Maksimum: 1.20 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ export default function BoyaliSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 600 mm</span>
+                    <span>Minimum: 800 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +136,7 @@ export default function BoyaliSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Kaplama kalınlığı: 15-25 μm</span>
+                    <span>Sistemler: Polyester, PVDF, PUR-PA, Plastisol, wrinkle polyester, PET/PVC film</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,6 +271,16 @@ export default function BoyaliSacPage() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#3d4f5f] mb-6 text-center">İlgili ürünler</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="/urunler/galvanizli-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Galvanizli Sac</a>
+            <a href="/urunler/aluzinc-sac" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-[#3d4f5f] font-medium hover:border-[#3d4f5f]">Aluzinc Sac</a>
           </div>
         </div>
       </section>

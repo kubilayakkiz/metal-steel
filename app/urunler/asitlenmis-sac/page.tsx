@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import ProductSectionWithImage from '@/components/ProductSectionWithImage';
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function AsitlenmisSacPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="/asitlenmissac.jpg" 
+            src="/products/asitlenmis-sac.png" 
             alt="Asitlenmiş Sac"
             className="w-full h-full object-cover"
           />
@@ -28,7 +28,7 @@ export default function AsitlenmisSacPage() {
         </div>
       </section>
 
-      <ProductSectionWithImage src="/asitlenmissac.jpg" alt="Asitlenmiş Sac" imagePosition="left">
+      <ProductSectionWithImage src="/products/asitlenmis-sac.png" alt="Asitlenmiş Sac" imagePosition="left">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
           Ürün Hakkında
         </h2>
@@ -47,7 +47,7 @@ export default function AsitlenmisSacPage() {
         </div>
       </ProductSectionWithImage>
 
-      <ProductSectionWithImage src="/asitlenmissac.jpg" alt="Asitlenmiş Sac" imagePosition="right" bgColor="gray">
+      <ProductSectionWithImage src="/products/asitlenmis-sac.png" alt="Asitlenmiş Sac" imagePosition="right" bgColor="gray">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8">
           Üretim Limitleri
         </h2>
@@ -59,13 +59,13 @@ export default function AsitlenmisSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 1.5 mm</span>
+                    <span>Minimum: 1.20 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 25 mm</span>
+                    <span>Maksimum: 12.00 mm</span>
                   </li>
                 </ul>
               </div>
@@ -77,7 +77,7 @@ export default function AsitlenmisSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 600 mm</span>
+                    <span>Minimum: 800 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

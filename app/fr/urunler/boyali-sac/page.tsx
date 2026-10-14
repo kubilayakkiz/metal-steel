@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations } from '@/lib/i18n/hooks';
 import { getPathWithLocale } from '@/lib/i18n/translations';
@@ -12,7 +12,7 @@ export default function BoyaliSacPageFR() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="/Boyali-Sac.jpg" 
+            src="/products/boyali-sac.jpg" 
             alt={t.products.boyaliSac.title}
             className="w-full h-full object-cover"
           />
@@ -34,7 +34,7 @@ export default function BoyaliSacPageFR() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg relative h-[300px] md:h-[400px]">
               <img 
-                src="/Boyali-Sac.jpg" 
+                src="/products/boyali-sac.jpg" 
                 alt={t.products.boyaliSac.title}
                 className="w-full h-full object-cover opacity-80"
               />

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import ProductSectionWithImage from '@/components/ProductSectionWithImage';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function SogukHaddelenmisSacPage() {
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img 
-            src="/sogukhaddelenmissac.jpg" 
+            src="/products/soguk-haddelenmis-sac.jpg" 
             alt="Soğuk Haddelenmiş Sac"
             className="w-full h-full object-cover"
           />
@@ -29,7 +29,7 @@ export default function SogukHaddelenmisSacPage() {
         </div>
       </section>
 
-      <ProductSectionWithImage src="/sogukhaddelenmissac.jpg" alt="Soğuk Haddelenmiş Sac" imagePosition="left">
+      <ProductSectionWithImage src="/products/soguk-haddelenmis-sac.jpg" alt="Soğuk Haddelenmiş Sac" imagePosition="left">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-6">
           Ürün Hakkında
         </h2>
@@ -52,7 +52,7 @@ export default function SogukHaddelenmisSacPage() {
         </div>
       </ProductSectionWithImage>
 
-      <ProductSectionWithImage src="/sogukhaddelenmissac.jpg" alt="Soğuk Haddelenmiş Sac" imagePosition="right" bgColor="gray">
+      <ProductSectionWithImage src="/products/soguk-haddelenmis-sac.jpg" alt="Soğuk Haddelenmiş Sac" imagePosition="right" bgColor="gray">
         <h2 className="text-3xl md:text-4xl font-bold text-[#3d4f5f] mb-8">
           Üretim Limitleri
         </h2>
@@ -64,13 +64,13 @@ export default function SogukHaddelenmisSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 0.3 mm</span>
+                    <span>Minimum: 0.25 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 3.0 mm</span>
+                    <span>Maksimum: 4.00 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,13 +94,13 @@ export default function SogukHaddelenmisSacPage() {
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Minimum: 300 mm</span>
+                    <span>Minimum: 800 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Maksimum: 1500 mm</span>
+                    <span>Maksimum: 2000 mm</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#3d4f5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
