@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { FORM_INBOX_EMAIL } from '@/lib/contact-departments';
-import { createMailTransporter, getMailFromAddress, logMailError, getMailErrorPayload } from '@/lib/mailer';
+import { sendFormMail, logMailError, getMailErrorPayload } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,7 +13,6 @@ export async function POST(request: NextRequest) {
     const coverLetter = formData.get('coverLetter') as string;
     const resume = formData.get('resume') as File | null;
 
-    // Validation
     if (!name || !email || !phone || !experience || !education || !coverLetter || !resume) {
       return NextResponse.json(
         { error: 'Tüm zorunlu alanları doldurunuz.' },
@@ -22,24 +20,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // SMTP transporter oluştur
-    const transporter = createMailTransporter();
-
-    // File attachment için buffer
-    let attachments = [];
+    const attachments = [];
     if (resume && resume.size > 0) {
       const bytes = await resume.arrayBuffer();
-      const buffer = Buffer.from(bytes);
       attachments.push({
         filename: resume.name,
-        content: buffer,
+        content: Buffer.from(bytes),
       });
     }
 
-    // Email gönder
-    const info = await transporter.sendMail({
-      from: getMailFromAddress(),
-      to: FORM_INBOX_EMAIL,
+    await sendFormMail({
       replyTo: email,
       subject: `İş Başvurusu: ${position || 'Genel Başvuru'} - ${name}`,
       html: `
@@ -51,16 +41,12 @@ export async function POST(request: NextRequest) {
             <p><strong>E-posta:</strong> ${email}</p>
             <p><strong>Telefon:</strong> ${phone}</p>
             <p><strong>Başvurulan Pozisyon:</strong> ${position || 'Genel Başvuru (Yetenek Havuzu)'}</p>
-            
             <h3 style="color: #3d4f5f; margin-top: 20px;">Eğitim Bilgileri</h3>
             <p style="white-space: pre-wrap;">${education}</p>
-            
             <h3 style="color: #3d4f5f; margin-top: 20px;">İş Deneyimi</h3>
             <p style="white-space: pre-wrap;">${experience}</p>
-            
             <h3 style="color: #3d4f5f; margin-top: 20px;">Ön Yazı</h3>
             <p style="white-space: pre-wrap;">${coverLetter}</p>
-            
             ${resume ? `<p style="margin-top: 20px;"><strong>Özgeçmiş Dosyası:</strong> ${resume.name} (${(resume.size / 1024).toFixed(2)} KB)</p>` : ''}
           </div>
           <p style="color: #666; font-size: 12px; margin-top: 20px;">
@@ -71,7 +57,6 @@ export async function POST(request: NextRequest) {
       text: `
 Yeni İş Başvurusu
 
-Kişisel Bilgiler:
 Ad Soyad: ${name}
 E-posta: ${email}
 Telefon: ${phone}
@@ -90,7 +75,7 @@ ${coverLetter}
     });
 
     return NextResponse.json(
-      { message: 'Başvurunuz başarıyla gönderildi!', messageId: info.messageId },
+      { message: 'Başvurunuz başarıyla gönderildi!' },
       { status: 200 }
     );
   } catch (error) {

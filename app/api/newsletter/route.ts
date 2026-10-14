@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { FORM_INBOX_EMAIL } from '@/lib/contact-departments';
-import { createMailTransporter, getMailFromAddress, logMailError, getMailErrorPayload } from '@/lib/mailer';
+import { sendFormMail, logMailError, getMailErrorPayload } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { email } = body;
 
-    // Validation
     if (!email || !email.includes('@')) {
       return NextResponse.json(
         { error: 'Geçerli bir e-posta adresi giriniz.' },
@@ -15,13 +13,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // SMTP transporter oluştur
-    const transporter = createMailTransporter();
-
-    // Email gönder
-    const info = await transporter.sendMail({
-      from: getMailFromAddress(),
-      to: FORM_INBOX_EMAIL,
+    await sendFormMail({
       subject: 'Yeni Newsletter Aboneliği',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -44,7 +36,7 @@ Abonelik Tarihi: ${new Date().toLocaleString('tr-TR')}
     });
 
     return NextResponse.json(
-      { message: 'Başarıyla abone oldunuz!', messageId: info.messageId },
+      { message: 'Başarıyla abone oldunuz!' },
       { status: 200 }
     );
   } catch (error) {

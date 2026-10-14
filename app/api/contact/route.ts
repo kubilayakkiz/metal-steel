@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getEmailForSubject, getSubjectLabel } from '@/lib/contact-departments';
-import { createMailTransporter, getMailFromAddress, logMailError, getMailErrorPayload } from '@/lib/mailer';
+import { getSubjectLabel } from '@/lib/contact-departments';
+import { sendFormMail, logMailError, getMailErrorPayload } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { name, email, phone, company, subject, message } = body;
 
-    // Validation
     if (!name || !email || !phone || !subject || !message) {
       return NextResponse.json(
         { error: 'Tüm zorunlu alanları doldurunuz.' },
@@ -15,14 +14,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // SMTP transporter oluştur
-    const transporter = createMailTransporter();
     const subjectLabel = getSubjectLabel(subject);
 
-    // Email gönder
-    const info = await transporter.sendMail({
-      from: getMailFromAddress(),
-      to: getEmailForSubject(),
+    await sendFormMail({
       replyTo: email,
       subject: `İletişim Formu: ${subjectLabel}`,
       html: `
@@ -57,7 +51,7 @@ ${message}
     });
 
     return NextResponse.json(
-      { message: 'Mesajınız başarıyla gönderildi!', messageId: info.messageId },
+      { message: 'Mesajınız başarıyla gönderildi!' },
       { status: 200 }
     );
   } catch (error) {
